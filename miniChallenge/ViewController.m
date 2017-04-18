@@ -26,6 +26,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //veeejjaaaaa
+    //adicionar no git
+    //Passos:
+    //0 - sempre dar um git pull antes de commitar
+    //1 - va para a pasta do projeto via terminal
+    //2 - git add .
+    //3 - git commit -m "digite a mensagem que representa a mudanca"
+    //4 - git push
 }
 
 
