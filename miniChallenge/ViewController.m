@@ -9,10 +9,18 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *titleImage;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *configButton;
+@property (weak, nonatomic) IBOutlet UIButton *leaderButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 
 @end
 
 @implementation ViewController
+
+- (IBAction)startGame:(UIButton *)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

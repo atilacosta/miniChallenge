@@ -15,6 +15,9 @@
 		C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */; };
 		C35FA0B51EA53BDB00E1DD29 /* miniChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0B41EA53BDB00E1DD29 /* miniChallengeTests.m */; };
 		C35FA0C01EA53BDB00E1DD29 /* miniChallengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0BF1EA53BDB00E1DD29 /* miniChallengeUITests.m */; };
+		C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */; };
+		C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */; };
+		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		C35FA0BB1EA53BDB00E1DD29 /* miniChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35FA0BF1EA53BDB00E1DD29 /* miniChallengeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = miniChallengeUITests.m; sourceTree = "<group>"; };
 		C35FA0C11EA53BDB00E1DD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C35FA0CD1EA53BFC00E1DD29 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
+		C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
+		C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Third View 1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,11 @@
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
 				C35FA0A31EA53BDB00E1DD29 /* Main.storyboard */,
+				C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */,
+				C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */,
+				C35FA0CD1EA53BFC00E1DD29 /* GameViewController.h */,
+				C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */,
+				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
 				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
@@ -248,6 +261,7 @@
 			files = (
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
+				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */,
+				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
 				C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */,
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
