@@ -97,38 +97,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6T7-JU-g96">
-                                    <size key="itemSize" width="199" height="310"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6T7-JU-g96">
+                                    <size key="itemSize" width="220" height="310"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="charCell" id="pAl-63-47s" customClass="CharCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="199" height="310"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="charCell" id="c1Y-3m-bnx" customClass="CharCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="32.5" width="220" height="310"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="199" height="310"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="310"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GzT-A2-Qhu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="310"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-0i-P3o">
+                                                    <rect key="frame" x="0.0" y="0.0" width="221" height="310"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.76521950959999996" green="0.19036048650000001" blue="0.096105597910000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="GzT-A2-Qhu" secondAttribute="bottom" id="4rc-IU-hPC"/>
-                                            <constraint firstItem="GzT-A2-Qhu" firstAttribute="top" secondItem="pAl-63-47s" secondAttribute="top" id="7Fj-Ng-XMt"/>
-                                            <constraint firstItem="GzT-A2-Qhu" firstAttribute="leading" secondItem="pAl-63-47s" secondAttribute="leading" id="TVW-4C-fNT"/>
-                                            <constraint firstAttribute="trailing" secondItem="GzT-A2-Qhu" secondAttribute="trailing" id="euL-ns-Y2n"/>
+                                            <constraint firstAttribute="bottom" secondItem="DOD-0i-P3o" secondAttribute="bottom" id="2ge-5G-dYA"/>
+                                            <constraint firstAttribute="trailing" secondItem="DOD-0i-P3o" secondAttribute="trailing" id="B5m-Ez-h8n"/>
+                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="top" secondItem="c1Y-3m-bnx" secondAttribute="top" id="nj5-Ma-lIk"/>
+                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="leading" secondItem="c1Y-3m-bnx" secondAttribute="leading" id="rXw-1y-ltP"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="charImage" destination="GzT-A2-Qhu" id="6WU-yh-14X"/>
+                                            <outlet property="charImage" destination="DOD-0i-P3o" id="o1j-Lx-qVm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -143,6 +141,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sef-B9-Vt5" firstAttribute="leading" secondItem="CC1-ww-zhD" secondAttribute="leading" id="Bdx-hO-29w"/>
+                            <constraint firstAttribute="trailing" secondItem="Sef-B9-Vt5" secondAttribute="trailing" id="Bgh-gc-4Hj"/>
+                            <constraint firstItem="Sef-B9-Vt5" firstAttribute="top" secondItem="CC1-ww-zhD" secondAttribute="top" id="XYb-Wl-kAY"/>
+                            <constraint firstItem="ABP-lL-3vP" firstAttribute="top" secondItem="Sef-B9-Vt5" secondAttribute="bottom" id="whb-cr-pii"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="charCollectionView" destination="Sef-B9-Vt5" id="TUC-Wr-MR3"/>
@@ -173,7 +177,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3lJ-Hw-QYv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9bx-fU-zt7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9bx-fU-zt7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uEb-ZN-0S2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
