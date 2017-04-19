@@ -7,33 +7,28 @@
 //
 
 #import "CharacterViewController.h"
+#import "CharCollectionViewCell.h"
+@interface CharacterViewController  () <UICollectionViewDataSource,UICollectionViewDelegate>
 
-@interface CharacterViewController ()
-
-@property (weak, nonatomic) IBOutlet UIScrollView *characterSelect;
+@property (weak, nonatomic) IBOutlet UICollectionView *charCollectionView;
+@property NSArray *charArray;
 
 @end
 
 @implementation CharacterViewController
 
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    //return _charArray.count;
+    return 3;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
+    cell.charImage.image = [UIImage imageNamed:@"astro.jpg"];
+    return cell;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.characterSelect.pagingEnabled = YES;
-    _characterSelect.alwaysBounceVertical = NO;
-    _characterSelect.bounces = NO;
-    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Third View 1.jpg"]];
-    
-    [_characterSelect addSubview:imageView2];
-    
-    UIImageView *image = [[UIImageView alloc] initWithFrame:
-                          CGRectMake(imageView2.frame.size.width, 0,
-                                     imageView2.frame.size.width,
-                                     imageView2.frame.size.height)];
-    image.image = [UIImage imageNamed:[NSString stringWithFormat:@"Third View 1.jpg"]];
-                                       
-    [_characterSelect addSubview:image];
-    _characterSelect.contentSize = CGSizeMake(2 * imageView2.image.size.width, imageView2.image.size.height);
-    
+
     // Do any additional setup after loading the view.
 }
 
