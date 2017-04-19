@@ -6,10 +6,16 @@
 //  Copyright © 2017 Atila Costa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface Item : NSObject
+@interface Item : UIImageView
 
-//Oie
+@property (nonatomic,copy) NSNumber *itemID;
+@property (nonatomic, copy) NSString *itemName;
+@property (nonatomic,readonly) NSString *itemPhoto;
+@property (nonatomic) NSSet *itemTags;
+@property (nonatomic) NSSet *itemQuestions;
+@property (nonatomic) NSNumber *itemPosX;
+@property (nonatomic) NSNumber *itemPosY;
 
 @end
