@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CharCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *charImage;
+IB_DESIGNABLE  @interface CharCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *charImage;
+@property (nonatomic) NSObject *characterForCell;
 @end

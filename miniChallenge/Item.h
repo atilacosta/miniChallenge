@@ -6,6 +6,7 @@
 //  Copyright © 2017 Atila Costa. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
 @interface Item : UIImageView
@@ -17,5 +18,9 @@
 @property (nonatomic) NSSet *itemQuestions;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;
+
+//Oie
+
+//Hello
 
 @end

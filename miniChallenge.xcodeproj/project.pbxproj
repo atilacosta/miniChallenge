@@ -11,6 +11,7 @@
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
 		C32DA4641EA6AB5500130808 /* astro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4631EA6AB5500130808 /* astro.jpg */; };
+		C32DA4661EA7E80D00130808 /* personagem.png in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4651EA7E80D00130808 /* personagem.png */; };
 		C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA09B1EA53BDB00E1DD29 /* main.m */; };
 		C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */; };
 		C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0A11EA53BDB00E1DD29 /* ViewController.m */; };
@@ -48,6 +49,7 @@
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
 		C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCollectionViewCell.m; sourceTree = "<group>"; };
 		C32DA4631EA6AB5500130808 /* astro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astro.jpg; sourceTree = "<group>"; };
+		C32DA4651EA7E80D00130808 /* personagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personagem.png; sourceTree = "<group>"; };
 		C35FA0971EA53BDB00E1DD29 /* miniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35FA09B1EA53BDB00E1DD29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
 				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
 				C32DA4631EA6AB5500130808 /* astro.jpg */,
+				C32DA4651EA7E80D00130808 /* personagem.png */,
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
 			);
@@ -279,6 +282,7 @@
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
+				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
 				03DB5C7E1EA7F89600EDE172 /* scene.plist in Resources */,
 			);
