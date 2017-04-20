@@ -118,7 +118,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         
         [self.charCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
