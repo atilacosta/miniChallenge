@@ -12,12 +12,19 @@
 @interface CharacterViewController  () <UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *charCollectionView;
-@property NSArray *charArray;
+@property NSArray<NSDictionary *> *charArray;
 @property CGFloat cellScale;
+@property NSDictionary *selectedSceneDictionary;
+@property CGRect imageSize;
 @end
 
 @implementation CharacterViewController
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    GameViewController *destView = segue.destinationViewController;
+    CharacterViewController *sourceView = segue.sourceViewController;
+    destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
+    
+}
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     
 //    UICollectionViewFlowLayout *layout = _charCollectionView.collectionViewLayout;
@@ -37,8 +44,26 @@
      [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
     NSLog(@"%f",_charCollectionView.center.x);
     [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    //collectionView
+    
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    _imageSize = currentCell.charImage.frame;
+    [UIView animateWithDuration:0.5 animations:^{
+        [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
+    }];
 
+
+    
+}
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.5 animations:^{
+        [currentCell.charImage setFrame:_imageSize];
+    }];
+}
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
@@ -48,6 +73,7 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
+
     cell.characterForCell = @"oi";
     //NSLog(@"%f",cell.charImage.frame.size.width);
     return cell;

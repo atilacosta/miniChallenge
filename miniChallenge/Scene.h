@@ -22,6 +22,6 @@
 +(NSNumber *)getUniqueID;
 
 
-- (instancetype)initWithDictionary: (NSDictionary *)dict
+- (instancetype)initWithDictionary: (NSDictionary *)dict;
 
 @end
