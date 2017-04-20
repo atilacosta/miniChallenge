@@ -115,15 +115,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-0i-P3o">
-                                                    <rect key="frame" x="0.0" y="0.0" width="221" height="310"/>
+                                                    <rect key="frame" x="42" y="56" width="122" height="199"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="DOD-0i-P3o" secondAttribute="bottom" id="2ge-5G-dYA"/>
-                                            <constraint firstAttribute="trailing" secondItem="DOD-0i-P3o" secondAttribute="trailing" id="B5m-Ez-h8n"/>
-                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="top" secondItem="c1Y-3m-bnx" secondAttribute="top" id="nj5-Ma-lIk"/>
-                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="leading" secondItem="c1Y-3m-bnx" secondAttribute="leading" id="rXw-1y-ltP"/>
+                                            <constraint firstAttribute="bottom" secondItem="DOD-0i-P3o" secondAttribute="bottom" constant="55" id="2ge-5G-dYA"/>
+                                            <constraint firstAttribute="trailing" secondItem="DOD-0i-P3o" secondAttribute="trailing" constant="56" id="B5m-Ez-h8n"/>
+                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="top" secondItem="c1Y-3m-bnx" secondAttribute="top" constant="56" id="nj5-Ma-lIk"/>
+                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="leading" secondItem="c1Y-3m-bnx" secondAttribute="leading" constant="42" id="rXw-1y-ltP"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="charImage" destination="DOD-0i-P3o" id="o1j-Lx-qVm"/>
