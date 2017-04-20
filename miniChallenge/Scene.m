@@ -7,10 +7,18 @@
 //
 
 #import "Scene.h"
+#import "Item.h"
 
 // Static reference counters for the scene itself and the items that belong to it.
 int uniqueIDReference;
 int ItemUniqueIDReference;
+
+@interface Scene ()
+
+@property NSMutableArray *privateItemsList;
+
+@end
+
 
 @implementation Scene
 
@@ -26,14 +34,22 @@ int ItemUniqueIDReference;
 {
     self = [super init];
     if (self) {
-//        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
-//        
-//        _itemsList = [[NSArray alloc] initWithContentsOfFile:filePath];
+        //_uniqueID;
+        _name = dict[@"sceneName"];
+        _backgroundImage = dict[@"sceneImage"];
         
-    // Receive the selected scene from the characterSelectionViewController
+        for (NSDictionary *current in dict[@"itemList"]){
+            Item *currentItem = [[Item alloc] init]; // WithData:current
+            [_privateItemsList addObject:currentItem];
+        }
         
     }
     return self;
+}
+
+// Overrides the itemList property getter
+-(NSArray *)itemsList {
+    return [_privateItemsList copy];
 }
 
 

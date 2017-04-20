@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.selectedScene = [[Scene alloc] init];
+    self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary];
     
     
 }
