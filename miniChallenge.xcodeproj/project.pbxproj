@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03DB5C801EA9147700EDE172 /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB5C7F1EA9147700EDE172 /* database.plist */; };
+		03DB5C831EA9259700EDE172 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB5C821EA9259700EDE172 /* Subject.m */; };
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
 		7DD935031EA921BC0040242F /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD935021EA921BC0040242F /* Scene.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
@@ -45,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		03DB5C7F1EA9147700EDE172 /* database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = database.plist; sourceTree = "<group>"; };
+		03DB5C811EA9259700EDE172 /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		03DB5C821EA9259700EDE172 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
 		03F5478C1EA7E5190033C2C4 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		03F5478D1EA7E5190033C2C4 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		7DD935011EA921BC0040242F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				7DD935021EA921BC0040242F /* Scene.m */,
 				03F5478C1EA7E5190033C2C4 /* Item.h */,
 				03F5478D1EA7E5190033C2C4 /* Item.m */,
+				03DB5C811EA9259700EDE172 /* Subject.h */,
+				03DB5C821EA9259700EDE172 /* Subject.m */,
 				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
 				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
@@ -322,6 +327,7 @@
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
+				03DB5C831EA9259700EDE172 /* Subject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

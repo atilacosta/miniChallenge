@@ -8,6 +8,12 @@
 
 #import "Item.h"
 
+@interface Item ()
+
+@property NSMutableArray *privateSubjects;
+
+@end
+
 @implementation Item
 
 
@@ -15,15 +21,25 @@
     self = [super init];
     if (self) {
         
+        _itemName = data[@"itemName"];
+        _itemImageName = data[@"itemImage"];
+        _itemPosX = data[@"itemPosX"];
+        _itemPosY = data[@"itemPosY"];
+        _itemSubjects = data[@"subsjectsList"];
         
+        for(NSDictionary *currentSubject in _itemSubjects){
+            //[self.privateSubjects addObject:<#(nonnull id)#>]
+        }
         
     }
     return self;
 }
 
-//+ (instancetype)itemWithData:(NSDictionary *)data{
-//    return [[Item alloc] initWithData:data];
-//}
+
+
++ (instancetype)itemWithData:(NSDictionary *)data{
+    return [[Item alloc] initWithData:data];
+}
 
 //Add função para retornar a string do nome do objeto.
 
