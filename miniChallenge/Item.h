@@ -13,14 +13,12 @@
 
 @property (nonatomic, copy) NSString *itemName;
 @property (nonatomic,readonly) NSString *itemImageName;
-@property (nonatomic) NSSet *itemQuestions;
+@property (nonatomic) NSArray *itemSubjects;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;
 
-//Oie
+- (instancetype)initWithData:(NSDictionary *)data;
++ (instancetype)itemWithData:(NSDictionary *)data;
 
-//Hello
-
-//Lets go
 
 @end
