@@ -14,77 +14,91 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *charCollectionView;
 @property NSArray<NSDictionary *> *charArray;
 @property CGFloat cellScale;
-@property NSDictionary *selectedSceneDictionary;
+@property (nonatomic) NSDictionary *selectedSceneDictionary;
+@property (weak, nonatomic) IBOutlet UILabel *charNameLabel;
 @property CGRect imageSize;
 @end
 
 @implementation CharacterViewController
+
+#pragma mark -Segue
+//--------------------//
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     GameViewController *destView = segue.destinationViewController;
     CharacterViewController *sourceView = segue.sourceViewController;
     destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
     
 }
+//--------------------//
+#pragma mark CollectionViewAnimation
+//--------------------//
+
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     
-//    UICollectionViewFlowLayout *layout = _charCollectionView.collectionViewLayout;
-//    CGFloat cellWidth = layout.itemSize.width + layout.minimumLineSpacing;
-//    CGPoint offset = *targetContentOffset;
-//    NSLog(@"offset");
-//    double index = (offset.x + scrollView.contentInset.left) / cellWidth;
-//    int roundIndex = round(index);
-//    offset = CGPointMake(roundIndex * cellWidth - scrollView.contentInset.left, -scrollView.contentInset.top);
-//    NSArray<CharCollectionViewCell *> *visibleCells = _charCollectionView.visibleCells;
-//    
-//    [UIView animateWithDuration:0.5 animations:^{
-//         *targetContentOffset = offset;
-//    }];
     NSIndexPath *indexPath =
     [self.charCollectionView indexPathForItemAtPoint:
      [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
     NSLog(@"%f",_charCollectionView.center.x);
     [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
-    //collectionView
-    
-}
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
-    _imageSize = currentCell.charImage.frame;
     [UIView animateWithDuration:0.5 animations:^{
         [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
     }];
+    self.selectedSceneDictionary = _charArray[indexPath.item];
+}
 
-
+//--------------------//
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
+    NSIndexPath *indexPath =
+    [self.charCollectionView indexPathForItemAtPoint:
+     [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
+    NSLog(@"%f",_charCollectionView.center.x);
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.5 animations:^{
+        [currentCell.charImage setFrame:_imageSize];
+    }];
     
 }
+//--------------------//
+#pragma mark CollectionViewData
+//--------------------//
+
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
     [UIView animateWithDuration:0.5 animations:^{
         [currentCell.charImage setFrame:_imageSize];
     }];
 }
+//--------------------//
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
+//--------------------//
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    NSLog(@"%d",_charArray.count);
+    return _charArray.count;
 }
-
+//--------------------//
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
+    _imageSize = cell.charImage.frame;
+    cell.cellScene = _charArray[indexPath.item];
 
-    cell.characterForCell = @"oi";
-    //NSLog(@"%f",cell.charImage.frame.size.width);
     return cell;
 }
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    GameViewController *dest = segue.destinationViewController;
-//    
-//}
+//--------------------//
+#pragma mark VIEWLOAD
+//--------------------//
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+//    NSDictionary *oneScene = [[NSDictionary alloc] initWithObjectsAndKeys:
+//                               @"outer space",@"sceneName",
+//                               @"outerSpace.png",@"sceneImage",nil];
+//   _charArray = [NSArray arrayWithObjects:oneScene,oneScene, nil];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"database" ofType:@"plist"];
     NSArray *scenesList = [[NSArray alloc]initWithContentsOfFile:filePath ];
     _charArray = scenesList;
     _charCollectionView.dataSource = self;
@@ -97,16 +111,30 @@
     CGFloat insetX = (screenSize.height - cellWidth) / 2.0;
     UICollectionViewFlowLayout *layout = _charCollectionView.collectionViewLayout;
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
+
     layout.minimumLineSpacing = cellWidth/5;
-    layout.sectionInset = UIEdgeInsetsMake(insetY, insetX * 2.5, insetY, insetX * 2.5);
+    layout.sectionInset = UIEdgeInsetsMake(insetY, insetX*3, insetY, insetX*3 );
     
+}
+-(void)viewDidAppear:(BOOL)animated{
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        [self.charCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
+    }];
+    self.selectedSceneDictionary = currentCell.cellScene;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//------------------//
+-(void)setSelectedSceneDictionary:(NSDictionary *)selectedSceneDictionary{
+    _selectedSceneDictionary = selectedSceneDictionary;
+    _charNameLabel.text = selectedSceneDictionary[@"sceneName"];
+}
 /*
 #pragma mark - Navigation
 

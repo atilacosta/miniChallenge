@@ -11,5 +11,5 @@
 IB_DESIGNABLE  @interface CharCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *charImage;
-@property (nonatomic) NSObject *characterForCell;
+@property (nonatomic) NSDictionary *cellScene;
 @end

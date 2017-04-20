@@ -25,6 +25,9 @@
 		C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */; };
 		C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */; };
 		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
+		C39E06161EA92BC900AA148D /* personagem 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06131EA92BC900AA148D /* personagem 1.png */; };
+		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
+		C39E061A1EA9472600AA148D /* outerspace.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06191EA9472600AA148D /* outerspace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
 		C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
 		C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Third View 1.jpg"; sourceTree = "<group>"; };
+		C39E06131EA92BC900AA148D /* personagem 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 1.png"; sourceTree = "<group>"; };
+		C39E06141EA92BC900AA148D /* personagem 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 2.png"; sourceTree = "<group>"; };
+		C39E06191EA9472600AA148D /* outerspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = outerspace.png; path = Assets.xcassets/outerspace.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +152,13 @@
 				03DB5C821EA9259700EDE172 /* Subject.m */,
 				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
+				C39E06191EA9472600AA148D /* outerspace.png */,
 				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
 				C32DA4631EA6AB5500130808 /* astro.jpg */,
 				C32DA4651EA7E80D00130808 /* personagem.png */,
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
+				C39E06131EA92BC900AA148D /* personagem 1.png */,
+				C39E06141EA92BC900AA148D /* personagem 2.png */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
 				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
@@ -293,8 +302,11 @@
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
+				C39E06161EA92BC900AA148D /* personagem 1.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
+				C39E06171EA92BC900AA148D /* personagem 2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
+				C39E061A1EA9472600AA148D /* outerspace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
