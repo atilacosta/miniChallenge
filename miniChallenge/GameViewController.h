@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Scene;
+
 @interface GameViewController : UIViewController
+
+@property (nonatomic) Scene *selectedScene;
+@property (nonatomic) NSDictionary *selectedSceneDictionary;
 
 @end
