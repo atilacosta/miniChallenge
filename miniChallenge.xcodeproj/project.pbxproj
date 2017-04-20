@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03DB5C7E1EA7F89600EDE172 /* scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB5C7D1EA7F89600EDE172 /* scene.plist */; };
+		03DB5C801EA9147700EDE172 /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB5C7F1EA9147700EDE172 /* database.plist */; };
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
 		C32DA4641EA6AB5500130808 /* astro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4631EA6AB5500130808 /* astro.jpg */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03DB5C7D1EA7F89600EDE172 /* scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene.plist; sourceTree = "<group>"; };
+		03DB5C7F1EA9147700EDE172 /* database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = database.plist; sourceTree = "<group>"; };
 		03F5478C1EA7E5190033C2C4 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		03F5478D1EA7E5190033C2C4 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 				C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */,
 				03F5478C1EA7E5190033C2C4 /* Item.h */,
 				03F5478D1EA7E5190033C2C4 /* Item.m */,
-				03DB5C7D1EA7F89600EDE172 /* scene.plist */,
 				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
 				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
@@ -142,6 +141,7 @@
 				C32DA4651EA7E80D00130808 /* personagem.png */,
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
+				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
 			path = miniChallenge;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
-				03DB5C7E1EA7F89600EDE172 /* scene.plist in Resources */,
+				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

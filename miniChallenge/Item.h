@@ -9,12 +9,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Item : UIImageView
+@interface Item : NSObject
 
-@property (nonatomic,copy) NSNumber *itemID;
 @property (nonatomic, copy) NSString *itemName;
-@property (nonatomic,readonly) NSString *itemPhoto;
-@property (nonatomic) NSSet *itemTags;
+@property (nonatomic,readonly) NSString *itemImageName;
 @property (nonatomic) NSSet *itemQuestions;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;
