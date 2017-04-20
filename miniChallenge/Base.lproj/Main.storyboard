@@ -115,15 +115,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-0i-P3o">
-                                                    <rect key="frame" x="42" y="56" width="122" height="199"/>
+                                                    <rect key="frame" x="49" y="56" width="122" height="199"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="DOD-0i-P3o" secondAttribute="bottom" constant="55" id="2ge-5G-dYA"/>
-                                            <constraint firstAttribute="trailing" secondItem="DOD-0i-P3o" secondAttribute="trailing" constant="56" id="B5m-Ez-h8n"/>
+                                            <constraint firstAttribute="trailing" secondItem="DOD-0i-P3o" secondAttribute="trailing" constant="49" id="B5m-Ez-h8n"/>
                                             <constraint firstItem="DOD-0i-P3o" firstAttribute="top" secondItem="c1Y-3m-bnx" secondAttribute="top" constant="56" id="nj5-Ma-lIk"/>
-                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="leading" secondItem="c1Y-3m-bnx" secondAttribute="leading" constant="42" id="rXw-1y-ltP"/>
+                                            <constraint firstItem="DOD-0i-P3o" firstAttribute="leading" secondItem="c1Y-3m-bnx" secondAttribute="leading" constant="49" id="rXw-1y-ltP"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="charImage" destination="DOD-0i-P3o" id="o1j-Lx-qVm"/>
@@ -131,9 +131,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
-                                <rect key="frame" x="277" y="326" width="112" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWT-At-h9Y">
+                                <rect key="frame" x="0.0" y="20" width="667" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
+                                <rect key="frame" x="0.0" y="345" width="667" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="KhV-QB-1mz" kind="show" id="8Rj-sE-V4e"/>
@@ -142,14 +147,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ABP-lL-3vP" firstAttribute="top" secondItem="mmZ-MY-1VV" secondAttribute="bottom" id="0fo-xR-1sR"/>
                             <constraint firstItem="Sef-B9-Vt5" firstAttribute="leading" secondItem="CC1-ww-zhD" secondAttribute="leading" id="Bdx-hO-29w"/>
                             <constraint firstAttribute="trailing" secondItem="Sef-B9-Vt5" secondAttribute="trailing" id="Bgh-gc-4Hj"/>
+                            <constraint firstItem="wWT-At-h9Y" firstAttribute="top" secondItem="QqT-lK-VvH" secondAttribute="bottom" id="IEh-nN-iZP"/>
+                            <constraint firstAttribute="trailing" secondItem="wWT-At-h9Y" secondAttribute="trailing" id="Lg6-sc-PLh"/>
+                            <constraint firstItem="wWT-At-h9Y" firstAttribute="leading" secondItem="CC1-ww-zhD" secondAttribute="leading" id="NgA-XL-oow"/>
                             <constraint firstItem="Sef-B9-Vt5" firstAttribute="top" secondItem="CC1-ww-zhD" secondAttribute="top" id="XYb-Wl-kAY"/>
+                            <constraint firstItem="mmZ-MY-1VV" firstAttribute="leading" secondItem="CC1-ww-zhD" secondAttribute="leading" id="qwQ-gp-Vg7"/>
+                            <constraint firstAttribute="trailing" secondItem="mmZ-MY-1VV" secondAttribute="trailing" id="tMp-DB-WKQ"/>
                             <constraint firstItem="ABP-lL-3vP" firstAttribute="top" secondItem="Sef-B9-Vt5" secondAttribute="bottom" id="whb-cr-pii"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="charCollectionView" destination="Sef-B9-Vt5" id="TUC-Wr-MR3"/>
+                        <outlet property="charNameLabel" destination="wWT-At-h9Y" id="bjG-VZ-YQy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdi-U4-CmC" userLabel="First Responder" sceneMemberID="firstResponder"/>

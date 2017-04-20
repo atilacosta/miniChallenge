@@ -10,10 +10,10 @@
 
 @implementation CharCollectionViewCell
 
--(void)setCharacterForCell:(NSObject *)characterForCell{
-    _characterForCell = characterForCell;
+-(void)setCellScene:(NSDictionary *)cellScene{
+    _cellScene = cellScene;
     //self.backgroundColor = [UIColor clearColor];
-    _charImage.image = [UIImage imageNamed:@"personagem.png"];
+    _charImage.image = [UIImage imageNamed:_cellScene[@"sceneImage"]];
     _charImage.contentMode = UIViewContentModeScaleAspectFill;
     
 }
