@@ -14,7 +14,8 @@
 @property (nonatomic) NSArray *questionsList;
 
 
-+ (instancetype)subjectWithData: (NSDictionary *)data;
 - (instancetype)initWithData: (NSDictionary *)data;
+
+-(NSArray *)itemsQuestions;
 
 @end

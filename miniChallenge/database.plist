@@ -26,9 +26,13 @@
 						<key>questionsList</key>
 						<array>
 							<dict>
+								<key>question</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>0</integer>
 								<key>questionID</key>
 								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoices</key>
 								<array>
 									<string>Option 1</string>
 									<string>Option 2</string>
@@ -36,7 +40,7 @@
 									<string>Option 4</string>
 									<string>Option 5</string>
 								</array>
-								<key>Hint</key>
+								<key>questionHint</key>
 								<string>Comets volume depend on...</string>
 							</dict>
 						</array>

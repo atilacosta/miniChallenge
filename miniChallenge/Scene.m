@@ -35,12 +35,13 @@ int ItemUniqueIDReference;
     self = [super init];
     if (self) {
         //_uniqueID;
+        _privateItemsList = [NSMutableArray new];
+        
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
-        for (NSDictionary *current in dict[@"itemList"]){
-            Item *currentItem = [[Item alloc] init]; // WithData:current
-            [_privateItemsList addObject:currentItem];
+        for (NSDictionary *currentDict in dict[@"itemList"]){
+            [_privateItemsList addObject:[[Item alloc] initWithData:currentDict]];
         }
         
     }
