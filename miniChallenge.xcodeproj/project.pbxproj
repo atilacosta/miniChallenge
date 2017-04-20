@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03DB5C801EA9147700EDE172 /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB5C7F1EA9147700EDE172 /* database.plist */; };
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
+		7DD935031EA921BC0040242F /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD935021EA921BC0040242F /* Scene.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
 		C32DA4641EA6AB5500130808 /* astro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4631EA6AB5500130808 /* astro.jpg */; };
 		C32DA4661EA7E80D00130808 /* personagem.png in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4651EA7E80D00130808 /* personagem.png */; };
@@ -46,6 +47,8 @@
 		03DB5C7F1EA9147700EDE172 /* database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = database.plist; sourceTree = "<group>"; };
 		03F5478C1EA7E5190033C2C4 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		03F5478D1EA7E5190033C2C4 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		7DD935011EA921BC0040242F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		7DD935021EA921BC0040242F /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
 		C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCollectionViewCell.m; sourceTree = "<group>"; };
 		C32DA4631EA6AB5500130808 /* astro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astro.jpg; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */,
 				C35FA0CD1EA53BFC00E1DD29 /* GameViewController.h */,
 				C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */,
+				7DD935011EA921BC0040242F /* Scene.h */,
+				7DD935021EA921BC0040242F /* Scene.m */,
 				03F5478C1EA7E5190033C2C4 /* Item.h */,
 				03F5478D1EA7E5190033C2C4 /* Item.m */,
 				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
@@ -309,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD935031EA921BC0040242F /* Scene.m in Sources */,
 				C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */,
 				C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */,
 				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
