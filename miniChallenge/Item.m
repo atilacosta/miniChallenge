@@ -10,4 +10,26 @@
 
 @implementation Item
 
+
+- (instancetype)initWithData:(NSDictionary *)data{
+    self = [super init];
+    if (self) {
+        
+        //_itemID =
+        //_itemName =
+        //_itemTags =
+        //_itemQuestions =
+        //_itemPosX =
+        //_itemPosY =
+    }
+    return self;
+}
+
++ (instancetype)itemWithData:(NSDictionary *)data{
+    return [[Item alloc] initWithData:data];
+}
+
+//Add função para retornar a string do nome do objeto.
+
+
 @end
