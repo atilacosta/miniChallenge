@@ -7,8 +7,10 @@
 //
 
 #import "GameViewController.h"
+#import "Scene.h"
 
 @interface GameViewController ()
+
 
 @end
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.selectedScene = [[Scene alloc] init];
     
     
 }

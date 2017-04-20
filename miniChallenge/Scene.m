@@ -22,13 +22,16 @@ int ItemUniqueIDReference;
 }
 */
 
-- (instancetype)init
+- (instancetype)initWithDictionary: (NSDictionary *)dict
 {
     self = [super init];
     if (self) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+//        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+//        
+//        _itemsList = [[NSArray alloc] initWithContentsOfFile:filePath];
         
-        _itemsList = [[NSArray alloc] initWithContentsOfFile:filePath];
+    // Receive the selected scene from the characterSelectionViewController
+        
     }
     return self;
 }
