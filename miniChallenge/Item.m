@@ -20,14 +20,15 @@
 - (instancetype)initWithData:(NSDictionary *)data{
     self = [super init];
     if (self) {
+        _privateSubjects = [NSMutableArray new];
         
         _itemName = data[@"itemName"];
         _itemImageName = data[@"itemImage"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
-        _itemSubjects = data[@"subsjectsList"];
+        //_itemSubjects = data[@"subsjectsList"];
         
-        for(NSDictionary *currentSubject in _itemSubjects){
+        for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             //[self.privateSubjects addObject:<#(nonnull id)#>]
         }
         
