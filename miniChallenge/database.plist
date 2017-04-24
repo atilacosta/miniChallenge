@@ -5,7 +5,7 @@
 	<dict>
 		<key>sceneName</key>
 		<string>Outer Space</string>
-		<key>sceneImage</key>
+		<key>sceneCharacterImage</key>
 		<string>outerspace</string>
 		<key>itemsList</key>
 		<array>

@@ -8,22 +8,36 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 @property (weak, nonatomic) IBOutlet UIButton *leaderButton;
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
-
+@property AVAudioPlayer *audioPlayer;
 @end
 
 @implementation ViewController
 
 - (IBAction)startGame:(UIButton *)sender {
 }
+- (IBAction)toggleMusic:(id)sender {
+    if(_audioPlayer.isPlaying){
+        [_audioPlayer stop];
+    }
+    else{
+        [_audioPlayer play];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"test"  ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    _audioPlayer.numberOfLoops = -1;
+    [_audioPlayer play];
     // Do any additional setup after loading the view, typically from a nib.
     //veeejjaaaaa
     //adicionar no git

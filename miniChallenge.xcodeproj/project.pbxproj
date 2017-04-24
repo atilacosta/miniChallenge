@@ -34,6 +34,7 @@
 		C39E06241EAE727000AA148D /* fill2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061E1EAE727000AA148D /* fill2.png */; };
 		C39E06251EAE727000AA148D /* fill2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061F1EAE727000AA148D /* fill2@2x.png */; };
 		C39E06261EAE727000AA148D /* fill2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06201EAE727000AA148D /* fill2@3x.png */; };
+		C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39E06271EAE7F6C00AA148D /* test.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		C39E061E1EAE727000AA148D /* fill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fill2.png; sourceTree = "<group>"; };
 		C39E061F1EAE727000AA148D /* fill2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@2x.png"; sourceTree = "<group>"; };
 		C39E06201EAE727000AA148D /* fill2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@3x.png"; sourceTree = "<group>"; };
+		C39E06271EAE7F6C00AA148D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		C39E062A1EAE804900AA148D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 				C35FA0B31EA53BDB00E1DD29 /* miniChallengeTests */,
 				C35FA0BE1EA53BDB00E1DD29 /* miniChallengeUITests */,
 				C35FA0981EA53BDB00E1DD29 /* Products */,
+				C39E06291EAE804900AA148D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +181,7 @@
 				C39E061E1EAE727000AA148D /* fill2.png */,
 				C39E061F1EAE727000AA148D /* fill2@2x.png */,
 				C39E06201EAE727000AA148D /* fill2@3x.png */,
+				C39E06271EAE7F6C00AA148D /* test.mp3 */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
 				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
@@ -207,6 +212,14 @@
 				C35FA0C11EA53BDB00E1DD29 /* Info.plist */,
 			);
 			path = miniChallengeUITests;
+			sourceTree = "<group>";
+		};
+		C39E06291EAE804900AA148D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39E062A1EAE804900AA148D /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +341,7 @@
 				C39E06241EAE727000AA148D /* fill2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
 				C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */,
+				C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */,
 				C39E06251EAE727000AA148D /* fill2@2x.png in Resources */,
 				C39E06211EAE727000AA148D /* characterSelection.png in Resources */,
 				C39E061A1EA9472600AA148D /* outerspace.png in Resources */,

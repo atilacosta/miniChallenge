@@ -13,7 +13,7 @@
 -(void)setCellScene:(NSDictionary *)cellScene{
     _cellScene = cellScene;
     //self.backgroundColor = [UIColor clearColor];
-    _charImage.image = [UIImage imageNamed:_cellScene[@"sceneImage"]];
+    _charImage.image = [UIImage imageNamed:_cellScene[@"sceneCharacterImage"]];
     _charImage.contentMode = UIViewContentModeScaleAspectFill;
     
 }
