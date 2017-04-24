@@ -108,12 +108,12 @@
     CGFloat cellHeight = (screenSize.width * _cellScale);
     CGFloat cellWidth = (screenSize.height * _cellScale);
     CGFloat insetY = (screenSize.width - cellHeight) / 2.0;
-    CGFloat insetX = (screenSize.height - cellWidth) / 2.0;
+    CGFloat insetX = (screenSize.height + cellWidth) / 2.0;
     UICollectionViewFlowLayout *layout = _charCollectionView.collectionViewLayout;
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
 
     layout.minimumLineSpacing = cellWidth/5;
-    layout.sectionInset = UIEdgeInsetsMake(insetY, insetX*3, insetY, insetX*3 );
+    layout.sectionInset = UIEdgeInsetsMake(0, insetX, 0,insetX);
     
 }
 -(void)viewDidAppear:(BOOL)animated{
