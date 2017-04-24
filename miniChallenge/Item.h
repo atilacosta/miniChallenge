@@ -12,7 +12,6 @@
 @interface Item : NSObject
 
 @property (nonatomic, copy) NSString *itemName;
-@property (nonatomic,readonly) NSString *itemImageName;
 @property (nonatomic) NSArray *itemSubjects;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;

@@ -24,7 +24,6 @@
         _privateSubjects = [NSMutableArray new];
         
         _itemName = data[@"itemName"];
-        _itemImageName = data[@"itemImage"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
         //_itemSubjects = data[@"subsjectsList"];
