@@ -28,6 +28,7 @@
 		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
 		C39E06161EA92BC900AA148D /* personagem 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06131EA92BC900AA148D /* personagem 1.png */; };
 		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
+		E8E035D91EAE84260024AE22 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E035D81EAE84260024AE22 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Third View 1.jpg"; sourceTree = "<group>"; };
 		C39E06131EA92BC900AA148D /* personagem 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 1.png"; sourceTree = "<group>"; };
 		C39E06141EA92BC900AA148D /* personagem 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 2.png"; sourceTree = "<group>"; };
+		E8E035D71EAE84260024AE22 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E8E035D81EAE84260024AE22 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
+				E8E035D71EAE84260024AE22 /* User.h */,
+				E8E035D81EAE84260024AE22 /* User.m */,
 				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
@@ -161,12 +166,6 @@
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
 				C39E06131EA92BC900AA148D /* personagem 1.png */,
 				C39E06141EA92BC900AA148D /* personagem 2.png */,
-				C39E061B1EAE727000AA148D /* characterSelection.png */,
-				C39E061C1EAE727000AA148D /* characterSelection@2x.png */,
-				C39E061D1EAE727000AA148D /* characterSelection@3x.png */,
-				C39E061E1EAE727000AA148D /* fill2.png */,
-				C39E061F1EAE727000AA148D /* fill2@2x.png */,
-				C39E06201EAE727000AA148D /* fill2@3x.png */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
 				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
@@ -307,15 +306,12 @@
 			files = (
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
-				C39E06231EAE727000AA148D /* characterSelection@3x.png in Resources */,
-				C39E06261EAE727000AA148D /* fill2@3x.png in Resources */,
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
 				C39E06161EA92BC900AA148D /* personagem 1.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
 				C39E06171EA92BC900AA148D /* personagem 2.png in Resources */,
-				C39E06241EAE727000AA148D /* fill2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +343,7 @@
 				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
 				C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */,
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
+				E8E035D91EAE84260024AE22 /* User.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
 				7DECBF881EA932A500E44078 /* Question.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
