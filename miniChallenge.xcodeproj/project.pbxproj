@@ -34,6 +34,7 @@
 		C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061C1EAE727000AA148D /* characterSelection@2x.png */; };
 		C39E06251EAE727000AA148D /* fill2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061F1EAE727000AA148D /* fill2@2x.png */; };
 		C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39E06271EAE7F6C00AA148D /* test.mp3 */; };
+		E84A9D831EAE9844008EDE77 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E84A9D821EAE9844008EDE77 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		C39E06201EAE727000AA148D /* fill2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@3x.png"; sourceTree = "<group>"; };
 		C39E06271EAE7F6C00AA148D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		C39E062A1EAE804900AA148D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E84A9D811EAE9844008EDE77 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E84A9D821EAE9844008EDE77 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

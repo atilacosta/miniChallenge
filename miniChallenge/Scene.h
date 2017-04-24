@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Item;
+
 @interface Scene : UIView
 
 //@property (nonatomic, readonly) NSNumber *uniqueIDReference;
@@ -18,7 +20,7 @@
 @property (nonatomic) NSString *backgroundImage;
 //@property (nonatomic) Character *character;
 
-@property (nonatomic) NSArray *itemsList;
+@property (nonatomic) NSArray<Item *> *itemsList;
 
 
 +(NSNumber *)getUniqueID;

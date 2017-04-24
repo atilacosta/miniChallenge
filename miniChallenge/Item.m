@@ -28,6 +28,14 @@
         _itemPosY = data[@"itemPosY"];
         //_itemSubjects = data[@"subsjectsList"];
         
+//        self.frame.origin.x = _itemPosX;
+//        self.frame.origin.y = _itemPosY;
+
+        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], 100, 100);
+        // action
+        
+//        [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:_itemName]]];
+        [self setBackgroundColor:[UIColor blueColor]];
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }

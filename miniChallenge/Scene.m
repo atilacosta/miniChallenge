@@ -37,11 +37,19 @@ int ItemUniqueIDReference;
         //_uniqueID;
         _privateItemsList = [NSMutableArray new];
         
+        self.frame = CGRectMake(0, 0 , 450, 200);
+        
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
-        for (NSDictionary *currentDict in dict[@"itemList"]){
-            [_privateItemsList addObject:[[Item alloc] initWithData:currentDict]];
+        for (NSDictionary *currentDict in dict[@"itemsList"]){
+            Item *currentItem = [[Item alloc] initWithData:currentDict];
+            [_privateItemsList addObject:currentItem];
+            
+            [self addSubview:currentItem];
+            
+            // set position from plist info
+            // add subview
         }
         
     }
