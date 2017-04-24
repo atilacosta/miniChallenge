@@ -11,6 +11,7 @@
 		03DB5C831EA9259700EDE172 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB5C821EA9259700EDE172 /* Subject.m */; };
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
 		7DD935031EA921BC0040242F /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD935021EA921BC0040242F /* Scene.m */; };
+		7DECBF881EA932A500E44078 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DECBF871EA932A500E44078 /* Question.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
 		C32DA4641EA6AB5500130808 /* astro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4631EA6AB5500130808 /* astro.jpg */; };
 		C32DA4661EA7E80D00130808 /* personagem.png in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4651EA7E80D00130808 /* personagem.png */; };
@@ -62,6 +63,8 @@
 		03F5478D1EA7E5190033C2C4 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		7DD935011EA921BC0040242F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		7DD935021EA921BC0040242F /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		7DECBF861EA932A500E44078 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		7DECBF871EA932A500E44078 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
 		C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCollectionViewCell.m; sourceTree = "<group>"; };
 		C32DA4631EA6AB5500130808 /* astro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astro.jpg; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
+				E8E035D71EAE84260024AE22 /* User.h */,
+				E8E035D81EAE84260024AE22 /* User.m */,
 				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
@@ -166,11 +171,12 @@
 				03F5478D1EA7E5190033C2C4 /* Item.m */,
 				03DB5C811EA9259700EDE172 /* Subject.h */,
 				03DB5C821EA9259700EDE172 /* Subject.m */,
+				7DECBF861EA932A500E44078 /* Question.h */,
+				7DECBF871EA932A500E44078 /* Question.m */,
 				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
 				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
-				C39E06191EA9472600AA148D /* outerspace.png */,
-				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
 				C32DA4631EA6AB5500130808 /* astro.jpg */,
+				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
 				C32DA4651EA7E80D00130808 /* personagem.png */,
 				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
 				C39E06131EA92BC900AA148D /* personagem 1.png */,
@@ -330,15 +336,12 @@
 			files = (
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
-				C39E06231EAE727000AA148D /* characterSelection@3x.png in Resources */,
-				C39E06261EAE727000AA148D /* fill2@3x.png in Resources */,
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
 				C39E06161EA92BC900AA148D /* personagem 1.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
 				C39E06171EA92BC900AA148D /* personagem 2.png in Resources */,
-				C39E06241EAE727000AA148D /* fill2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
 				C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */,
 				C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */,
@@ -375,7 +378,9 @@
 				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
 				C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */,
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
+				E8E035D91EAE84260024AE22 /* User.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
+				7DECBF881EA932A500E44078 /* Question.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
 				03DB5C831EA9259700EDE172 /* Subject.m in Sources */,
 			);

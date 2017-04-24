@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "Scene.h"
+#import "Item.h"
 
 @interface GameViewController ()
 
@@ -20,7 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.selectedScene = [[Scene alloc] init];
+    self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary];
+    
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Space"]]];
+    
+   // [self.selectedScene.itemsList objectAtIndex:0].itemPosX = 12;
     
     
 }

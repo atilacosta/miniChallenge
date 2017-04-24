@@ -14,7 +14,9 @@
 
 
 @property (nonatomic, readonly) NSNumber *uniqueID;
+@property (nonatomic) NSString *name;
 @property (nonatomic) NSString *backgroundImage;
+//@property (nonatomic) Character *character;
 
 @property (nonatomic) NSArray *itemsList;
 

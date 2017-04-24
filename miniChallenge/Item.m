@@ -7,6 +7,7 @@
 //
 
 #import "Item.h"
+#import "Subject.h"
 
 @interface Item ()
 
@@ -23,23 +24,20 @@
         _privateSubjects = [NSMutableArray new];
         
         _itemName = data[@"itemName"];
-        _itemImageName = data[@"itemImage"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
         //_itemSubjects = data[@"subsjectsList"];
         
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
-            //[self.privateSubjects addObject:<#(nonnull id)#>]
+            [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
     }
     return self;
 }
 
-
-
-+ (instancetype)itemWithData:(NSDictionary *)data{
-    return [[Item alloc] initWithData:data];
+-(NSArray *)itemsSubjects {
+    return [_privateSubjects copy];
 }
 
 //Add função para retornar a string do nome do objeto.

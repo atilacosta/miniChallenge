@@ -7,6 +7,7 @@
 //
 
 #import "Subject.h"
+#import "Question.h"
 
 @interface Subject ()
 
@@ -25,15 +26,15 @@
         _subjectName = data[@"subjectName"];
         
         for(NSDictionary *currentQuestion in data[@"questionsList"]){
-            //[self.privateQuestions addObject:<#(nonnull id)#>];
+            [self.privateQuestions addObject:[[Question alloc]initWithDictionary:currentQuestion]];
         }
     
     }
     return self;
 }
 
-+ (instancetype)subjectWithData: (NSDictionary *)data{
-    return [[Subject alloc] initWithData:data];
+-(NSArray *)itemsQuestions {
+    return [_privateQuestions copy];
 }
 
 @end
