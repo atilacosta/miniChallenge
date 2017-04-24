@@ -9,6 +9,7 @@
 #import "CharacterViewController.h"
 #import "CharCollectionViewCell.h"
 #import "GameViewController.h"
+#import <AVFoundation/AVFoundation.h>
 @interface CharacterViewController  () <UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *charCollectionView;
@@ -92,7 +93,7 @@
 //--------------------//
 - (void)viewDidLoad {
     
-    [super viewDidLoad];
+
 //    NSDictionary *oneScene = [[NSDictionary alloc] initWithObjectsAndKeys:
 //                               @"outer space",@"sceneName",
 //                               @"outerSpace.png",@"sceneImage",nil];

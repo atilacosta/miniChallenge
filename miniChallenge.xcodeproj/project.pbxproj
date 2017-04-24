@@ -28,6 +28,13 @@
 		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
 		C39E06161EA92BC900AA148D /* personagem 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06131EA92BC900AA148D /* personagem 1.png */; };
 		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
+		C39E06211EAE727000AA148D /* characterSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061B1EAE727000AA148D /* characterSelection.png */; };
+		C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061C1EAE727000AA148D /* characterSelection@2x.png */; };
+		C39E06231EAE727000AA148D /* characterSelection@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061D1EAE727000AA148D /* characterSelection@3x.png */; };
+		C39E06241EAE727000AA148D /* fill2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061E1EAE727000AA148D /* fill2.png */; };
+		C39E06251EAE727000AA148D /* fill2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061F1EAE727000AA148D /* fill2@2x.png */; };
+		C39E06261EAE727000AA148D /* fill2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06201EAE727000AA148D /* fill2@3x.png */; };
+		C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39E06271EAE7F6C00AA148D /* test.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +91,14 @@
 		C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Third View 1.jpg"; sourceTree = "<group>"; };
 		C39E06131EA92BC900AA148D /* personagem 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 1.png"; sourceTree = "<group>"; };
 		C39E06141EA92BC900AA148D /* personagem 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 2.png"; sourceTree = "<group>"; };
+		C39E061B1EAE727000AA148D /* characterSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = characterSelection.png; sourceTree = "<group>"; };
+		C39E061C1EAE727000AA148D /* characterSelection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "characterSelection@2x.png"; sourceTree = "<group>"; };
+		C39E061D1EAE727000AA148D /* characterSelection@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "characterSelection@3x.png"; sourceTree = "<group>"; };
+		C39E061E1EAE727000AA148D /* fill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fill2.png; sourceTree = "<group>"; };
+		C39E061F1EAE727000AA148D /* fill2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@2x.png"; sourceTree = "<group>"; };
+		C39E06201EAE727000AA148D /* fill2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@3x.png"; sourceTree = "<group>"; };
+		C39E06271EAE7F6C00AA148D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		C39E062A1EAE804900AA148D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +133,7 @@
 				C35FA0B31EA53BDB00E1DD29 /* miniChallengeTests */,
 				C35FA0BE1EA53BDB00E1DD29 /* miniChallengeUITests */,
 				C35FA0981EA53BDB00E1DD29 /* Products */,
+				C39E06291EAE804900AA148D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
+				E8E035D71EAE84260024AE22 /* User.h */,
+				E8E035D81EAE84260024AE22 /* User.m */,
 				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
@@ -167,6 +185,7 @@
 				C39E061E1EAE727000AA148D /* fill2.png */,
 				C39E061F1EAE727000AA148D /* fill2@2x.png */,
 				C39E06201EAE727000AA148D /* fill2@3x.png */,
+				C39E06271EAE7F6C00AA148D /* test.mp3 */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
 				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
@@ -197,6 +216,14 @@
 				C35FA0C11EA53BDB00E1DD29 /* Info.plist */,
 			);
 			path = miniChallengeUITests;
+			sourceTree = "<group>";
+		};
+		C39E06291EAE804900AA148D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39E062A1EAE804900AA148D /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,16 +334,17 @@
 			files = (
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
-				C39E06231EAE727000AA148D /* characterSelection@3x.png in Resources */,
-				C39E06261EAE727000AA148D /* fill2@3x.png in Resources */,
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
 				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
 				C39E06161EA92BC900AA148D /* personagem 1.png in Resources */,
 				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
 				C39E06171EA92BC900AA148D /* personagem 2.png in Resources */,
-				C39E06241EAE727000AA148D /* fill2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
+				C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */,
+				C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */,
+				C39E06251EAE727000AA148D /* fill2@2x.png in Resources */,
+				C39E06211EAE727000AA148D /* characterSelection.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +375,7 @@
 				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
 				C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */,
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
+				E8E035D91EAE84260024AE22 /* User.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
 				7DECBF881EA932A500E44078 /* Question.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
