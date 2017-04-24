@@ -30,11 +30,9 @@
 		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
 		C39E06211EAE727000AA148D /* characterSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061B1EAE727000AA148D /* characterSelection.png */; };
 		C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061C1EAE727000AA148D /* characterSelection@2x.png */; };
-		C39E06231EAE727000AA148D /* characterSelection@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061D1EAE727000AA148D /* characterSelection@3x.png */; };
-		C39E06241EAE727000AA148D /* fill2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061E1EAE727000AA148D /* fill2.png */; };
 		C39E06251EAE727000AA148D /* fill2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061F1EAE727000AA148D /* fill2@2x.png */; };
-		C39E06261EAE727000AA148D /* fill2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06201EAE727000AA148D /* fill2@3x.png */; };
 		C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39E06271EAE7F6C00AA148D /* test.mp3 */; };
+		E84A9D831EAE9844008EDE77 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E84A9D821EAE9844008EDE77 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +97,8 @@
 		C39E06201EAE727000AA148D /* fill2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@3x.png"; sourceTree = "<group>"; };
 		C39E06271EAE7F6C00AA148D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		C39E062A1EAE804900AA148D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E84A9D811EAE9844008EDE77 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E84A9D821EAE9844008EDE77 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
-				E8E035D71EAE84260024AE22 /* User.h */,
-				E8E035D81EAE84260024AE22 /* User.m */,
+				E84A9D811EAE9844008EDE77 /* User.h */,
+				E84A9D821EAE9844008EDE77 /* User.m */,
 				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
@@ -375,7 +375,7 @@
 				C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */,
 				C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */,
 				C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */,
-				E8E035D91EAE84260024AE22 /* User.m in Sources */,
+				E84A9D831EAE9844008EDE77 /* User.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
 				7DECBF881EA932A500E44078 /* Question.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
