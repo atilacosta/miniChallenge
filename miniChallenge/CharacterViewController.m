@@ -15,7 +15,6 @@
 @property NSArray<NSDictionary *> *charArray;
 @property CGFloat cellScale;
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
-@property (weak, nonatomic) IBOutlet UILabel *charNameLabel;
 @property CGRect imageSize;
 @end
 
@@ -32,7 +31,6 @@
 //--------------------//
 #pragma mark CollectionViewAnimation
 //--------------------//
-
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     
     NSIndexPath *indexPath =
@@ -83,8 +81,9 @@
 //--------------------//
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
-    _imageSize = cell.charImage.frame;
     cell.cellScene = _charArray[indexPath.item];
+    
+    
 
     return cell;
 }
@@ -103,7 +102,7 @@
     _charArray = scenesList;
     _charCollectionView.dataSource = self;
     _charCollectionView.delegate = self;
-    _cellScale = 0.5;
+    _cellScale = 0.4;
     CGSize screenSize = _charCollectionView.frame.size;
     CGFloat cellHeight = (screenSize.width * _cellScale);
     CGFloat cellWidth = (screenSize.height * _cellScale);
@@ -113,11 +112,12 @@
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
 
     layout.minimumLineSpacing = cellWidth/5;
-    layout.sectionInset = UIEdgeInsetsMake(0, insetX, 0,insetX);
+    layout.sectionInset = UIEdgeInsetsMake(0, insetX + 20, 0,insetX + 20);
     
 }
 -(void)viewDidAppear:(BOOL)animated{
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+    _imageSize = currentCell.charImage.frame;
     [UIView animateWithDuration:0.2 animations:^{
         
         [self.charCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
@@ -133,7 +133,7 @@
 //------------------//
 -(void)setSelectedSceneDictionary:(NSDictionary *)selectedSceneDictionary{
     _selectedSceneDictionary = selectedSceneDictionary;
-    _charNameLabel.text = selectedSceneDictionary[@"sceneName"];
+    NSLog(@"Scene name: %@", _selectedSceneDictionary);
 }
 /*
 #pragma mark - Navigation
