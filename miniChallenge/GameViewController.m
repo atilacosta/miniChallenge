@@ -26,8 +26,6 @@
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Space"]]];
     
-   // [self.selectedScene.itemsList objectAtIndex:0].itemPosX = 12;
-    
     
 }
 

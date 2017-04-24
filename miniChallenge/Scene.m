@@ -40,7 +40,9 @@ int ItemUniqueIDReference;
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
-        for (NSDictionary *currentDict in dict[@"itemList"]){
+        [_privateItemsList addObject:@2];
+        
+        for (NSDictionary *currentDict in dict[@"itemsList"]){
             [_privateItemsList addObject:[[Item alloc] initWithData:currentDict]];
         }
         
