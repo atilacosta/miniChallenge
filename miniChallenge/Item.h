@@ -9,15 +9,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Item : NSObject
+@class Subject;
+
+@interface Item : UIButton
 
 @property (nonatomic, copy) NSString *itemName;
-@property (nonatomic) NSArray *itemSubjects;
+@property (nonatomic) NSArray<Subject *>  *itemSubjects;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;
 
-- (instancetype)initWithData:(NSDictionary *)data;
 
--(NSArray *)itemsSubjects;
+- (instancetype)initWithData:(NSDictionary *)data;
 
 @end

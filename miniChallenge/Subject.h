@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Question;
+
 @interface Subject : NSObject
 
 @property (nonatomic) NSString *subjectName;
-@property (nonatomic) NSArray *questionsList;
+@property (nonatomic) NSArray<Question *> *questionsList;
 
 
 - (instancetype)initWithData: (NSDictionary *)data;
 
--(NSArray *)itemsQuestions;
 
 @end

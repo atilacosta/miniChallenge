@@ -22,9 +22,12 @@
     // Do any additional setup after loading the view.
     
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary];
+    self.selectedScene.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.selectedScene];
     
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Space"]]];
+//    [self.view setBackgroundColor:[UIColor redColor]];
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Space"]]];
     
     
 }

@@ -17,9 +17,9 @@
 				<key>itemNamePt</key>
 				<string>Sol</string>
 				<key>itemPosX</key>
-				<integer>0</integer>
+				<integer>150</integer>
 				<key>itemPosY</key>
-				<integer>0</integer>
+				<integer>200</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -102,9 +102,9 @@
 				<key>itemNamePt</key>
 				<string>Terra</string>
 				<key>itemPosX</key>
-				<integer>0</integer>
+				<integer>50</integer>
 				<key>itemPosY</key>
-				<integer>0</integer>
+				<integer>50</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
