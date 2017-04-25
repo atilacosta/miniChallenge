@@ -83,6 +83,9 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
     cell.cellScene = _charArray[indexPath.item];
+    if(indexPath.item > 0){
+        cell.charImage.image = [UIImage imageNamed:@"any"];
+    }
     
     
 
