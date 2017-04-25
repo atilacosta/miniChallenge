@@ -157,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
+				E84A9D811EAE9844008EDE77 /* User.h */,
+				E84A9D821EAE9844008EDE77 /* User.m */,
 				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
 				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
