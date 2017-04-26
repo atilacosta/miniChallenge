@@ -20,12 +20,14 @@
 @property (nonatomic) NSString *backgroundImage;
 //@property (nonatomic) Character *character;
 
+//@property (nonatomic) NSNumber *width,*height;
+
 @property (nonatomic) NSArray<Item *> *itemsList;
 
 
 +(NSNumber *)getUniqueID;
 
 
-- (instancetype)initWithDictionary: (NSDictionary *)dict;
+- (instancetype)initWithDictionary: (NSDictionary *)dict withWidth:(NSNumber *)width withHeight:(NSNumber *)height;
 
 @end

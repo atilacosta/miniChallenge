@@ -272,9 +272,9 @@
 				<key>itemNamePt</key>
 				<string>Espaçonave</string>
 				<key>itemPosX</key>
-				<integer>400</integer>
+				<integer>512</integer>
 				<key>itemPosY</key>
-				<integer>10</integer>
+				<integer>374</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>

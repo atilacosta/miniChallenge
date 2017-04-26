@@ -19,6 +19,6 @@
 @property (nonatomic) NSNumber *itemPosY;
 
 
-- (instancetype)initWithData:(NSDictionary *)data;
+- (instancetype)initWithData:(NSDictionary *)data withWidth:(NSNumber *)width withHeight:(NSNumber *)height;;
 
 @end
