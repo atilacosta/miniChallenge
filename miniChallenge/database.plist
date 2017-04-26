@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>sceneName</key>
-		<string>Space</string>
+		<string>SceneSpace</string>
 		<key>sceneImage</key>
 		<string>OuterSpace</string>
 		<key>sceneCharacterImage</key>
@@ -181,239 +181,86 @@
 					</dict>
 				</array>
 			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>sceneName</key>
-		<string>Veja nois</string>
-		<key>sceneImage</key>
-		<string>Personagem</string>
-		<key>itemsList</key>
-		<array>
 			<dict>
 				<key>itemName</key>
-				<string>Comet</string>
-				<key>itemImage</key>
-				<string>comet</string>
+				<string>Asteroid</string>
+				<key>itemNamePt</key>
+				<string>Asteróide</string>
 				<key>itemPosX</key>
-				<integer>0</integer>
+				<integer>200</integer>
 				<key>itemPosY</key>
-				<integer>0</integer>
+				<integer>300</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Math</string>
+						<string>Science</string>
+						<key>subjectNamePt</key>
+						<string>Ciência</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string></string>
+								<string>Is the Sun a planet or a star?</string>
+								<key>questionPt</key>
+								<string>O sol é um planeta ou uma estrela?</string>
 								<key>questionValue</key>
-								<integer>0</integer>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Star</string>
+									<string>Planet</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Estrela</string>
+									<string>Planeta</string>
 								</array>
 								<key>questionHint</key>
-								<string>Comets volume depend on...</string>
+								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<key>questionHintPt</key>
+								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
 							</dict>
 						</array>
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>Biology</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Spaceship</string>
-				<key>itemImage</key>
-				<string>spaceship</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Planet</string>
-				<key>itemImage</key>
-				<string>planet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Satellite</string>
-				<key>itemImage</key>
-				<string>satellite</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>sceneName</key>
-		<string>Sapequinha</string>
-		<key>sceneImage</key>
-		<string>personagem</string>
-		<key>itemsList</key>
-		<array>
-			<dict>
-				<key>itemName</key>
-				<string>Comet</string>
-				<key>itemImage</key>
-				<string>comet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
+						<string>English</string>
+						<key>subjectNamePt</key>
+						<string>Portuguese</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string></string>
+								<string>What is called a group of stars?</string>
+								<key>questionPt</key>
+								<string>Como se chama um conjunto de estrelas?</string>
 								<key>questionValue</key>
-								<integer>0</integer>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Constellation</string>
+									<string>Galaxy</string>
+									<string>Universe</string>
+									<string>Solar System</string>
+									<string>Nebula</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Constelação</string>
+									<string>Galáxia</string>
+									<string>Universo</string>
+									<string>Sistema Solar</string>
+									<string>Nébula</string>
 								</array>
 								<key>questionHint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string>Biology</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
+								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<key>questionHintPt</key>
+								<string>Andromeda is a famous example of a group of stars.</string>
 							</dict>
 						</array>
 					</dict>
@@ -422,232 +269,83 @@
 			<dict>
 				<key>itemName</key>
 				<string>Spaceship</string>
-				<key>itemImage</key>
-				<string>spaceship</string>
+				<key>itemNamePt</key>
+				<string>Espaçonave</string>
 				<key>itemPosX</key>
-				<integer>0</integer>
+				<integer>400</integer>
 				<key>itemPosY</key>
-				<integer>0</integer>
+				<integer>10</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Math</string>
+						<string>Science</string>
+						<key>subjectNamePt</key>
+						<string>Ciência</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
+								<key>question</key>
+								<string>Is the Sun a planet or a star?</string>
+								<key>questionPt</key>
+								<string>O sol é um planeta ou uma estrela?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Star</string>
+									<string>Planet</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Planet</string>
-				<key>itemImage</key>
-				<string>planet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoicesPt</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Estrela</string>
+									<string>Planeta</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Satellite</string>
-				<key>itemImage</key>
-				<string>satellite</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>sceneName</key>
-		<string>Outer Space</string>
-		<key>sceneImage</key>
-		<string>outerspace</string>
-		<key>itemsList</key>
-		<array>
-			<dict>
-				<key>itemName</key>
-				<string>Comet</string>
-				<key>itemImage</key>
-				<string>comet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
+								<key>questionHint</key>
+								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<key>questionHintPt</key>
+								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
 							</dict>
 						</array>
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>Biology</string>
+						<string>English</string>
+						<key>subjectNamePt</key>
+						<string>Portuguese</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
+								<key>question</key>
+								<string>What is called a group of stars?</string>
+								<key>questionPt</key>
+								<string>Como se chama um conjunto de estrelas?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Constellation</string>
+									<string>Galaxy</string>
+									<string>Universe</string>
+									<string>Solar System</string>
+									<string>Nebula</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Spaceship</string>
-				<key>itemImage</key>
-				<string>spaceship</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoicesPt</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Constelação</string>
+									<string>Galáxia</string>
+									<string>Universo</string>
+									<string>Sistema Solar</string>
+									<string>Nébula</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Planet</string>
-				<key>itemImage</key>
-				<string>planet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
+								<key>questionHint</key>
+								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<key>questionHintPt</key>
+								<string>Andromeda is a famous example of a group of stars.</string>
 							</dict>
 						</array>
 					</dict>
@@ -656,364 +354,83 @@
 			<dict>
 				<key>itemName</key>
 				<string>Satellite</string>
-				<key>itemImage</key>
-				<string>satellite</string>
+				<key>itemNamePt</key>
+				<string>Satélite</string>
 				<key>itemPosX</key>
-				<integer>0</integer>
+				<integer>200</integer>
 				<key>itemPosY</key>
-				<integer>0</integer>
+				<integer>10</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Math</string>
+						<string>Science</string>
+						<key>subjectNamePt</key>
+						<string>Ciência</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
+								<key>question</key>
+								<string>Is the Sun a planet or a star?</string>
+								<key>questionPt</key>
+								<string>O sol é um planeta ou uma estrela?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Star</string>
+									<string>Planet</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>sceneName</key>
-		<string>Outer Space</string>
-		<key>sceneImage</key>
-		<string>outerspace</string>
-		<key>itemsList</key>
-		<array>
-			<dict>
-				<key>itemName</key>
-				<string>Comet</string>
-				<key>itemImage</key>
-				<string>comet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoicesPt</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Estrela</string>
+									<string>Planeta</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
+								<key>questionHint</key>
+								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<key>questionHintPt</key>
+								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
 							</dict>
 						</array>
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>Biology</string>
+						<string>English</string>
+						<key>subjectNamePt</key>
+						<string>Portuguese</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
+								<key>question</key>
+								<string>What is called a group of stars?</string>
+								<key>questionPt</key>
+								<string>Como se chama um conjunto de estrelas?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
 								<key>questionID</key>
 								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoices</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Constellation</string>
+									<string>Galaxy</string>
+									<string>Universe</string>
+									<string>Solar System</string>
+									<string>Nebula</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Spaceship</string>
-				<key>itemImage</key>
-				<string>spaceship</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
+								<key>questionChoicesPt</key>
 								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
+									<string>Constelação</string>
+									<string>Galáxia</string>
+									<string>Universo</string>
+									<string>Sistema Solar</string>
+									<string>Nébula</string>
 								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Planet</string>
-				<key>itemImage</key>
-				<string>planet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Satellite</string>
-				<key>itemImage</key>
-				<string>satellite</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>sceneName</key>
-		<string>Outer Space</string>
-		<key>sceneImage</key>
-		<string>outerspace</string>
-		<key>itemsList</key>
-		<array>
-			<dict>
-				<key>itemName</key>
-				<string>Comet</string>
-				<key>itemImage</key>
-				<string>comet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string>Biology</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Spaceship</string>
-				<key>itemImage</key>
-				<string>spaceship</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Planet</string>
-				<key>itemImage</key>
-				<string>planet</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
-							</dict>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Satellite</string>
-				<key>itemImage</key>
-				<string>satellite</string>
-				<key>itemPosX</key>
-				<integer>0</integer>
-				<key>itemPosY</key>
-				<integer>0</integer>
-				<key>subjectsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string>Math</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>Alternatives</key>
-								<array>
-									<string>Option 1</string>
-									<string>Option 2</string>
-									<string>Option 3</string>
-									<string>Option 4</string>
-									<string>Option 5</string>
-								</array>
-								<key>Hint</key>
-								<string>Comets volume depend on...</string>
+								<key>questionHint</key>
+								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<key>questionHintPt</key>
+								<string>Andromeda is a famous example of a group of stars.</string>
 							</dict>
 						</array>
 					</dict>

@@ -31,11 +31,23 @@
 //        self.frame.origin.x = _itemPosX;
 //        self.frame.origin.y = _itemPosY;
 
-        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], 100, 100);
-        // action
         
-//        [self setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:_itemName]]];
-        [self setBackgroundColor:[UIColor blueColor]];
+ 
+        
+        UIImage *image = [UIImage imageNamed:_itemName];
+        
+        CGFloat heightInPoints = image.size.height;
+        //CGFloat heightInPixels = heightInPoints * image.scale;
+        
+        CGFloat widthInPoints = image.size.width;
+        //CGFloat widthInPixels = widthInPoints * image.scale;
+        
+        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
+        
+        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+        
+        //action
+        
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }

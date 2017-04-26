@@ -37,8 +37,6 @@ int ItemUniqueIDReference;
         //_uniqueID;
         _privateItemsList = [NSMutableArray new];
         
-        self.frame = CGRectMake(0, 0 , 450, 200);
-        
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
