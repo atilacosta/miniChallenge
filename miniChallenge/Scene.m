@@ -30,18 +30,17 @@ int ItemUniqueIDReference;
 }
 */
 
-- (instancetype)initWithDictionary: (NSDictionary *)dict
+- (instancetype)initWithDictionary: (NSDictionary *)dict withWidth:(NSNumber *)width withHeight:(NSNumber *)height
 {
     self = [super init];
     if (self) {
         //_uniqueID;
         _privateItemsList = [NSMutableArray new];
-        
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
         for (NSDictionary *currentDict in dict[@"itemsList"]){
-            Item *currentItem = [[Item alloc] initWithData:currentDict];
+            Item *currentItem = [[Item alloc] initWithData:currentDict withWidth:width withHeight:height];
             [_privateItemsList addObject:currentItem];
             
             [self addSubview:currentItem];

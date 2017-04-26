@@ -12,7 +12,6 @@
 
 @interface GameViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 
 @end
@@ -23,9 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary];
+    self.width = @(self.view.frame.size.width);
+    self.height = @(self.view.frame.size.height);
+    
+    self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
+    
+    
     
     [self.view addSubview:self.selectedScene];
     

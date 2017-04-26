@@ -12,7 +12,13 @@
 
 @interface GameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+
 @property (nonatomic) Scene *selectedScene;
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
+
+
+@property (nonatomic) NSNumber *width;
+@property (nonatomic) NSNumber *height;
 
 @end

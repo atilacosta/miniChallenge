@@ -8,6 +8,7 @@
 
 #import "Item.h"
 #import "Subject.h"
+#import "GameViewController.h"
 
 @interface Item ()
 
@@ -18,7 +19,7 @@
 @implementation Item
 
 
-- (instancetype)initWithData:(NSDictionary *)data{
+- (instancetype)initWithData:(NSDictionary *)data withWidth:(NSNumber *)width withHeight:(NSNumber *)height;{
     self = [super init];
     if (self) {
         _privateSubjects = [NSMutableArray new];
@@ -26,27 +27,23 @@
         _itemName = data[@"itemName"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
-        //_itemSubjects = data[@"subsjectsList"];
         
-//        self.frame.origin.x = _itemPosX;
-//        self.frame.origin.y = _itemPosY;
-
         
- 
+        [self setPositionX:width andY:height];
         
         UIImage *image = [UIImage imageNamed:_itemName];
-        
         CGFloat heightInPoints = image.size.height;
-        //CGFloat heightInPixels = heightInPoints * image.scale;
-        
         CGFloat widthInPoints = image.size.width;
-        //CGFloat widthInPixels = widthInPoints * image.scale;
+        
+        NSArray *updated = [NSArray new];
+        updated = [self updateImageWidth:widthInPoints andHeight:heightInPoints andX:width andY:height];
+        
+        widthInPoints = [updated[0] intValue];
+        heightInPoints = [updated[1] intValue];
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
         [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
-        
-        //action
         
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
@@ -58,6 +55,31 @@
 
 -(NSArray *)itemsSubjects {
     return [_privateSubjects copy];
+}
+
+
+-(void)setPositionX:(NSNumber *)x andY:(NSNumber *)y{
+    
+    NSLog(@"%@    %@", self.itemPosX, self.itemPosY);
+    
+    self.itemPosX = @(([self.itemPosX intValue] * [x intValue])/1024);
+    self.itemPosY = @(([self.itemPosY intValue] * [y intValue])/748);
+    
+    NSLog(@"%@    %@", self.itemPosX, self.itemPosY);
+    
+}
+
+- (NSArray *)updateImageWidth:(CGFloat)width andHeight:(CGFloat)height andX:(NSNumber *)x andY:(NSNumber *)y{
+    
+    NSMutableArray *new = [NSMutableArray new];
+    
+    NSNumber *newWidth = @((width * [x intValue])/1024);
+    NSNumber *newHeight = @((height * [y intValue])/748);
+    
+    [new addObject:newWidth];
+    [new addObject:newHeight];
+    
+    return new;
 }
 
 //Add função para retornar a string do nome do objeto.
