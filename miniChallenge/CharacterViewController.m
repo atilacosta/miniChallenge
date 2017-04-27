@@ -37,7 +37,7 @@
     NSIndexPath *indexPath =
     [self.charCollectionView indexPathForItemAtPoint:
      [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
-    NSLog(@"%f",_charCollectionView.center.x);
+    //NSLog(@"%f",_charCollectionView.center.x);
     [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
     [UIView animateWithDuration:0.5 animations:^{
@@ -52,7 +52,7 @@
     NSIndexPath *indexPath =
     [self.charCollectionView indexPathForItemAtPoint:
      [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
-    NSLog(@"%f",_charCollectionView.center.x);
+    //NSLog(@"%f",_charCollectionView.center.x);
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
     [UIView animateWithDuration:0.5 animations:^{
         [currentCell.charImage setFrame:_imageSize];
@@ -76,7 +76,7 @@
 }
 //--------------------//
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSLog(@"%d",_charArray.count);
+    //NSLog(@"%d",_charArray.count);
     return _charArray.count;
 }
 //--------------------//
@@ -137,7 +137,7 @@
 //------------------//
 -(void)setSelectedSceneDictionary:(NSDictionary *)selectedSceneDictionary{
     _selectedSceneDictionary = selectedSceneDictionary;
-    NSLog(@"Scene name: %@", _selectedSceneDictionary);
+    //NSLog(@"Scene name: %@", _selectedSceneDictionary);
 }
 /*
 #pragma mark - Navigation

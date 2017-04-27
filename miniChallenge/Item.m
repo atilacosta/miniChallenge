@@ -40,7 +40,9 @@
         [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
 
         
-        for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
+        
+        for(NSDictionary *currentSubject in data[@"subjectsList"]){
+            //NSLog(@"%@",currentSubject);
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
@@ -55,7 +57,7 @@
 
 -(void)setPositionX:(NSNumber *)x andY:(NSNumber *)y{
     
-    NSLog(@"%@    %@", self.itemPosX, self.itemPosY);
+    //NSLog(@"%@    %@", self.itemPosX, self.itemPosY);
     
     self.itemPosX = @(([self.itemPosX intValue] * [x intValue])/1024);
     self.itemPosY = @(([self.itemPosY intValue] * [y intValue])/748);

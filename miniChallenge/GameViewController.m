@@ -52,6 +52,12 @@
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
     [self.view addSubview:self.selectedScene];
+    
+    for(Item *current in self.selectedScene.itemsList){
+        [current addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    NSLog(@"%@",self.selectedScene.itemsList[0].itemSubjects[0].subjectName);
 }
 
 -(void) dismissEverything {
