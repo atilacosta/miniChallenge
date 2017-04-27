@@ -35,11 +35,11 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        NSArray *updated = [NSArray new];
-        updated = [self updateImageWidth:widthInPoints andHeight:heightInPoints andX:width andY:height];
-        
-        widthInPoints = [updated[0] intValue];
-        heightInPoints = [updated[1] intValue];
+//        NSArray *updated = [NSArray new];
+//        updated = [self updateImageWidth:widthInPoints andHeight:heightInPoints andX:width andY:height];
+//        
+//        widthInPoints = [updated[0] intValue];
+//        heightInPoints = [updated[1] intValue];
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         

@@ -12,9 +12,6 @@
 
 @interface Scene : UIView
 
-//@property (nonatomic, readonly) NSNumber *uniqueIDReference;
-
-
 @property (nonatomic, readonly) NSNumber *uniqueID;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *backgroundImage;
@@ -22,11 +19,7 @@
 
 //@property (nonatomic) NSNumber *width,*height;
 
-@property (nonatomic) NSArray<Item *> *itemsList;
-
-
-+(NSNumber *)getUniqueID;
-
+@property (nonatomic) NSMutableArray<Item *> *itemsList;
 
 - (instancetype)initWithDictionary: (NSDictionary *)dict withWidth:(NSNumber *)width withHeight:(NSNumber *)height;
 
