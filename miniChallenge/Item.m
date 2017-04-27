@@ -35,7 +35,6 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
         [self setBackgroundColor:[UIColor colorWithPatternImage:image]];

@@ -54,10 +54,6 @@
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
     [self.view addSubview:self.selectedScene];
-    
-    [self.view addSubview:self.selectedScene];
-    
-    
 }
 
 -(void) dismissEverything {
