@@ -29,8 +29,6 @@
     
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
     
-    
-    
     [self.view addSubview:self.selectedScene];
     
 }

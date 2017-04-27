@@ -35,11 +35,6 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        NSArray *updated = [NSArray new];
-        updated = [self updateImageWidth:widthInPoints andHeight:heightInPoints andX:width andY:height];
-        
-        widthInPoints = [updated[0] intValue];
-        heightInPoints = [updated[1] intValue];
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
@@ -65,24 +60,7 @@
     self.itemPosX = @(([self.itemPosX intValue] * [x intValue])/1024);
     self.itemPosY = @(([self.itemPosY intValue] * [y intValue])/748);
     
-    NSLog(@"%@    %@", self.itemPosX, self.itemPosY);
-    
 }
-
-- (NSArray *)updateImageWidth:(CGFloat)width andHeight:(CGFloat)height andX:(NSNumber *)x andY:(NSNumber *)y{
-    
-    NSMutableArray *new = [NSMutableArray new];
-    
-    NSNumber *newWidth = @((width * [x intValue])/1024);
-    NSNumber *newHeight = @((height * [y intValue])/748);
-    
-    [new addObject:newWidth];
-    [new addObject:newHeight];
-    
-    return new;
-}
-
-//Add função para retornar a string do nome do objeto.
 
 
 @end
