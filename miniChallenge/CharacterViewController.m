@@ -17,6 +17,8 @@
 @property CGFloat cellScale;
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
 @property CGRect imageSize;
+@property CGSize selectedImageSize;
+
 @end
 
 @implementation CharacterViewController
@@ -41,7 +43,7 @@
     [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
     [UIView animateWithDuration:0.5 animations:^{
-        [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
+        [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
     }];
     self.selectedSceneDictionary = _charArray[indexPath.item];
 }
@@ -106,17 +108,22 @@
     _charArray = scenesList;
     _charCollectionView.dataSource = self;
     _charCollectionView.delegate = self;
-    _cellScale = 0.4;
-    CGSize screenSize = _charCollectionView.frame.size;
-    CGFloat cellHeight = (screenSize.width * _cellScale);
-    CGFloat cellWidth = (screenSize.height * _cellScale);
-    CGFloat insetY = (screenSize.width - cellHeight) / 2.0;
-    CGFloat insetX = (screenSize.height + cellWidth) / 2.0;
+    
+    //---------------//
+    
+    
+//    _cellScale = 0.4;
+//    CGSize screenSize = _charCollectionView.frame.size;
+//    CGFloat cellHeight = (screenSize.width * _cellScale);
+//    CGFloat cellWidth = (screenSize.height * _cellScale);
     UICollectionViewFlowLayout *layout = _charCollectionView.collectionViewLayout;
-    layout.itemSize = CGSizeMake(cellWidth, cellHeight);
-
-    layout.minimumLineSpacing = cellWidth/5;
-    layout.sectionInset = UIEdgeInsetsMake(0, insetX + 20, 0,insetX + 20);
+    _selectedImageSize = layout.itemSize;
+    CGFloat insetX = (self.view.frame.size.width / 2.0) - (layout.itemSize.width/2.0);
+//    layout.itemSize = CGSizeMake(cellWidth, cellHeight);
+//
+    
+    layout.minimumInteritemSpacing = self.view.frame.size.width/20;
+    layout.sectionInset = UIEdgeInsetsMake(0, insetX, 0,insetX);
     
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -125,7 +132,7 @@
     [UIView animateWithDuration:0.2 animations:^{
         
         [self.charCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-        [currentCell.charImage setFrame:CGRectMake(0, 0, currentCell.frame.size.width, currentCell.frame.size.height)];
+        [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
     }];
     self.selectedSceneDictionary = currentCell.cellScene;
 }
