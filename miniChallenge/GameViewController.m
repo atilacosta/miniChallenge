@@ -48,7 +48,7 @@
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
     
-    // Creater the scene
+    // Create the scene
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
     [self.view addSubview:self.selectedScene];
@@ -59,13 +59,13 @@
     }
     
     // Provide a dismissView to close everything and go back to the scene (initially hidden)
-//    self.dismissView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10000, 10000)];
-//    self.dismissView.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:self.dismissView];
-//    self.dismissView.layer.zPosition = 1;
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
-//    [self.dismissView addGestureRecognizer:tap];
-//    self.dismissView.hidden = YES;
+    self.dismissView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10000, 10000)];
+    //self.dismissView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.dismissView];
+    self.dismissView.layer.zPosition = 1;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
+    [self.dismissView addGestureRecognizer:tap];
+    self.dismissView.hidden = YES;
     
     // Test button
     Item *test2 = [[Item alloc] initWithData:self.selectedSceneDictionary[@"itemsList"][0] withWidth:@1024 withHeight:@748];
@@ -79,7 +79,10 @@
 
 -(void) dismissEverything {
     self.subjectSelectionView.hidden = YES;
-    //self.dismissView.hidden = YES;
+    self.dismissView.hidden = YES;
+}
+
+-(void) doNothing {
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,9 +94,10 @@
     NSLog(@"An item was pressed!");
     self.selectedItem = (Item *)sender;
     self.subjectSelectionView.hidden = NO;
+    [self updateSubjectSelectionView];
     self.subjectSelectionView.layer.zPosition = 1;
     
-    //self.dismissView.hidden = NO;
+    self.dismissView.hidden = NO;
 }
 
 -(void)updateSubjectSelectionView {
@@ -108,7 +112,7 @@
             break;
         case 2:
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
+            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
             break;
         case 3:
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;

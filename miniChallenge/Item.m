@@ -10,11 +10,6 @@
 #import "Subject.h"
 #import "GameViewController.h"
 
-@interface Item ()
-
-@property NSMutableArray *privateSubjects;
-
-@end
 
 @implementation Item
 
@@ -22,12 +17,11 @@
 - (instancetype)initWithData:(NSDictionary *)data withWidth:(NSNumber *)width withHeight:(NSNumber *)height;{
     self = [super init];
     if (self) {
-        _privateSubjects = [NSMutableArray new];
+        _itemSubjects = [NSMutableArray new];
         
         _itemName = data[@"itemName"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
-
         
         [self setPositionX:width andY:height];
         
@@ -37,19 +31,15 @@
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
-        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
-
+//        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+        [self setBackgroundImage:image forState:UIControlStateNormal];
         
-        for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
-            [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
+        for(NSDictionary *currentSubject in data[@"subjectsList"]){
+            [_itemSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
     }
     return self;
-}
-
--(NSArray *)itemsSubjects {
-    return [_privateSubjects copy];
 }
 
 
