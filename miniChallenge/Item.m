@@ -27,7 +27,7 @@
         _itemName = data[@"itemName"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
-        
+
         
         [self setPositionX:width andY:height];
         
@@ -35,15 +35,10 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-//        NSArray *updated = [NSArray new];
-//        updated = [self updateImageWidth:widthInPoints andHeight:heightInPoints andX:width andY:height];
-//        
-//        widthInPoints = [updated[0] intValue];
-//        heightInPoints = [updated[1] intValue];
-        
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
         [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+
         
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];

@@ -28,8 +28,6 @@
 
 @property(nonatomic) UIView *dismissView;
 
-//@property (weak, nonatomic) NSMutableArray<UIButton *> *selectedItemSubjectsList;
-
 
 //@property (weak, nonatomic) IBOutlet UILabel *selectedQuestionText;
 //@property (weak, nonatomic) IBOutlet UIButton *selectedQuestionAlternative1;
@@ -81,7 +79,7 @@
 
 -(void) dismissEverything {
     self.subjectSelectionView.hidden = YES;
-    self.dismissView.hidden = YES;
+    //self.dismissView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,9 +91,9 @@
     NSLog(@"An item was pressed!");
     self.selectedItem = (Item *)sender;
     self.subjectSelectionView.hidden = NO;
-    self.subjectSelectionView.layer.zPosition = 2;
+    self.subjectSelectionView.layer.zPosition = 1;
     
-    self.dismissView.hidden = NO;
+    //self.dismissView.hidden = NO;
 }
 
 -(void)updateSubjectSelectionView {
