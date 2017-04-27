@@ -9,10 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @class Scene;
+@class Item;
+@class Question;
 
 @interface GameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+
 @property (nonatomic) Scene *selectedScene;
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
+
+@property (nonatomic) Item *selectedItem;
+@property (nonatomic) Question *selectedQuestion;
+
+@property (nonatomic) NSNumber *width;
+@property (nonatomic) NSNumber *height;
 
 @end

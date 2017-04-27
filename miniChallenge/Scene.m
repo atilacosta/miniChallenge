@@ -9,15 +9,11 @@
 #import "Scene.h"
 #import "Item.h"
 
-// Static reference counters for the scene itself and the items that belong to it.
-int uniqueIDReference;
-int ItemUniqueIDReference;
-
-@interface Scene ()
-
-@property NSMutableArray *privateItemsList;
-
-@end
+//@interface Scene ()
+//
+//@property NSMutableArray *privateItemsList;
+//
+//@end
 
 
 @implementation Scene
@@ -30,21 +26,18 @@ int ItemUniqueIDReference;
 }
 */
 
-- (instancetype)initWithDictionary: (NSDictionary *)dict
+- (instancetype)initWithDictionary: (NSDictionary *)dict withWidth:(NSNumber *)width withHeight:(NSNumber *)height
 {
-    self = [super init];
+//    self = [super init];
+    self = [super initWithFrame:CGRectMake(0, 0, 2000, 2000)];
     if (self) {
-        //_uniqueID;
-        _privateItemsList = [NSMutableArray new];
-        
-        self.frame = CGRectMake(0, 0 , 450, 200);
-        
+        _itemsList = [NSMutableArray new];
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
         for (NSDictionary *currentDict in dict[@"itemsList"]){
-            Item *currentItem = [[Item alloc] initWithData:currentDict];
-            [_privateItemsList addObject:currentItem];
+            Item *currentItem = [[Item alloc] initWithData:currentDict withWidth:width withHeight:height];
+            [_itemsList addObject:currentItem];
             
             [self addSubview:currentItem];
             
@@ -57,21 +50,9 @@ int ItemUniqueIDReference;
 }
 
 // Overrides the itemList property getter
--(NSArray *)itemsList {
-    return [_privateItemsList copy];
-}
+//-(NSArray *)itemsList {
+//    return [_privateItemsList copy];
+//}
 
-
-// Method for a scene to get its unique ID
-+ (NSNumber *)getUniqueID {
-    uniqueIDReference++;
-    return @(uniqueIDReference-1);
-}
-
-// Method for an item that belongs to the scene to get its unique ID
-+ (NSNumber *)getItemUniqueID {
-    ItemUniqueIDReference++;
-    return @(ItemUniqueIDReference-1);
-}
 
 @end

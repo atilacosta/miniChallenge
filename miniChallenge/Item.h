@@ -14,11 +14,11 @@
 @interface Item : UIButton
 
 @property (nonatomic, copy) NSString *itemName;
-@property (nonatomic) NSArray<Subject *>  *itemSubjects;
+@property (nonatomic) NSMutableArray<Subject *>  *itemSubjects;
 @property (nonatomic) NSNumber *itemPosX;
 @property (nonatomic) NSNumber *itemPosY;
 
 
-- (instancetype)initWithData:(NSDictionary *)data;
+- (instancetype)initWithData:(NSDictionary *)data withWidth:(NSNumber *)width withHeight:(NSNumber *)height;;
 
 @end

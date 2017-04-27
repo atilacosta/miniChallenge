@@ -9,11 +9,6 @@
 #import "Subject.h"
 #import "Question.h"
 
-@interface Subject ()
-
-@property NSMutableArray *privateQuestions;
-
-@end
 
 @implementation Subject
 
@@ -21,20 +16,16 @@
 {
     self = [super init];
     if (self) {
-        _privateQuestions = [NSMutableArray new];
+        _questionsList = [NSMutableArray new];
         
         _subjectName = data[@"subjectName"];
         
         for(NSDictionary *currentQuestion in data[@"questionsList"]){
-            [self.privateQuestions addObject:[[Question alloc]initWithDictionary:currentQuestion]];
+            [_questionsList addObject:[[Question alloc]initWithDictionary:currentQuestion]];
         }
     
     }
     return self;
-}
-
--(NSArray *)itemsQuestions {
-    return [_privateQuestions copy];
 }
 
 @end
