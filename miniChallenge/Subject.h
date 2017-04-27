@@ -13,7 +13,7 @@
 @interface Subject : NSObject
 
 @property (nonatomic) NSString *subjectName;
-@property (nonatomic) NSArray<Question *> *questionsList;
+@property (nonatomic) NSMutableArray<Question *> *questionsList;
 
 
 - (instancetype)initWithData: (NSDictionary *)data;

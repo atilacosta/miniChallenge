@@ -9,11 +9,6 @@
 #import "Subject.h"
 #import "Question.h"
 
-@interface Subject ()
-
-@property NSMutableArray *privateQuestions;
-
-@end
 
 @implementation Subject
 
@@ -35,10 +30,6 @@
     
     }
     return self;
-}
-
--(NSArray *)itemsQuestions {
-    return [_privateQuestions copy];
 }
 
 @end
