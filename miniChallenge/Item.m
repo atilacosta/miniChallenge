@@ -27,7 +27,7 @@
         _itemName = data[@"itemName"];
         _itemPosX = data[@"itemPosX"];
         _itemPosY = data[@"itemPosY"];
-        
+
         
         [self setPositionX:width andY:height];
         
@@ -38,6 +38,7 @@
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
         
         [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+
         
         for(NSDictionary *currentSubject in data[@"itemsSubjects"]){
             [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
