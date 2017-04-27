@@ -102,7 +102,7 @@
 				<key>itemNamePt</key>
 				<string>Terra</string>
 				<key>itemPosX</key>
-				<integer>50</integer>
+				<integer>80</integer>
 				<key>itemPosY</key>
 				<integer>50</integer>
 				<key>subjectsList</key>
@@ -187,9 +187,9 @@
 				<key>itemNamePt</key>
 				<string>Asteróide</string>
 				<key>itemPosX</key>
-				<integer>200</integer>
+				<integer>550</integer>
 				<key>itemPosY</key>
-				<integer>300</integer>
+				<integer>350</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
