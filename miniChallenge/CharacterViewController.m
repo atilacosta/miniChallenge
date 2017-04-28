@@ -10,6 +10,9 @@
 #import "CharCollectionViewCell.h"
 #import "GameViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "User.h"
+#import "currentUser.h"
+
 @interface CharacterViewController  () <UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *charCollectionView;
@@ -18,6 +21,7 @@
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
 @property CGRect imageSize;
 @property CGSize selectedImageSize;
+@property NSInteger count;
 
 @end
 
@@ -85,7 +89,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
     cell.cellScene = _charArray[indexPath.item];
-    if(indexPath.item > 0){
+    if(indexPath.item >= _count){
         cell.charImage.image = [UIImage imageNamed:@"any"];
     }
     
@@ -108,6 +112,7 @@
     _charArray = scenesList;
     _charCollectionView.dataSource = self;
     _charCollectionView.delegate = self;
+    _count = [[[[currentUser sharedManager]user] numberOfCharacters] intValue];
     
     //---------------//
     
