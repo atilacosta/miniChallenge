@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="75D-aW-781">
-                                <rect key="frame" x="267" y="44" width="202" height="202"/>
+                                <rect key="frame" x="243" y="20" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="75D-aW-781" secondAttribute="height" multiplier="1:1" id="4rB-Vp-siX"/>
                                 </constraints>
@@ -51,12 +51,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.051166571680000002" green="0.2253625095" blue="0.33759492639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.026610895991325378" green="0.12884044647216797" blue="0.17059215903282166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UBV-ig-y3l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3J8-bW-Gol"/>
                             <constraint firstItem="lyx-Ix-VwP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="76i-Uy-ZrX"/>
-                            <constraint firstItem="lyx-Ix-VwP" firstAttribute="top" secondItem="75D-aW-781" secondAttribute="bottom" multiplier="1.1" priority="750" constant="8" symbolic="YES" id="L6I-DQ-zNb"/>
-                            <constraint firstItem="75D-aW-781" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.275" id="PP9-M7-0d3"/>
+                            <constraint firstItem="lyx-Ix-VwP" firstAttribute="top" secondItem="75D-aW-781" secondAttribute="bottom" priority="750" constant="8" symbolic="YES" id="L6I-DQ-zNb"/>
+                            <constraint firstItem="75D-aW-781" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.34" id="PP9-M7-0d3"/>
                             <constraint firstItem="UBV-ig-y3l" firstAttribute="top" secondItem="lyx-Ix-VwP" secondAttribute="bottom" constant="8" symbolic="YES" id="QSd-nA-X1a"/>
                             <constraint firstItem="lyx-Ix-VwP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.275" id="ZwW-76-Qoi"/>
                             <constraint firstItem="75D-aW-781" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fVU-oX-63A"/>
@@ -108,17 +108,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pAs-Se-YS0" secondAttribute="height" multiplier="63:50" id="oQ0-TN-rvV"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="soundIcon"/>
+                                <state key="normal" backgroundImage="musicOn"/>
                                 <connections>
                                     <action selector="toggleMusic:" destination="0P5-6s-CiY" eventType="touchUpInside" id="mzi-KF-7sr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LG-8d-8BH">
                                 <rect key="frame" x="388" y="175" width="81" height="64"/>
-                                <state key="normal" backgroundImage="soundIcon"/>
+                                <state key="normal" backgroundImage="soundOn"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.051166571680000002" green="0.2253625095" blue="0.33759492639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qfb-mk-7BY" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" multiplier="1.8" constant="-7" id="3Eo-2K-jGU"/>
                             <constraint firstItem="6LG-8d-8BH" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" id="610-QK-Wd4"/>
@@ -159,7 +159,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
-                                <rect key="frame" x="266.66666666666669" y="338" width="202.66666666666663" height="55"/>
+                                <rect key="frame" x="266.66666666666669" y="338.33333333333331" width="202.66666666666663" height="54.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mmZ-MY-1VV" secondAttribute="height" multiplier="26:7" id="vuM-Ib-9XA"/>
                                 </constraints>
@@ -169,8 +169,9 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
-                                <rect key="frame" x="0.0" y="67.666666666666657" width="736" height="270.33333333333337"/>
-                                <color key="backgroundColor" red="0.05116657167673111" green="0.22536250948905945" blue="0.33759492635726929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="67.666666666666686" width="736" height="270.66666666666663"/>
+                                <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6T7-JU-g96">
                                     <size key="itemSize" width="127" height="179"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -205,7 +206,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.051166571680000002" green="0.2253625095" blue="0.33759492639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sef-B9-Vt5" firstAttribute="top" secondItem="vVf-Xg-fXT" secondAttribute="bottom" id="6CD-bC-VnO"/>
                             <constraint firstItem="mmZ-MY-1VV" firstAttribute="centerX" secondItem="CC1-ww-zhD" secondAttribute="centerX" id="FK7-o5-aa6"/>
@@ -259,11 +260,12 @@
         <image name="characterSelection" width="423" height="43"/>
         <image name="doneButton" width="181" height="49"/>
         <image name="fill2" width="182" height="49"/>
-        <image name="logo" width="188" height="188"/>
+        <image name="logo" width="257" height="196"/>
+        <image name="musicOn" width="49" height="54"/>
         <image name="play" width="181" height="49"/>
         <image name="settings" width="181" height="49"/>
         <image name="settingsTitle" width="198" height="44"/>
-        <image name="soundIcon" width="63" height="50"/>
+        <image name="soundOn" width="63" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rAQ-Xs-hjx"/>
