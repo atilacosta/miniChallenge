@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-Ix-VwP">
-                                <rect key="frame" x="267" y="278" width="202" height="55"/>
+                                <rect key="frame" x="267" y="278" width="202" height="54.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lyx-Ix-VwP" secondAttribute="height" multiplier="181:49" id="L0t-y4-hr4"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-ig-y3l">
-                                <rect key="frame" x="267" y="341" width="202" height="54"/>
+                                <rect key="frame" x="267" y="340.66666666666669" width="202" height="54.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UBV-ig-y3l" secondAttribute="height" multiplier="181:49" id="goY-cN-ysu"/>
                                 </constraints>
@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfb-mk-7BY">
-                                <rect key="frame" x="267" y="338" width="202" height="55"/>
+                                <rect key="frame" x="267" y="338.33333333333331" width="202" height="54.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qfb-mk-7BY" secondAttribute="height" multiplier="183:49" id="Sra-kv-Aec"/>
                                 </constraints>
@@ -98,7 +98,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsTitle" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-kg-TJf">
-                                <rect key="frame" x="221" y="17" width="294" height="49"/>
+                                <rect key="frame" x="221" y="17.333333333333329" width="294" height="48.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pcV-kg-TJf" secondAttribute="height" multiplier="67:11" id="S9b-P8-pSa"/>
                                 </constraints>
