@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectSix;
 
 @property (weak, nonatomic) IBOutlet UIView *subjectView;
+@property (weak, nonatomic) IBOutlet UIView *intermediateView;
 
 @property (nonatomic) NSArray *buttonArray;
 
@@ -51,8 +52,25 @@
     
     self.buttonArray = [[NSArray alloc]initWithObjects:self.selectedSubjectOne, self.selectedSubjectTwo,self.selectedSubjectThree,self.selectedSubjectFour,self.selectedSubjectFive, self.selectedSubjectSix, nil];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
+    
 }
 
+- (void)dismissViews{
+    [self.subjectView setHidden:YES];
+    [self.intermediateView setHidden:YES];
+    [self enableButtons];
+}
+
+- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (CGRectContainsPoint(self.subjectView.bounds, [touch locationInView:self.subjectView]))
+        return NO;
+    
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,8 +91,24 @@
     
 - (void)showSubjectView{
     [self updateSubjectView];
-    self.subjectView.layer.zPosition = 1;
-    self.subjectView.hidden = NO;
+    self.subjectView.layer.zPosition = 2;
+    self.intermediateView.layer.zPosition = 1;
+    self.intermediateView.userInteractionEnabled = NO;
+    [self disableButtons];
+    [self.intermediateView setHidden:NO];
+    [self.subjectView setHidden:NO];
+}
+
+-(void)disableButtons{
+    for(Item *current in self.selectedScene.itemsList){
+        [current setEnabled:NO];
+    }
+}
+
+-(void)enableButtons{
+    for(Item *current in self.selectedScene.itemsList){
+        [current setEnabled:YES];
+    }
 }
 
 - (void)updateSubjectView{

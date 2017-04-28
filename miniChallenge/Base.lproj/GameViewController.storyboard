@@ -82,17 +82,26 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.071715325163136501" green="0.92366986947520258" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wlx-bc-7gX">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.12941176470588234" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UVd-Wa-6hN" firstAttribute="leading" secondItem="B7U-jB-zIL" secondAttribute="leading" id="9iH-kA-fRc"/>
+                            <constraint firstItem="Wlx-bc-7gX" firstAttribute="top" secondItem="RSV-5f-qYl" secondAttribute="bottom" id="FdQ-sJ-uoK"/>
+                            <constraint firstAttribute="trailing" secondItem="Wlx-bc-7gX" secondAttribute="trailing" id="VhD-OP-1bg"/>
                             <constraint firstItem="UTj-3G-Cpr" firstAttribute="top" secondItem="UVd-Wa-6hN" secondAttribute="bottom" id="WtB-DN-t7v"/>
                             <constraint firstItem="UVd-Wa-6hN" firstAttribute="top" secondItem="RSV-5f-qYl" secondAttribute="bottom" id="aP7-Fw-WOj"/>
                             <constraint firstAttribute="trailing" secondItem="UVd-Wa-6hN" secondAttribute="trailing" id="el8-aj-uTN"/>
+                            <constraint firstItem="Wlx-bc-7gX" firstAttribute="leading" secondItem="B7U-jB-zIL" secondAttribute="leading" id="fBt-Ab-2c5"/>
+                            <constraint firstItem="UTj-3G-Cpr" firstAttribute="top" secondItem="Wlx-bc-7gX" secondAttribute="bottom" id="leO-Ku-1ag"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="UVd-Wa-6hN" id="NSY-dh-DXE"/>
+                        <outlet property="intermediateView" destination="Wlx-bc-7gX" id="O2A-bw-Pvu"/>
                         <outlet property="selectedItemDescription" destination="Fxo-sK-QlV" id="8CQ-UW-R5c"/>
                         <outlet property="selectedItemName" destination="fTp-Ik-A8T" id="GDq-gv-6a0"/>
                         <outlet property="selectedSubjectFive" destination="rbt-JV-36J" id="lGl-Rl-i8C"/>
@@ -106,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcI-uB-pyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3002.2488755622189" y="164"/>
+            <point key="canvasLocation" x="2739.5802098950526" y="-18.399999999999999"/>
         </scene>
     </scenes>
 </document>
