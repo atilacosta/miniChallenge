@@ -76,6 +76,7 @@
     if(![_currentQuestionsIds containsObject:questionId]){
         [_currentQuestionsIds addObject:questionId];
         _answeredQuestionsIds = [[[NSSet alloc]initWithSet:_currentQuestionsIds]copy];
+        
     }
 }
 
@@ -86,6 +87,7 @@
         [self.currentSettings setValue:@"YES" forKey:@"MUSIC"];
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
+    
 }
 
 -(void)changeSoundStatus{
@@ -95,6 +97,7 @@
         [self.currentSettings setValue:@"YES" forKey:@"SOUND"];
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
+    
 }
 
 -(void)addCharacter{
@@ -102,4 +105,22 @@
     _numberOfCharacters = [[NSNumber alloc]initWithInt:characters];
     _currentCharacters = _numberOfCharacters;
 }
+
+-(BOOL)isMusicOn{
+    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+-(BOOL)isSoundOn{
+    if([[self.userSettings valueForKey:@"SOUND"] isEqualToString:@"YES"]){
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+
 @end

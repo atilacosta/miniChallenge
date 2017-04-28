@@ -27,8 +27,10 @@
 
 - (void)changeMusicStatus;
 
--(void)addCharacter;
+- (void)addCharacter;
 
+- (BOOL)isSoundOn;
 
+- (BOOL)isMusicOn;
 
 @end

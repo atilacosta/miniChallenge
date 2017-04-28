@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "AudioManager.h"
 #import <AVFoundation/AVFoundation.h>
+#import "User.h"
+#import "currentUser.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
@@ -24,7 +26,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[AudioManager sharedManager] toggle];
+    User *userAux;
+    userAux = [[currentUser sharedManager]user];
+    //[userAux changeMusicStatus];
+    
+    [[currentUser sharedManager]saveConfiguration];
+    
+    //Retrieving Data
+//    NSUserDefaults *userConfigDefault = [NSUserDefaults standardUserDefaults];
+//    NSData *encodedUserConfig = [userConfigDefault objectForKey:@"encodedUser"];
+//    User *currentUser = (User *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedUserConfig];
+//    if(currentUser == nil){
+//        currentUser = [[User alloc]initWithUserId:[NSNumber numberWithInt:1]];
+//    }
+//    [currentUser changeMusicStatus];
+//    if([currentUser isMusicOn]){
+//        [[AudioManager sharedManager]playMusic];
+//    }
+    
 
     // Do any additional setup after loading the view, typically from a nib.
     //veeejjaaaaa
@@ -36,6 +55,11 @@
     //3 - git commit -m "digite a mensagem que representa a mudanca"
     //4 - git push
     
+    //Saving Data
+//    encodedUserConfig = [NSKeyedArchiver archivedDataWithRootObject:currentUser];
+//    [userConfigDefault setObject:encodedUserConfig forKey:@"encodedUser"];
+//    [userConfigDefault synchronize];
+    
 }
 
 
@@ -43,6 +67,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 @end

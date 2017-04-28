@@ -18,4 +18,7 @@
 - (void)toggle;
 + (AudioManager *)sharedManager;
 
+- (void)playMusic;
+- (void)stopMusic;
+
 @end
