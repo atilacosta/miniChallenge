@@ -58,6 +58,7 @@
     }
     
     NSLog(@"%@",self.selectedScene.itemsList[0].itemSubjects[0].subjectName);
+
 }
 
 -(void) dismissEverything {
@@ -82,6 +83,7 @@
     
     self.dismissView.hidden = NO;
 }
+
 
 -(void)updateSubjectSelectionView {
     self.selectedItemName.text = self.selectedItem.itemName;

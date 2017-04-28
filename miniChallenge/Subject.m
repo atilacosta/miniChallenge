@@ -18,13 +18,13 @@
     if (self) {
         //NSLog(@"IOIIEOEOEO");
         
-        _privateQuestions = [NSMutableArray new];
+        _questionsList = [NSMutableArray new];
         
         _subjectName = data[@"subjectName"];
 
         
         for(NSDictionary *currentQuestion in data[@"questionsList"]){
-            [self.privateQuestions addObject:[[Question alloc]initWithDictionary:currentQuestion]];
+            [self.questionsList addObject:[[Question alloc]initWithDictionary:currentQuestion]];
         
         }
     

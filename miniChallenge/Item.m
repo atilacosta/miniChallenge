@@ -37,7 +37,7 @@
         
         for(NSDictionary *currentSubject in data[@"subjectsList"]){
             //NSLog(@"%@",currentSubject);
-            [self.privateSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
+            [self.itemSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
     }
