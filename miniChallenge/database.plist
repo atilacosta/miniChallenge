@@ -194,7 +194,7 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Science</string>
+						<string>Math</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
@@ -227,7 +227,7 @@
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>English</string>
+						<string>History</string>
 						<key>subjectNamePt</key>
 						<string>Portuguese</string>
 						<key>questionsList</key>
@@ -279,7 +279,7 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Science</string>
+						<string>Geography</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
@@ -312,7 +312,7 @@
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>English</string>
+						<string>Mithology</string>
 						<key>subjectNamePt</key>
 						<string>Portuguese</string>
 						<key>questionsList</key>
@@ -364,7 +364,7 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Science</string>
+						<string>Art</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
@@ -397,7 +397,7 @@
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>English</string>
+						<string>ED</string>
 						<key>subjectNamePt</key>
 						<string>Portuguese</string>
 						<key>questionsList</key>

@@ -60,18 +60,16 @@
     
     NSLog(@"%@",self.selectedScene.itemsList[0].itemSubjects[0].subjectName);
     
-    self.subjectSelectionView.userInteractionEnabled = NO;
-    self.subjectOptionsView.userInteractionEnabled = NO;
+    //self.subjectSelectionView.userInteractionEnabled = NO;
+    //self.subjectOptionsView.userInteractionEnabled = NO;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     
     [self clearSubjectViewContent];
+
     
-//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
-//    tapRecognizer.cancelsTouchesInView = NO;
-//    [self.view addGestureRecognizer:tapRecognizer];
 
 }
 
@@ -102,18 +100,19 @@
     self.selectedItem = (Item *)sender;
     if(![self verifySelectionView:self.selectedItem]){
         self.subjectSelectionView.hidden = NO;
-        [self updateSubjectSelectionView];
         self.subjectSelectionView.layer.zPosition = 1;
-        self.dismissView.hidden = NO;
+        //self.dismissView.hidden = NO;
+        [self updateSubjectSelectionView];
     }
-    self.selectedItem = NULL;
+    
+    //self.selectedItem = NULL;
 }
 
 -(void)clearSubjectViewContent{
     self.selectedItemName.text = nil;
     self.selectedItemDescription.text = nil;
-    self.selectedItemSubject1.titleLabel.hidden = YES;
-    self.selectedItemSubject2.titleLabel.text = nil;
+    //self.selectedItemSubject1.titleLabel.hidden = YES;
+    self.selectedItemSubject2.titleLabel.text = @"";
     self.selectedItemSubject3.titleLabel.text = nil;
     self.selectedItemSubject4.titleLabel.text = nil;
     self.selectedItemSubject5.titleLabel.text = nil;
@@ -138,6 +137,8 @@
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
             break;
         case 2:
+            
+            
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
             self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
             self.selectedItemSubject3.titleLabel.hidden = YES;
