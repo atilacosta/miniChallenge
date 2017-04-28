@@ -14,6 +14,7 @@
 @interface GameViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *subjectSelectionView;
+@property (weak, nonatomic) IBOutlet UIView *subjectOptionsView;
 
 @property (weak, nonatomic) IBOutlet UILabel *selectedItemName;
 @property (weak, nonatomic) IBOutlet UILabel *selectedItemDescription;
@@ -58,12 +59,32 @@
     }
     
     NSLog(@"%@",self.selectedScene.itemsList[0].itemSubjects[0].subjectName);
+    
+    self.subjectSelectionView.userInteractionEnabled = NO;
+    self.subjectOptionsView.userInteractionEnabled = NO;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
+    
+//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
+//    tapRecognizer.cancelsTouchesInView = NO;
+//    [self.view addGestureRecognizer:tapRecognizer];
 
+}
+
+- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (CGRectContainsPoint(self.subjectSelectionView.bounds, [touch locationInView:self.subjectSelectionView]))
+        return NO;
+    
+    return YES;
 }
 
 -(void) dismissEverything {
     self.subjectSelectionView.hidden = YES;
     self.dismissView.hidden = YES;
+    [self clearSubjectViewContent];
 }
 
 -(void) doNothing {
@@ -77,13 +98,32 @@
 - (IBAction)itemPressed:(UIButton *)sender {
     NSLog(@"An item was pressed!");
     self.selectedItem = (Item *)sender;
-    self.subjectSelectionView.hidden = NO;
-    [self updateSubjectSelectionView];
-    self.subjectSelectionView.layer.zPosition = 1;
-    
-    self.dismissView.hidden = NO;
+    if(![self verifySelectionView:self.selectedItem]){
+        self.subjectSelectionView.hidden = NO;
+        [self updateSubjectSelectionView];
+        self.subjectSelectionView.layer.zPosition = 1;
+        self.dismissView.hidden = NO;
+    }
+    self.selectedItem = NULL;
 }
 
+-(void)clearSubjectViewContent{
+    self.selectedItemName.text = nil;
+    self.selectedItemDescription.text = nil;
+    self.selectedItemSubject1.titleLabel.text = nil;
+    self.selectedItemSubject2.titleLabel.text = nil;
+    self.selectedItemSubject3.titleLabel.text = nil;
+    self.selectedItemSubject4.titleLabel.text = nil;
+    self.selectedItemSubject5.titleLabel.text = nil;
+    self.selectedItemSubject6.titleLabel.text = nil;
+}
+
+- (BOOL)verifySelectionView:(Item *)item{
+    if(self.selectedItemName.text == item.itemName){
+        return YES;
+    }
+    return NO;
+}
 
 -(void)updateSubjectSelectionView {
     self.selectedItemName.text = self.selectedItem.itemName;

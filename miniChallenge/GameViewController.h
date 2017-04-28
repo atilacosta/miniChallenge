@@ -12,7 +12,7 @@
 @class Item;
 @class Question;
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
