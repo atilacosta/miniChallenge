@@ -67,6 +67,8 @@
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     
+    [self clearSubjectViewContent];
+    
 //    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEverything)];
 //    tapRecognizer.cancelsTouchesInView = NO;
 //    [self.view addGestureRecognizer:tapRecognizer];
@@ -110,7 +112,7 @@
 -(void)clearSubjectViewContent{
     self.selectedItemName.text = nil;
     self.selectedItemDescription.text = nil;
-    self.selectedItemSubject1.titleLabel.text = nil;
+    self.selectedItemSubject1.titleLabel.hidden = YES;
     self.selectedItemSubject2.titleLabel.text = nil;
     self.selectedItemSubject3.titleLabel.text = nil;
     self.selectedItemSubject4.titleLabel.text = nil;
@@ -138,6 +140,10 @@
         case 2:
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
             self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
+            self.selectedItemSubject3.titleLabel.hidden = YES;
+            self.selectedItemSubject4.titleLabel.hidden = YES;
+            //self.selectedItemSubject1.titleLabel.text =
+            //self.selectedItemSubject2.titleLabel.text =
             break;
         case 3:
             self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
