@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.026610895991325378" green="0.12884044647216797" blue="0.17059215903282166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.027450980392156862" green="0.12941176470588234" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UBV-ig-y3l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3J8-bW-Gol"/>
                             <constraint firstItem="lyx-Ix-VwP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="76i-Uy-ZrX"/>
@@ -153,13 +153,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterSelection" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Xg-fXT">
-                                <rect key="frame" x="110.33333333333331" y="15.333333333333332" width="515.33333333333326" height="52.333333333333343"/>
+                                <rect key="frame" x="110" y="15" width="516" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vVf-Xg-fXT" secondAttribute="height" multiplier="423:43" id="Swr-4m-ruK"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
-                                <rect key="frame" x="266.66666666666669" y="338.33333333333331" width="202.66666666666663" height="54.333333333333371"/>
+                                <rect key="frame" x="267" y="338" width="202" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mmZ-MY-1VV" secondAttribute="height" multiplier="26:7" id="vuM-Ib-9XA"/>
                                 </constraints>
@@ -169,7 +169,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
-                                <rect key="frame" x="0.0" y="67.666666666666686" width="736" height="270.66666666666663"/>
+                                <rect key="frame" x="0.0" y="68" width="736" height="270"/>
                                 <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6T7-JU-g96">
@@ -187,7 +187,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-0i-P3o">
-                                                    <rect key="frame" x="18.666666666666664" y="17" width="88.333333333333343" height="144"/>
+                                                    <rect key="frame" x="19" y="17" width="88" height="144"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DOD-0i-P3o" secondAttribute="height" multiplier="122:199" id="hPo-E7-LMr"/>
                                                     </constraints>
