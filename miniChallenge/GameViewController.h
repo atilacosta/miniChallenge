@@ -10,7 +10,9 @@
 
 @class Scene;
 @class Item;
+@class Subject;
 @class Question;
+
 
 @interface GameViewController : UIViewController <UIGestureRecognizerDelegate>
 
@@ -20,7 +22,11 @@
 @property (nonatomic) NSDictionary *selectedSceneDictionary;
 
 @property (nonatomic) Item *selectedItem;
+
+@property (nonatomic) Subject *selectedSubject;
+
 @property (nonatomic) Question *selectedQuestion;
+
 
 @property (nonatomic) NSNumber *width;
 @property (nonatomic) NSNumber *height;

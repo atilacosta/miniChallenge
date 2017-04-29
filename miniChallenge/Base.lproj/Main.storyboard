@@ -153,13 +153,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterSelection" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Xg-fXT">
-                                <rect key="frame" x="110" y="15" width="516" height="53"/>
+                                <rect key="frame" x="110" y="15.333333333333332" width="516" height="52.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vVf-Xg-fXT" secondAttribute="height" multiplier="423:43" id="Swr-4m-ruK"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
-                                <rect key="frame" x="267" y="338" width="202" height="55"/>
+                                <rect key="frame" x="267" y="338.33333333333331" width="202" height="54.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mmZ-MY-1VV" secondAttribute="height" multiplier="26:7" id="vuM-Ib-9XA"/>
                                 </constraints>
@@ -169,7 +169,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
-                                <rect key="frame" x="0.0" y="68" width="736" height="270"/>
+                                <rect key="frame" x="0.0" y="67.666666666666686" width="736" height="270.66666666666663"/>
                                 <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6T7-JU-g96">

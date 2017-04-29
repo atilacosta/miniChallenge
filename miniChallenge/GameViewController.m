@@ -10,12 +10,17 @@
 #import "Scene.h"
 #import "Item.h"
 #import "Subject.h"
+#import "Question.h"
 
 @interface GameViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UIView *subjectView;
 
 @property (weak, nonatomic) IBOutlet UILabel *selectedItemName;
 @property (weak, nonatomic) IBOutlet UILabel *selectedItemDescription;
 
+@property (nonatomic) NSArray *buttonArray;
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectOne;
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectTwo;
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectThree;
@@ -23,10 +28,20 @@
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectFive;
 @property (weak, nonatomic) IBOutlet UIButton *selectedSubjectSix;
 
-@property (weak, nonatomic) IBOutlet UIView *subjectView;
+
 @property (weak, nonatomic) IBOutlet UIView *intermediateView;
 
-@property (nonatomic) NSArray *buttonArray;
+
+@property (weak, nonatomic) IBOutlet UIView *questionView;
+@property (weak, nonatomic) IBOutlet UILabel *selectedQuestionText;
+
+@property (nonatomic) NSArray *alternativesArray;
+@property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeOne;
+@property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeTwo;
+@property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeThree;
+@property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeFour;
+@property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeFive;
+
 
 @end
 
@@ -44,13 +59,26 @@
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
     [self.view addSubview:self.selectedScene];
     
+    // Makes all items respond to being touched by opening the subjectView.
     for(Item *current in self.selectedScene.itemsList){
         [current addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    self.subjectView.hidden = YES;
-    
+    // Initializes the subject buttons array with the outlets.
     self.buttonArray = [[NSArray alloc]initWithObjects:self.selectedSubjectOne, self.selectedSubjectTwo,self.selectedSubjectThree,self.selectedSubjectFour,self.selectedSubjectFive, self.selectedSubjectSix, nil];
+    
+    
+    
+    // Make all subject buttons respond to the subjectPressed, which updates the selectedSubject.
+    for(UIButton *current in self.buttonArray){
+        [current addTarget:self action:@selector(subjectPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    
+    
+    // Initializes the alternatives array with the outlet button objects.
+    self.alternativesArray = [[NSArray alloc] initWithObjects:self.selectedAlternativeOne, self.selectedAlternativeTwo, self.selectedAlternativeThree, self.selectedAlternativeFour, self.selectedAlternativeFive, nil];
+    
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
@@ -78,15 +106,20 @@
 }
 
 
-
 - (IBAction)itemPressed:(UIButton *)sender{
     
     if(self.selectedItem != (Item *)sender){
         self.selectedItem = (Item *)sender;
     }
     [self showSubjectView];
-    
+}
 
+- (IBAction)subjectPressed:(UIButton *)sender{
+    
+    if(self.selectedSubject != (Subject *)sender){
+        self.selectedSubject = (Subject *)sender;
+    }
+    [self showQuestionView];
 }
     
 - (void)showSubjectView{
@@ -97,6 +130,17 @@
     [self disableButtons];
     [self.intermediateView setHidden:NO];
     [self.subjectView setHidden:NO];
+}
+
+// 1 - DONE
+- (void)showQuestionView{
+    [self updateQuestionView];
+    self.questionView.layer.zPosition = 3;
+    self.intermediateView.layer.zPosition = 1; // maybe change to 2 so that it stands in front of the subjectView
+    self.intermediateView.userInteractionEnabled = NO;
+    [self disableButtons];
+    [self.intermediateView setHidden:NO];
+    [self.questionView setHidden:NO];
 }
 
 -(void)disableButtons{
@@ -112,11 +156,15 @@
 }
 
 - (void)updateSubjectView{
-    
     self.selectedItemName.text = self.selectedItem.itemName;
     self.selectedItemDescription.text = nil;
     [self setButtonName];
-    
+}
+
+// 2 - DONE
+- (void)updateQuestionView{
+    self.selectedQuestionText.text = self.selectedQuestion.question;
+    [self setAlternativesName];
 }
 
 - (void)setButtonName{
@@ -126,6 +174,23 @@
             index = [self.buttonArray indexOfObject:current];
             [current setEnabled:YES];
             [current setTitle:[[self.selectedItem.itemSubjects objectAtIndex:index] subjectName] forState:UIControlStateNormal];
+            [current.titleLabel sizeToFit];
+        }else{
+            [current setEnabled:NO];
+            [current setTitle:@"" forState:UIControlStateDisabled];
+            
+        }
+    }
+}
+
+// 3 - DONE
+- (void)setAlternativesName{
+    NSUInteger index;
+    for(UIButton *current in self.alternativesArray){
+        if([self.alternativesArray indexOfObject:current] < [self.selectedQuestion.choices count]){
+            index = [self.alternativesArray indexOfObject:current];
+            [current setEnabled:YES];
+            [current setTitle:[self.selectedQuestion.choices objectAtIndex:index] forState:UIControlStateNormal];
             [current.titleLabel sizeToFit];
         }else{
             [current setEnabled:NO];
