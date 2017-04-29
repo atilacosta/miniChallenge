@@ -89,12 +89,15 @@
 - (void)dismissViews{
     [self.subjectView setHidden:YES];
     [self.intermediateView setHidden:YES];
+    [self.questionView setHidden:YES];
+    
+    self.selectedScene.userInteractionEnabled = YES;
     [self enableButtons];
 }
 
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if (CGRectContainsPoint(self.subjectView.bounds, [touch locationInView:self.subjectView]))
+    if ( CGRectContainsPoint(self.subjectView.bounds, [touch locationInView:self.subjectView]) )
         return NO;
     
     return YES;
@@ -107,7 +110,6 @@
 
 
 - (IBAction)itemPressed:(UIButton *)sender{
-    
     if(self.selectedItem != (Item *)sender){
         self.selectedItem = (Item *)sender;
     }
@@ -115,10 +117,8 @@
 }
 
 - (IBAction)subjectPressed:(UIButton *)sender{
-    
-    if(self.selectedSubject != (Subject *)sender){
-        self.selectedSubject = (Subject *)sender;
-    }
+    self.selectedSubject = [self.selectedItem subjectByName:sender.titleLabel.text];
+    self.selectedQuestion = [self.selectedSubject getRandomUnansweredQuestion];
     [self showQuestionView];
 }
     
@@ -127,6 +127,7 @@
     self.subjectView.layer.zPosition = 2;
     self.intermediateView.layer.zPosition = 1;
     self.intermediateView.userInteractionEnabled = NO;
+    self.selectedScene.userInteractionEnabled = NO;
     [self disableButtons];
     [self.intermediateView setHidden:NO];
     [self.subjectView setHidden:NO];
@@ -199,7 +200,6 @@
         }
     }
 }
-
 
 
 

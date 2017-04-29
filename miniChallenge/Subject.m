@@ -32,4 +32,12 @@
     return self;
 }
 
+-(Question *)getRandomUnansweredQuestion {
+    int randomIndex;
+    do{
+        randomIndex = arc4random_uniform((int)[self.questionsList count]);
+    }while(2==3); // Replace this with: "while the result gave me a already answered question"
+    return [self.questionsList objectAtIndex:randomIndex];
+}
+
 @end
