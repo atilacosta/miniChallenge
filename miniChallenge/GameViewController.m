@@ -14,6 +14,7 @@
 
 @interface GameViewController ()
 
+// Where we are at right now: We have almost completed the questionView. Next task is to add the action alternativePressed and its outcomes.
 
 @property (weak, nonatomic) IBOutlet UIView *subjectView;
 
@@ -41,6 +42,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeThree;
 @property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeFour;
 @property (weak, nonatomic) IBOutlet UIButton *selectedAlternativeFive;
+
+
+
+@property (weak, nonatomic) IBOutlet UIView *resultView;
+
+@property (weak, nonatomic) IBOutlet UILabel *resultText;
+
+@property (weak, nonatomic) IBOutlet UIButton *nextQuestionInSubject;
+@property (weak, nonatomic) IBOutlet UIButton *goBackToObject;
+@property (weak, nonatomic) IBOutlet UIButton *goBackToScene;
+
 
 
 @end
@@ -79,6 +91,20 @@
     // Initializes the alternatives array with the outlet button objects.
     self.alternativesArray = [[NSArray alloc] initWithObjects:self.selectedAlternativeOne, self.selectedAlternativeTwo, self.selectedAlternativeThree, self.selectedAlternativeFour, self.selectedAlternativeFive, nil];
     
+    // Make all alternatve buttons respond to the alternativePressed, which updates the selectedAlternative.
+    for(UIButton *current in self.alternativesArray){
+        [current addTarget:self action:@selector(alternativePressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    
+    // Result View Part
+    // next random in s=ob and subje
+    [self.nextQuestionInSubject addTarget:self action:@selector(subjectPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.goBackToObject addTarget:self action:@selector(showSubjectView) forControlEvents:UIControlEventTouchUpInside];
+    [self.goBackToScene addTarget:self action:@selector(dismissViews) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
@@ -87,12 +113,14 @@
 }
 
 - (void)dismissViews{
-    [self.subjectView setHidden:YES];
-    [self.intermediateView setHidden:YES];
-    [self.questionView setHidden:YES];
-    
-    self.selectedScene.userInteractionEnabled = YES;
-    [self enableButtons];
+    if(self.questionView.hidden == YES){   // This was added so that it is impossible to "dodge the question" by tapping the background
+        [self.subjectView setHidden:YES];
+        [self.intermediateView setHidden:YES];
+        [self.questionView setHidden:YES];
+        [self.resultView setHidden:YES];
+        self.selectedScene.userInteractionEnabled = YES;
+        [self enableButtons];
+    }
 }
 
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
@@ -117,9 +145,21 @@
 }
 
 - (IBAction)subjectPressed:(UIButton *)sender{
-    self.selectedSubject = [self.selectedItem subjectByName:sender.titleLabel.text];
+    if(![sender.titleLabel.text isEqualToString:self.selectedItem.itemName]){// This is false if the user is coming from the resultView
+        self.selectedSubject = [self.selectedItem subjectByName:sender.titleLabel.text];
+    }
     self.selectedQuestion = [self.selectedSubject getRandomUnansweredQuestion];
     [self showQuestionView];
+}
+
+- (IBAction)alternativePressed:(UIButton *)sender{
+    self.selectedAlternative = sender.titleLabel.text;
+    
+    // question = errar ou acertar (dismiss blocked)
+    // resultView tem 3 outcomes: voltar pra scene(dismiss), voltar pro subjectSelection, next question
+    // dismiss em tudo
+
+    [self showResultView];
 }
     
 - (void)showSubjectView{
@@ -129,6 +169,10 @@
     self.intermediateView.userInteractionEnabled = NO;
     self.selectedScene.userInteractionEnabled = NO;
     [self disableButtons];
+    
+    [self.questionView setHidden:YES];
+    [self.resultView setHidden:YES];
+    
     [self.intermediateView setHidden:NO];
     [self.subjectView setHidden:NO];
 }
@@ -137,11 +181,19 @@
 - (void)showQuestionView{
     [self updateQuestionView];
     self.questionView.layer.zPosition = 3;
-    self.intermediateView.layer.zPosition = 1; // maybe change to 2 so that it stands in front of the subjectView
-    self.intermediateView.userInteractionEnabled = NO;
-    [self disableButtons];
+    
+    [self.resultView setHidden:YES];
+    
     [self.intermediateView setHidden:NO];
     [self.questionView setHidden:NO];
+}
+
+- (void)showResultView{
+    [self updateResultView];
+    self.resultView.layer.zPosition = 4;
+    
+    [self.questionView setHidden:YES];
+    [self.resultView setHidden:NO];
 }
 
 -(void)disableButtons{
@@ -168,13 +220,40 @@
     [self setAlternativesName];
 }
 
+- (void)updateResultView{
+    if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
+        self.resultText.text = @"Correct!!";
+        self.resultText.textColor = [UIColor greenColor];
+        // show and update score
+    } else {
+        self.resultText.text = @"Incorrect!!";
+        self.resultText.textColor = [UIColor redColor];
+    }
+    // Update the buttons:
+    
+    
+    [UIView performWithoutAnimation:^{ // This gay ass block is just to fix the problem where a unwanted animation is played.
+        [self.nextQuestionInSubject setTitle:self.selectedSubject.subjectName forState:UIControlStateNormal];
+        [self.goBackToObject setTitle:self.selectedItem.itemName forState:UIControlStateNormal];
+        [self.nextQuestionInSubject layoutIfNeeded];
+        [self.goBackToObject layoutIfNeeded];
+    }];
+}
+
 - (void)setButtonName{
     NSUInteger index;
     for(UIButton *current in self.buttonArray){
         if([self.buttonArray indexOfObject:current] < [self.selectedItem.itemSubjects count]){
             index = [self.buttonArray indexOfObject:current];
             [current setEnabled:YES];
-            [current setTitle:[[self.selectedItem.itemSubjects objectAtIndex:index] subjectName] forState:UIControlStateNormal];
+            
+            [UIView performWithoutAnimation:^{
+                [current setTitle:[[self.selectedItem.itemSubjects objectAtIndex:index] subjectName] forState:UIControlStateNormal];
+                [current layoutIfNeeded];
+            }];
+            
+            
+            
             [current.titleLabel sizeToFit];
         }else{
             [current setEnabled:NO];
@@ -186,12 +265,26 @@
 
 // 3 - DONE
 - (void)setAlternativesName{
-    NSUInteger index;
+    // Create a copy of the question's list of alternatives (so we can edit it)
+    NSMutableArray<NSMutableString *> *questionAlternatives = [[NSMutableArray alloc] initWithArray:self.selectedQuestion.choices];
+    
     for(UIButton *current in self.alternativesArray){
-        if([self.alternativesArray indexOfObject:current] < [self.selectedQuestion.choices count]){
-            index = [self.alternativesArray indexOfObject:current];
+        if([self.alternativesArray indexOfObject:current] < [questionAlternatives count]){
             [current setEnabled:YES];
-            [current setTitle:[self.selectedQuestion.choices objectAtIndex:index] forState:UIControlStateNormal];
+            
+            int randIndex;
+            do {
+                randIndex = arc4random_uniform((int)[questionAlternatives count]); // Get a random Index
+            }while([[questionAlternatives objectAtIndex:randIndex] isEqual:@"*"]); // Only leave after we found a not * object
+            
+            
+            [UIView performWithoutAnimation:^{ // This gay ass block is just to fix the problem where a unwanted animation is played.
+                [current setTitle:[questionAlternatives objectAtIndex:randIndex] forState:UIControlStateNormal];// Set outlet to the random
+                [current layoutIfNeeded];
+            }];
+            
+            [questionAlternatives replaceObjectAtIndex:randIndex withObject: [NSMutableString stringWithString:@"*" ] ]; // Change to * so it's not used again
+            
             [current.titleLabel sizeToFit];
         }else{
             [current setEnabled:NO];
@@ -199,7 +292,23 @@
             
         }
     }
+    // This below is the old version of the method, which doesn't include the random order of alternatives.
+    
+//    NSInteger index;
+//    for(UIButton *current in self.alternativesArray){
+//        if([self.alternativesArray indexOfObject:current] < [self.selectedQuestion.choices count]){
+//            index = [self.alternativesArray indexOfObject:current];
+//            [current setEnabled:YES];
+//            [current setTitle:[self.selectedQuestion.choices objectAtIndex:index] forState:UIControlStateNormal];
+//            [current.titleLabel sizeToFit];
+//        }else{
+//            [current setEnabled:NO];
+//            [current setTitle:@"" forState:UIControlStateDisabled];
+//            
+//        }
+//    }
 }
+
 
 
 
