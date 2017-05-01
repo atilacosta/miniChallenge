@@ -12,7 +12,7 @@
 
 @interface Question : NSObject
 
-@property (nonatomic) NSNumber *uniqueID;
+@property (nonatomic, readonly) NSNumber *uniqueID;
 @property (nonatomic, weak) Subject *subject;
 @property (nonatomic) NSString *question;
 @property (nonatomic) int value;
@@ -21,5 +21,10 @@
 @property (nonatomic) NSArray<NSString *> *choices;
 
 - (instancetype)initWithDictionary: (NSDictionary *)dict;
+
+-(BOOL)gradeQuestionWithAlternative: (NSString *)alternative;
+
+// Static method
++(NSNumber *)getUniqueID;
 
 @end

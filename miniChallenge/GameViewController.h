@@ -27,6 +27,9 @@
 
 @property (nonatomic) Question *selectedQuestion;
 
+@property (nonatomic) NSString *selectedAlternative;
+
+@property (nonatomic) NSInteger *userPoints;
 
 @property (nonatomic) NSNumber *width;
 @property (nonatomic) NSNumber *height;

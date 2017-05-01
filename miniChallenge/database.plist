@@ -102,9 +102,9 @@
 				<key>itemNamePt</key>
 				<string>Terra</string>
 				<key>itemPosX</key>
-				<integer>80</integer>
+				<integer>530</integer>
 				<key>itemPosY</key>
-				<integer>50</integer>
+				<integer>450</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -187,9 +187,9 @@
 				<key>itemNamePt</key>
 				<string>Asteróide</string>
 				<key>itemPosX</key>
-				<integer>100</integer>
+				<integer>700</integer>
 				<key>itemPosY</key>
-				<integer>600</integer>
+				<integer>75</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -272,9 +272,9 @@
 				<key>itemNamePt</key>
 				<string>Espaçonave</string>
 				<key>itemPosX</key>
-				<integer>800</integer>
+				<integer>280</integer>
 				<key>itemPosY</key>
-				<integer>420</integer>
+				<integer>30</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -357,9 +357,9 @@
 				<key>itemNamePt</key>
 				<string>Satélite</string>
 				<key>itemPosX</key>
-				<integer>280</integer>
+				<integer>800</integer>
 				<key>itemPosY</key>
-				<integer>30</integer>
+				<integer>420</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
