@@ -11,6 +11,8 @@
 #import "Item.h"
 #import "Subject.h"
 #import "Question.h"
+#import "currentUser.h"
+#import "User.h"
 
 @interface GameViewController ()
 
@@ -48,12 +50,15 @@
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
+@property (weak, nonatomic) IBOutlet UILabel *resultHint;
 
 @property (weak, nonatomic) IBOutlet UIButton *nextQuestionInSubject;
 @property (weak, nonatomic) IBOutlet UIButton *goBackToObject;
 @property (weak, nonatomic) IBOutlet UIButton *goBackToScene;
 
+@property (weak, nonatomic) IBOutlet UILabel *playerScore;
 
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end
 
@@ -103,8 +108,9 @@
     [self.goBackToObject addTarget:self action:@selector(showSubjectView) forControlEvents:UIControlEventTouchUpInside];
     [self.goBackToScene addTarget:self action:@selector(dismissViews) forControlEvents:UIControlEventTouchUpInside];
     
+    self.userPoints = [[currentUser sharedManager] user].playerPoints;
     
-    
+    [self.selectedScene addSubview:self.backButton];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
@@ -148,7 +154,13 @@
     if(![sender.titleLabel.text isEqualToString:self.selectedItem.itemName]){// This is false if the user is coming from the resultView
         self.selectedSubject = [self.selectedItem subjectByName:sender.titleLabel.text];
     }
-    self.selectedQuestion = [self.selectedSubject getRandomUnansweredQuestion];
+    
+    //Verify if Subject still has unanswered questions if it does shows question view. If it doesnt: Think about it
+    if([self.selectedSubject hasQuestionsAvaiable]){
+        self.selectedQuestion = [self.selectedSubject getRandomUnansweredQuestion];
+    } else{
+        self.selectedQuestion = nil;
+    }
     [self showQuestionView];
 }
 
@@ -182,10 +194,15 @@
     [self updateQuestionView];
     self.questionView.layer.zPosition = 3;
     
-    [self.resultView setHidden:YES];
     
-    [self.intermediateView setHidden:NO];
-    [self.questionView setHidden:NO];
+    if([self.selectedSubject hasQuestionsAvaiable]){
+        [self.resultView setHidden:YES];
+        [self.intermediateView setHidden:NO];
+        [self.questionView setHidden:NO];
+    } else{
+        [self showResultView];
+    }
+    
 }
 
 - (void)showResultView{
@@ -221,13 +238,27 @@
 }
 
 - (void)updateResultView{
-    if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
-        self.resultText.text = @"Correct!!";
-        self.resultText.textColor = [UIColor greenColor];
-        // show and update score
-    } else {
-        self.resultText.text = @"Incorrect!!";
-        self.resultText.textColor = [UIColor redColor];
+    if (self.selectedQuestion == nil) {
+        self.resultText.text = @"There are no more avaible questions for this subject at the moment";
+        self.resultHint.text = @"Try another subject";
+        self.resultText.textColor = [UIColor blackColor];
+    }else {
+        if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
+            self.resultText.text = @"Correct!!";
+            self.resultHint.text = @"";
+            self.resultText.textColor = [UIColor greenColor];
+            // show and update score
+            
+            NSLog(@"%@", self.selectedQuestion.uniqueID);
+            
+            [self incrementPlayerScore:self.selectedQuestion.value];
+            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID];
+            
+        } else {
+            self.resultText.text = @"Incorrect!!";
+            self.resultText.textColor = [UIColor redColor];
+            self.resultHint.text = self.selectedQuestion.hint;
+        }
     }
     // Update the buttons:
     
@@ -289,7 +320,6 @@
         }else{
             [current setEnabled:NO];
             [current setTitle:@"" forState:UIControlStateDisabled];
-            
         }
     }
     // This below is the old version of the method, which doesn't include the random order of alternatives.
@@ -309,90 +339,26 @@
 //    }
 }
 
+- (void)incrementPlayerScore:(int)questionPoints{
+    
+    self.userPoints = @([self.userPoints intValue] + questionPoints);
+    [[currentUser sharedManager] user].playerPoints = self.userPoints;
+    [self updatePoints];
+    
+}
+
+- (void)updatePoints{
+    [self.playerScore setText:[NSString stringWithFormat:@"%@", self.userPoints]];
+}
 
 
+// To do:
+// resultView update score add question to answered in user. update label. and add score to user overall score.
+// Incorrent: update hint outlet.
+// Back.
+// 
 
 
-//- (IBAction)itemPressed:(UIButton *)sender {
-//    NSLog(@"An item was pressed!");
-//    self.selectedItem = (Item *)sender;
-//    if(![self verifySelectionView:self.selectedItem]){
-//        self.subjectSelectionView.hidden = NO;
-//        self.subjectSelectionView.layer.zPosition = 1;
-//        //self.dismissView.hidden = NO;
-//        [self updateSubjectSelectionView];
-//    }
-//    
-//    //self.selectedItem = NULL;
-//}
-//
-//-(void)clearSubjectViewContent{
-//    self.selectedItemName.text = nil;
-//    self.selectedItemDescription.text = nil;
-//    //self.selectedItemSubject1.titleLabel.hidden = YES;
-//    self.selectedItemSubject2.titleLabel.text = @"";
-//    self.selectedItemSubject3.titleLabel.text = nil;
-//    self.selectedItemSubject4.titleLabel.text = nil;
-//    self.selectedItemSubject5.titleLabel.text = nil;
-//    self.selectedItemSubject6.titleLabel.text = nil;
-//}
-//
-//- (BOOL)verifySelectionView:(Item *)item{
-//    if(self.selectedItemName.text == item.itemName){
-//        return YES;
-//    }
-//    return NO;
-//}
-//
-//-(void)updateSubjectSelectionView {
-//    self.selectedItemName.text = self.selectedItem.itemName;
-//    
-//    // We need to add a description for every item before uncommenting the line below.
-//    //self.selectedItemDescription.text = self.selectedItem.itemDescription;
-//    
-//    switch ([self.selectedItem.itemSubjects count]) {
-//        case 1:
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            break;
-//        case 2:
-//            
-//            
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
-//            self.selectedItemSubject3.titleLabel.hidden = YES;
-//            self.selectedItemSubject4.titleLabel.hidden = YES;
-//            //self.selectedItemSubject1.titleLabel.text =
-//            //self.selectedItemSubject2.titleLabel.text =
-//            break;
-//        case 3:
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
-//            self.selectedItemSubject3.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:2].subjectName;
-//            break;
-//        case 4:
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
-//            self.selectedItemSubject3.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:2].subjectName;
-//            self.selectedItemSubject4.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:3].subjectName;
-//            break;
-//        case 5:
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
-//            self.selectedItemSubject3.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:2].subjectName;
-//            self.selectedItemSubject4.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:3].subjectName;
-//            self.selectedItemSubject5.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:4].subjectName;
-//            break;
-//        case 6:
-//            self.selectedItemSubject1.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:0].subjectName;
-//            self.selectedItemSubject2.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:1].subjectName;
-//            self.selectedItemSubject3.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:2].subjectName;
-//            self.selectedItemSubject4.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:3].subjectName;
-//            self.selectedItemSubject5.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:4].subjectName;
-//            self.selectedItemSubject6.titleLabel.text = [self.selectedItem.itemSubjects objectAtIndex:5].subjectName;
-//            break;
-//    }
-//}
-//
 ///*
 //#pragma mark - Navigation
 

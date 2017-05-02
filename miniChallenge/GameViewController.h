@@ -29,7 +29,9 @@
 
 @property (nonatomic) NSString *selectedAlternative;
 
-@property (nonatomic) NSInteger *userPoints;
+@property (nonatomic) NSNumber *userPoints;
+
+@property (nonatomic) BOOL hasAnswers;
 
 @property (nonatomic) NSNumber *width;
 @property (nonatomic) NSNumber *height;
