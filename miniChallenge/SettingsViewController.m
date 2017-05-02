@@ -9,13 +9,16 @@
 #import "SettingsViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AudioManager.h"
+#import "currentUser.h"
+
 @interface SettingsViewController ()
 @property AVAudioPlayer *audioPlayer;
 @end
 
 @implementation SettingsViewController
 
-- (IBAction)toggleMusic:(UIButton *)sender {
+- (IBAction)toggleMusic:(id)sender {
+    //[s]
     [[AudioManager sharedManager] toggle];
     if([[[AudioManager sharedManager] player] isPlaying]){
         [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal]; ;
