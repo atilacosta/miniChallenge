@@ -10,8 +10,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AudioManager.h"
 #import "currentUser.h"
+#import "User.h"
 
 @interface SettingsViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *musicButton;
+@property (weak, nonatomic) IBOutlet UIButton *soundButton;
 @property AVAudioPlayer *audioPlayer;
 @end
 
@@ -19,13 +22,18 @@
 
 - (IBAction)toggleMusic:(id)sender {
     //[s]
+    [[[currentUser sharedManager] user] changeMusicStatus];
+    [[currentUser sharedManager] saveConfiguration];
     [[AudioManager sharedManager] toggle];
     if([[[AudioManager sharedManager] player] isPlaying]){
-        [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal]; ;
+        [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal]; 
     }
     else{
         [sender setBackgroundImage:[UIImage imageNamed:@"music off"] forState:UIControlStateNormal];
     }
+    
+
+    
 }
 
 - (IBAction)toggleSound:(UIButton *)sender {
@@ -34,6 +42,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if([[[currentUser sharedManager] user] isMusicOn]){
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal];
+    }
+    else{
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music off"] forState:UIControlStateNormal];
+    }
 
 }
 

@@ -30,9 +30,8 @@
     userAux = [[currentUser sharedManager]user];
     
     if([userAux isMusicOn]){
-        [[AudioManager sharedManager]playMusic];
+        [[AudioManager sharedManager]toggle];
     }
-    [[currentUser sharedManager]saveConfiguration];
     
     //adicionar no git
     //Passos:
@@ -45,6 +44,7 @@
 
 - (IBAction)unwindFromSettings:(UIStoryboardSegue*)sender
 {
+    
 }
 - (IBAction)unwindFromCharSelect:(UIStoryboardSegue*)sender
 {
