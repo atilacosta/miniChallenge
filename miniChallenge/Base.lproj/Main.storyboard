@@ -94,7 +94,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="done button"/>
                                 <connections>
-                                    <segue destination="yWy-dv-xeC" kind="unwind" unwindAction="unwindFromView:" id="28s-BT-ldD"/>
+                                    <segue destination="yWy-dv-xeC" kind="unwind" unwindAction="unwindFromSettings:" id="QbV-7J-MZi"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings lettering" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-kg-TJf">
@@ -216,7 +216,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="back arrow 1"/>
                                 <connections>
-                                    <segue destination="Nka-Dq-BsR" kind="unwind" unwindAction="unwindFromView:" id="6cN-bu-HdJ"/>
+                                    <segue destination="Nka-Dq-BsR" kind="unwind" unwindAction="unwindFromCharSelect:" id="AL1-Dr-a7m"/>
                                 </connections>
                             </button>
                         </subviews>

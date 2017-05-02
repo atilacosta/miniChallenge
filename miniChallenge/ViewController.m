@@ -62,7 +62,10 @@
     
 }
 
-- (IBAction)unwindFromView:(UIStoryboardSegue*)sender
+- (IBAction)unwindFromSettings:(UIStoryboardSegue*)sender
+{
+}
+- (IBAction)unwindFromCharSelect:(UIStoryboardSegue*)sender
 {
 }
 - (void)didReceiveMemoryWarning {

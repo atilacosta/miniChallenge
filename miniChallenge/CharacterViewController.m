@@ -33,7 +33,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     GameViewController *destView = segue.destinationViewController;
     CharacterViewController *sourceView = segue.sourceViewController;
-    destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
+    if ([segue.destinationViewController isKindOfClass:[GameViewController class]]) {
+        destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
+    }
+    
     
 }
 //--------------------//
