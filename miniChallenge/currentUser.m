@@ -19,7 +19,7 @@
     static currentUser *sharedMyManager = nil;
     @synchronized(self) {
         if (sharedMyManager == nil)
-            sharedMyManager = [[self alloc] init];
+            sharedMyManager = [[currentUser alloc] init];
     }
     return sharedMyManager;
 }
@@ -30,7 +30,8 @@
         NSUserDefaults *userConfigDefault = [NSUserDefaults standardUserDefaults];
         NSData *encodedUserConfig = [userConfigDefault objectForKey:@"encodedUser"];
         user = (User *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedUserConfig];
-        if(user == nil){
+        
+        if(user != nil){
             user = [[User alloc]initWithUserId:[NSNumber numberWithInt:1]];
         }
     }

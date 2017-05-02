@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+#import "AudioManager.h"
 
 
 @interface User()
@@ -14,6 +15,7 @@
 @property NSNumber *currentCharacters;
 @property NSMutableSet<NSNumber *> *currentQuestionsIds;
 @property (nonatomic)NSMutableDictionary *currentSettings;
+@property (nonatomic) int currentHits;
 
 
 @end
@@ -28,6 +30,7 @@
         _userId = userId;
         _playerPoints = [[NSNumber alloc]initWithInt:0];
         _numberOfCharacters = [[NSNumber alloc]initWithInt:1];
+        _numberOfHits = [[NSNumber alloc]initWithInt:0];
         _answeredQuestionsIds = [[NSMutableSet alloc]init];
         _userSettings = [[NSDictionary alloc]init];
         _userSettings = @{
@@ -50,6 +53,8 @@
     if (self != nil) {
         _userId = [decoder decodeObjectForKey:@"ID"];
         _playerPoints = [decoder decodeObjectForKey:@"POINTS"];
+        _numberOfCharacters = [decoder decodeObjectForKey:@"NUMBEROFCHARACTER"];
+        _numberOfHits = [decoder decodeObjectForKey:@"NUMBEROFHITS"];
         _answeredQuestionsIds = [decoder decodeObjectForKey:@"ANSWEREDQUESTIONS"];
         _userSettings = [decoder decodeObjectForKey:@"SETTINGS"];
         
@@ -68,8 +73,11 @@
 {
     [encoder encodeObject:self.userId forKey: @"ID"];
     [encoder encodeObject:self.playerPoints forKey:@"POINTS"];
+    [encoder encodeObject:self.numberOfCharacters forKey:@"NUMBEROFCHARACTER"];
+    [encoder encodeObject:self.numberOfHits forKey:@"NUMBEROFHITS"];
     [encoder encodeObject:self.answeredQuestionsIds forKey:@"ANSWEREDQUESTIONS"];
     [encoder encodeObject:self.userSettings forKey:@"SETTINGS"];
+    
 }
 
 
@@ -77,7 +85,8 @@
     if(![_currentQuestionsIds containsObject:questionId]){
         [_currentQuestionsIds addObject:questionId];
         _answeredQuestionsIds = [[[NSSet alloc]initWithSet:_currentQuestionsIds]copy];
-        
+        _currentHits += [_numberOfHits intValue];
+        _numberOfHits = [NSNumber numberWithInt:_currentHits];
     }
 }
 
@@ -86,6 +95,7 @@
         [self.currentSettings setValue:@"NO" forKey:@"MUSIC"];
     }else{
         [self.currentSettings setValue:@"YES" forKey:@"MUSIC"];
+        [[AudioManager sharedManager]playMusic];
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
     
@@ -96,6 +106,7 @@
         [self.currentSettings setValue:@"NO" forKey:@"SOUND"];
     }else{
         [self.currentSettings setValue:@"YES" forKey:@"SOUND"];
+        
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
     

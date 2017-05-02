@@ -9,6 +9,8 @@
 #import "SettingsViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AudioManager.h"
+#import "currentUser.h"
+
 @interface SettingsViewController ()
 @property AVAudioPlayer *audioPlayer;
 @end
@@ -16,6 +18,7 @@
 @implementation SettingsViewController
 
 - (IBAction)toggleMusic:(id)sender {
+    //[s]
     [[AudioManager sharedManager] toggle];
 }
 
