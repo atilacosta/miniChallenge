@@ -54,5 +54,14 @@
     
 }
 
+-(Subject *)subjectByName: (NSString *)name {
+    for (Subject *current in self.itemSubjects){
+        if(current.subjectName == name){
+            return current;
+        }
+    }
+    return nil; // Subject not found
+}
+
 
 @end

@@ -19,4 +19,6 @@
 - (instancetype)initWithData: (NSDictionary *)data;
 
 
+-(Question *)getRandomUnansweredQuestion;
+-(BOOL)hasQuestionsAvaiable;
 @end

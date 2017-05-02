@@ -12,7 +12,7 @@
 
 @interface Scene : UIView
 
-@property (nonatomic, readonly) NSNumber *uniqueID;
+//@property (nonatomic, readonly) NSNumber *uniqueID;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *backgroundImage;
 //@property (nonatomic) Character *character;
