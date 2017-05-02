@@ -71,6 +71,7 @@
 		C316E2061EAE8E4D0036E2C8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C316E2081EAE8F690036E2C8 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
 		C316E2091EAE8F690036E2C8 /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
+		C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundtrack.m4a; sourceTree = "<group>"; };
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
 		C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCollectionViewCell.m; sourceTree = "<group>"; };
 		C32DA4631EA6AB5500130808 /* astro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astro.jpg; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 				C39E061D1EAE727000AA148D /* characterSelection@3x.png */,
 				C39E061E1EAE727000AA148D /* fill2.png */,
 				C39E061F1EAE727000AA148D /* fill2@2x.png */,
+				C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */,
 				C39E06201EAE727000AA148D /* fill2@3x.png */,
 				C39E06271EAE7F6C00AA148D /* test.mp3 */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,

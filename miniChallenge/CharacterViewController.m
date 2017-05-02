@@ -22,6 +22,7 @@
 @property CGRect imageSize;
 @property CGSize selectedImageSize;
 @property NSInteger count;
+@property User *currentUser;
 
 @end
 
@@ -82,18 +83,25 @@
 }
 //--------------------//
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    //NSLog(@"%d",_charArray.count);
+    NSLog(@"%d",_charArray.count);
     return _charArray.count;
 }
 //--------------------//
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
-    cell.cellScene = _charArray[indexPath.item];
-    if(indexPath.item >= _count){
-        cell.charImage.image = [UIImage imageNamed:@"any"];
+    cell.cellScene = _charArray[indexPath.row];
+    NSLog(@"%d %d",_count,indexPath.row);
+    
+    if(indexPath.row > _count){
+        cell.charImage.image = [UIImage imageNamed:@"unknown character"];
+    }
+    else{
+        NSString *leveledImage = [NSString stringWithFormat: @"%@ %lu",cell.cellScene[@"sceneCharacterImage"], _currentUser.answeredQuestionsIds.count/1];
+        cell.charImage.image = [UIImage imageNamed:leveledImage];
+        NSLog(@"%@",leveledImage);
     }
     
-    
+
 
     return cell;
 }
@@ -112,6 +120,7 @@
     _charArray = scenesList;
     _charCollectionView.dataSource = self;
     _charCollectionView.delegate = self;
+    _currentUser = [[currentUser sharedManager]user];
     _count = [[[[currentUser sharedManager]user] numberOfCharacters] intValue];
     
     //---------------//

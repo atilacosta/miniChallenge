@@ -20,12 +20,21 @@
 - (IBAction)toggleMusic:(id)sender {
     //[s]
     [[AudioManager sharedManager] toggle];
+    if([[[AudioManager sharedManager] player] isPlaying]){
+        [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal]; ;
+    }
+    else{
+        [sender setBackgroundImage:[UIImage imageNamed:@"music off"] forState:UIControlStateNormal];
+    }
 }
 
+- (IBAction)toggleSound:(UIButton *)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
