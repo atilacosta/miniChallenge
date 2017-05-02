@@ -21,6 +21,7 @@ int uniqueIDReference = -1;
         
         _question = dict[@"question"];
         // enum
+        _value = [dict[@"questionValue"] intValue];
         
         _hint = dict[@"questionHint"];
         _choices = dict[@"questionChoices"];

@@ -8,7 +8,8 @@
 
 #import "Subject.h"
 #import "Question.h"
-
+#import "currentUser.h"
+#import "User.h"
 
 @implementation Subject
 
@@ -16,7 +17,6 @@
 {
     self = [super init];
     if (self) {
-        //NSLog(@"IOIIEOEOEO");
         
         _questionsList = [NSMutableArray new];
         
@@ -34,10 +34,20 @@
 
 -(Question *)getRandomUnansweredQuestion {
     int randomIndex;
+    
     do{
         randomIndex = arc4random_uniform((int)[self.questionsList count]);
-    }while(2==3); // Replace this with: "while the result gave me a already answered question"
+    }while([[currentUser sharedManager].user.answeredQuestionsIds containsObject:[self.questionsList objectAtIndex:randomIndex].uniqueID]); // Replace this with: "while the result gave me a already answered question"
     return [self.questionsList objectAtIndex:randomIndex];
+}
+
+-(BOOL)hasQuestionsAvaiable{
+    for(Question *current in self.questionsList){
+        if(!([[[currentUser sharedManager] user].answeredQuestionsIds containsObject:current.uniqueID])){
+            return YES;
+        }
+    }
+    return NO;
 }
 
 @end

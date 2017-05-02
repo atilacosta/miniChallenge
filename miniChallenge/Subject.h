@@ -20,4 +20,5 @@
 
 
 -(Question *)getRandomUnansweredQuestion;
+-(BOOL)hasQuestionsAvaiable;
 @end

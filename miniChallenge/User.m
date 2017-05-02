@@ -28,7 +28,7 @@
         _userId = userId;
         _playerPoints = [[NSNumber alloc]initWithInt:0];
         _numberOfCharacters = [[NSNumber alloc]initWithInt:1];
-        _answeredQuestionsIds = [[NSSet alloc]init];
+        _answeredQuestionsIds = [[NSMutableSet alloc]init];
         _userSettings = [[NSDictionary alloc]init];
         _userSettings = @{
                           @"SOUND":@"YES",
@@ -58,6 +58,7 @@
         _currentQuestionsIds = [[NSMutableSet alloc]initWithSet:_answeredQuestionsIds];
         _currentCharacters = [[NSNumber alloc]init];
         _currentCharacters = _numberOfCharacters;
+
         
     }
     return self;

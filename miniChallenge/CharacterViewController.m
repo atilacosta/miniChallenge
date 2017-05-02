@@ -152,6 +152,16 @@
     //NSLog(@"Scene name: %@", _selectedSceneDictionary);
 }
 
+//Unwind
+- (IBAction)unwindFromSecond:(UIStoryboardSegue*)sender
+{
+    GameViewController *sourceViewController = sender.sourceViewController;
+    CharacterViewController *destinationViewController = sender.destinationViewController;
+    
+    
+    
+}
+
 /*
 #pragma mark - Navigation
 
