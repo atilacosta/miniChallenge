@@ -8,7 +8,7 @@
 		<key>sceneImage</key>
 		<string>OuterSpace</string>
 		<key>sceneCharacterImage</key>
-		<string>Astronaut</string>
+		<string>astronaut</string>
 		<key>itemsList</key>
 		<array>
 			<dict>
