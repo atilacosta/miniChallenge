@@ -26,7 +26,7 @@
 
 - (AudioManager *)init {
     if (self = [super init]) {
-        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"test"  ofType:@"mp3"];
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"soundtrack"  ofType:@"m4a"];
         NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
         player.numberOfLoops = -1;
