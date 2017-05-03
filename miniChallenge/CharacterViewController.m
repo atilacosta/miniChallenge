@@ -33,7 +33,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     GameViewController *destView = segue.destinationViewController;
     CharacterViewController *sourceView = segue.sourceViewController;
-    destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
+    if ([segue.destinationViewController isKindOfClass:[GameViewController class]]) {
+        destView.selectedSceneDictionary = sourceView.selectedSceneDictionary;
+    }
+    
     
 }
 //--------------------//
@@ -92,11 +95,17 @@
     cell.cellScene = _charArray[indexPath.row];
     NSLog(@"%d %d",_count,indexPath.row);
     
-    if(indexPath.row > _count){
+    if(indexPath.row >= _count){
         cell.charImage.image = [UIImage imageNamed:@"unknown character"];
     }
     else{
-        NSString *leveledImage = [NSString stringWithFormat: @"%@ %lu",cell.cellScene[@"sceneCharacterImage"], _currentUser.answeredQuestionsIds.count/1];
+        NSString *leveledImage;
+        NSInteger numberToLevel = 1;
+        if(_currentUser.answeredQuestionsIds.count/numberToLevel < 5){
+            leveledImage = [NSString stringWithFormat: @"%@ %lu",cell.cellScene[@"sceneCharacterImage"], _currentUser.answeredQuestionsIds.count/numberToLevel];
+        }else{
+            leveledImage = [NSString stringWithFormat: @"%@ %d",cell.cellScene[@"sceneCharacterImage"],4];
+        }
         cell.charImage.image = [UIImage imageNamed:leveledImage];
         NSLog(@"%@",leveledImage);
     }
@@ -150,7 +159,9 @@
     }];
     self.selectedSceneDictionary = currentCell.cellScene;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [_charCollectionView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

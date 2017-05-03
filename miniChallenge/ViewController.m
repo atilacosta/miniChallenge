@@ -33,9 +33,8 @@
         NSLog(@"TESTE");
     }
     if([userAux isMusicOn]){
-        [[AudioManager sharedManager]playMusic];
+        [[AudioManager sharedManager]toggle];
     }
-    [[currentUser sharedManager]saveConfiguration];
     
     //adicionar no git
     //Passos:
@@ -46,7 +45,11 @@
     //4 - git push
 }
 
-- (IBAction)unwindFromView:(UIStoryboardSegue*)sender
+- (IBAction)unwindFromSettings:(UIStoryboardSegue*)sender
+{
+    
+}
+- (IBAction)unwindFromCharSelect:(UIStoryboardSegue*)sender
 {
 }
 - (void)didReceiveMemoryWarning {

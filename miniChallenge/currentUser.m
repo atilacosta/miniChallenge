@@ -33,6 +33,7 @@
         
         if(user == nil){
             user = [[User alloc]initWithUserId:[NSNumber numberWithInt:1]];
+            
         }
     }
     return self;

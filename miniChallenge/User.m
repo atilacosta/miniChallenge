@@ -34,8 +34,8 @@
         _answeredQuestionsIds = [[NSMutableSet alloc]init];
         _userSettings = [[NSDictionary alloc]init];
         _userSettings = @{
-                          @"SOUND":@"YES",
-                          @"MUSIC":@"YES",
+                          @"SOUND":@"TRUE",
+                          @"MUSIC":@"TRUE",
                           @"LANGUAGE": @"PT_BR"
                           };
         //inicializando as variaveis privadas
@@ -60,6 +60,7 @@
         
         
         //inicializando as variaveis privadas
+        _currentSettings = [[NSMutableDictionary alloc]initWithDictionary:_userSettings];
         _currentQuestionsIds = [[NSMutableSet alloc]initWithSet:_answeredQuestionsIds];
         _currentCharacters = [[NSNumber alloc]init];
         _currentCharacters = _numberOfCharacters;
@@ -95,8 +96,8 @@
     if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
         [self.currentSettings setValue:@"NO" forKey:@"MUSIC"];
     }else{
-        [self.currentSettings setValue:@"YES" forKey:@"MUSIC"];
-        [[AudioManager sharedManager]playMusic];
+        [self.currentSettings setValue:@"TRUE" forKey:@"MUSIC"];
+        //[[AudioManager sharedManager]playMusic];
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
     
@@ -106,7 +107,7 @@
     if([[self.userSettings valueForKey:@"SOUND"] isEqualToString:@"YES"]){
         [self.currentSettings setValue:@"NO" forKey:@"SOUND"];
     }else{
-        [self.currentSettings setValue:@"YES" forKey:@"SOUND"];
+        [self.currentSettings setValue:@"TRUE" forKey:@"SOUND"];
         
     }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
@@ -120,9 +121,10 @@
 }
 
 -(BOOL)isMusicOn{
-    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
+    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"TRUE"]){
         return YES;
     }else{
+        //NSLog(@"%@",[[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"TRUE"]);
         return NO;
     }
 }
