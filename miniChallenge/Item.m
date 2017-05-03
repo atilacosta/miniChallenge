@@ -43,7 +43,7 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/1.7, heightInPoints/1.7);
+        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatio], heightInPoints/[self getItemRatio]);
         
         //        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
         [self setBackgroundImage:image forState:UIControlStateNormal];
@@ -79,6 +79,23 @@
     }
     
     return NO;
+}
+
+- (float)getItemRatio{
+    
+    if ([self.itemName isEqualToString:@"Sun"]) {
+        return 0.8;
+    } else if ([self.itemName isEqualToString:@"Earth"]) {
+        return 1.6;
+    } else if ([self.itemName isEqualToString:@"Comet"]) {
+        return 2.1;
+    } else if ([self.itemName isEqualToString:@"Satellite"]) {
+        return 2.0;
+    } else if ([self.itemName isEqualToString:@"Spaceship"]) {
+        return 2.6;
+    } else {
+        return 2;
+    }
 }
 
 @end
