@@ -29,6 +29,7 @@
 		C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */; };
 		C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */; };
 		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
+		C37FA1DE1EBA3ECC0021ADCA /* soundtrack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */; };
 		C39E06161EA92BC900AA148D /* personagem 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06131EA92BC900AA148D /* personagem 1.png */; };
 		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
 		C39E06211EAE727000AA148D /* characterSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061B1EAE727000AA148D /* characterSelection.png */; };
@@ -352,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37FA1DE1EBA3ECC0021ADCA /* soundtrack.m4a in Resources */,
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
 				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
