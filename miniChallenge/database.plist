@@ -31,9 +31,9 @@
 						<array>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>Is the Sun a ...</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string>O sol é um(a) ...</string>
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
@@ -42,11 +42,15 @@
 								<array>
 									<string>Star</string>
 									<string>Planet</string>
+									<string>System</string>
+									<string>Comet</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
 									<string>Estrela</string>
 									<string>Planeta</string>
+									<string>Sistema</string>
+									<string>Cometa</string>
 								</array>
 								<key>questionHint</key>
 								<string>Planets orbit around hot celestial bodies called stars.</string>
@@ -57,9 +61,9 @@
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>English</string>
+						<string>History</string>
 						<key>subjectNamePt</key>
-						<string>Portuguese</string>
+						<string>História</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
