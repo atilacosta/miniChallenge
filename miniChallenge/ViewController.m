@@ -30,6 +30,8 @@
     userAux = [[currentUser sharedManager]user];
     //[[[currentUser sharedManager]user]changeMusicStatus];
     [[currentUser sharedManager]saveConfiguration];
+
+
     if([userAux isMusicOn]){
         [[AudioManager sharedManager]toggle];
     }

@@ -17,9 +17,9 @@
 				<key>itemNamePt</key>
 				<string>Sol</string>
 				<key>itemPosX</key>
-				<integer>150</integer>
+				<integer>-120</integer>
 				<key>itemPosY</key>
-				<integer>200</integer>
+				<integer>350</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -232,9 +232,9 @@
 				<key>itemNamePt</key>
 				<string>Terra</string>
 				<key>itemPosX</key>
-				<integer>530</integer>
-				<key>itemPosY</key>
 				<integer>450</integer>
+				<key>itemPosY</key>
+				<integer>380</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -445,13 +445,13 @@
 			</dict>
 			<dict>
 				<key>itemName</key>
-				<string>Asteroid</string>
+				<string>Comet</string>
 				<key>itemNamePt</key>
-				<string>Asteróide</string>
+				<string>Cometa</string>
 				<key>itemPosX</key>
-				<integer>700</integer>
+				<integer>750</integer>
 				<key>itemPosY</key>
-				<integer>75</integer>
+				<integer>100</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -586,9 +586,9 @@
 				<key>itemNamePt</key>
 				<string>Espaçonave</string>
 				<key>itemPosX</key>
-				<integer>280</integer>
+				<integer>490</integer>
 				<key>itemPosY</key>
-				<integer>30</integer>
+				<integer>150</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>
@@ -671,9 +671,94 @@
 				<key>itemNamePt</key>
 				<string>Satélite</string>
 				<key>itemPosX</key>
-				<integer>800</integer>
+				<integer>720</integer>
 				<key>itemPosY</key>
-				<integer>420</integer>
+				<integer>490</integer>
+				<key>subjectsList</key>
+				<array>
+					<dict>
+						<key>subjectName</key>
+						<string>Art</string>
+						<key>subjectNamePt</key>
+						<string>Ciência</string>
+						<key>questionsList</key>
+						<array>
+							<dict>
+								<key>question</key>
+								<string>Is the Sun a planet or a star?</string>
+								<key>questionPt</key>
+								<string>O sol é um planeta ou uma estrela?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
+								<key>questionID</key>
+								<integer>1</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Star</string>
+									<string>Planet</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Estrela</string>
+									<string>Planeta</string>
+								</array>
+								<key>questionHint</key>
+								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<key>questionHintPt</key>
+								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>subjectName</key>
+						<string>ED</string>
+						<key>subjectNamePt</key>
+						<string>Portuguese</string>
+						<key>questionsList</key>
+						<array>
+							<dict>
+								<key>question</key>
+								<string>What is called a group of stars?</string>
+								<key>questionPt</key>
+								<string>Como se chama um conjunto de estrelas?</string>
+								<key>questionValue</key>
+								<integer>100</integer>
+								<key>questionID</key>
+								<integer>1</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Constellation</string>
+									<string>Galaxy</string>
+									<string>Universe</string>
+									<string>Solar System</string>
+									<string>Nebula</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Constelação</string>
+									<string>Galáxia</string>
+									<string>Universo</string>
+									<string>Sistema Solar</string>
+									<string>Nébula</string>
+								</array>
+								<key>questionHint</key>
+								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<key>questionHintPt</key>
+								<string>Andromeda is a famous example of a group of stars.</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>itemName</key>
+				<string>Moon</string>
+				<key>itemNamePt</key>
+				<string>Lua</string>
+				<key>itemPosX</key>
+				<integer>285</integer>
+				<key>itemPosY</key>
+				<integer>225</integer>
 				<key>subjectsList</key>
 				<array>
 					<dict>

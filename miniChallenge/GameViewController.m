@@ -67,7 +67,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
     
@@ -115,7 +114,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
-    
+    NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
+
 }
 
 - (void)dismissViews{
@@ -221,7 +221,12 @@
 
 -(void)enableButtons{
     for(Item *current in self.selectedScene.itemsList){
-        [current setEnabled:YES];
+        
+        if([current hasQuestionsRemainingForAllSubjects]){
+            [current setEnabled:YES];
+        } else{
+            [current setEnabled:NO];
+        }
     }
 }
 
@@ -253,6 +258,12 @@
             
             [self incrementPlayerScore:self.selectedQuestion.value];
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID];
+            if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
+                [self.selectedItem setEnabled:YES];
+            } else{
+                [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
+                [self.selectedItem setEnabled:NO];
+            }
             
         } else {
             self.resultText.text = @"Incorrect!!";
@@ -350,7 +361,6 @@
 - (void)updatePoints{
     [self.playerScore setText:[NSString stringWithFormat:@"%@", self.userPoints]];
 }
-
 
 // To do:
 // resultView update score add question to answered in user. update label. and add score to user overall score.
