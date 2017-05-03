@@ -25,14 +25,7 @@
         
         [self setPositionX:width andY:height];
         
-        UIImage *image = [UIImage imageNamed:_itemName];
-        CGFloat heightInPoints = image.size.height;
-        CGFloat widthInPoints = image.size.width;
-        
-        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints, heightInPoints);
-        
-//        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
-        [self setBackgroundImage:image forState:UIControlStateNormal];
+        UIImage *image = [UIImage new];
         
         
         for(NSDictionary *currentSubject in data[@"subjectsList"]){
@@ -40,6 +33,20 @@
             [self.itemSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
+        if([self hasQuestionsRemainingForAllSubjects]){
+            image = [UIImage imageNamed:[NSString stringWithFormat:@"highlight%@",_itemName]];
+        } else{
+            image = [UIImage imageNamed:_itemName];
+            [self setEnabled:NO];
+        }
+        
+        CGFloat heightInPoints = image.size.height;
+        CGFloat widthInPoints = image.size.width;
+        
+        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatio], heightInPoints/[self getItemRatio]);
+        
+        //        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+        [self setBackgroundImage:image forState:UIControlStateNormal];
     }
     return self;
 }
@@ -63,5 +70,32 @@
     return nil; // Subject not found
 }
 
+- (BOOL)hasQuestionsRemainingForAllSubjects{
+    
+    for(Subject *current in self.itemSubjects){
+        if([current hasQuestionsAvaiable]){
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+- (float)getItemRatio{
+    
+    if ([self.itemName isEqualToString:@"Sun"]) {
+        return 0.8;
+    } else if ([self.itemName isEqualToString:@"Earth"]) {
+        return 1.6;
+    } else if ([self.itemName isEqualToString:@"Comet"]) {
+        return 2.1;
+    } else if ([self.itemName isEqualToString:@"Satellite"]) {
+        return 2.0;
+    } else if ([self.itemName isEqualToString:@"Spaceship"]) {
+        return 2.6;
+    } else {
+        return 2;
+    }
+}
 
 @end

@@ -22,5 +22,6 @@
 - (instancetype)initWithData:(NSDictionary *)data withWidth:(NSNumber *)width withHeight:(NSNumber *)height;;
 
 -(Subject *)subjectByName: (NSString *)name;
+- (BOOL)hasQuestionsRemainingForAllSubjects;
 
 @end
