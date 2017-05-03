@@ -33,6 +33,8 @@
     }
     
     [[currentUser sharedManager]saveConfiguration];
+
+
     if([userAux isMusicOn]){
         [[AudioManager sharedManager]toggle];
     }
