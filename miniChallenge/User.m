@@ -78,6 +78,7 @@
     [encoder encodeObject:self.answeredQuestionsIds forKey:@"ANSWEREDQUESTIONS"];
     [encoder encodeObject:self.userSettings forKey:@"SETTINGS"];
     
+    
 }
 
 
@@ -91,7 +92,7 @@
 }
 
 - (void)changeMusicStatus{
-    if([[self.currentSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
+    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
         [self.currentSettings setValue:@"NO" forKey:@"MUSIC"];
     }else{
         [self.currentSettings setValue:@"YES" forKey:@"MUSIC"];
@@ -102,7 +103,7 @@
 }
 
 -(void)changeSoundStatus{
-    if([[self.currentSettings valueForKey:@"SOUND"] isEqualToString:@"YES"]){
+    if([[self.userSettings valueForKey:@"SOUND"] isEqualToString:@"YES"]){
         [self.currentSettings setValue:@"NO" forKey:@"SOUND"];
     }else{
         [self.currentSettings setValue:@"YES" forKey:@"SOUND"];

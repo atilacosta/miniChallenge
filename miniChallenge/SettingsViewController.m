@@ -21,7 +21,8 @@
     //[s]
     [[AudioManager sharedManager] toggle];
     if([[[AudioManager sharedManager] player] isPlaying]){
-        [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal]; ;
+        [sender setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal];
+        //[[currentUser sharedManager]user]
     }
     else{
         [sender setBackgroundImage:[UIImage imageNamed:@"music off"] forState:UIControlStateNormal];

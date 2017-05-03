@@ -28,7 +28,10 @@
     [super viewDidLoad];
     User *userAux;
     userAux = [[currentUser sharedManager]user];
-    
+    [userAux changeMusicStatus];
+    if([userAux isMusicOn]){
+        NSLog(@"TESTE");
+    }
     if([userAux isMusicOn]){
         [[AudioManager sharedManager]playMusic];
     }

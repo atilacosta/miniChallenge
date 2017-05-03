@@ -31,7 +31,7 @@
         NSData *encodedUserConfig = [userConfigDefault objectForKey:@"encodedUser"];
         user = (User *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedUserConfig];
         
-        if(user != nil){
+        if(user == nil){
             user = [[User alloc]initWithUserId:[NSNumber numberWithInt:1]];
         }
     }
