@@ -183,9 +183,9 @@
 			</dict>
 			<dict>
 				<key>itemName</key>
-				<string>Asteroid</string>
+				<string>Comet</string>
 				<key>itemNamePt</key>
-				<string>Asteróide</string>
+				<string>Cometa</string>
 				<key>itemPosX</key>
 				<integer>700</integer>
 				<key>itemPosY</key>
