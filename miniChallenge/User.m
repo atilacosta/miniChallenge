@@ -93,12 +93,10 @@
 }
 
 - (void)changeMusicStatus{
-    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"YES"]){
-        [self.currentSettings setValue:@"NO" forKey:@"MUSIC"];
+    if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"TRUE"]){
+        [self.currentSettings setValue:@"FALSE" forKey:@"MUSIC"];
     }else{
-        [self.currentSettings setValue:@"TRUE" forKey:@"MUSIC"];
-        //[[AudioManager sharedManager]playMusic];
-    }
+        [self.currentSettings setValue:@"TRUE" forKey:@"MUSIC"];    }
     _userSettings = [[[NSDictionary alloc]initWithDictionary:self.currentSettings]copy];
     
 }
@@ -124,13 +122,12 @@
     if([[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"TRUE"]){
         return YES;
     }else{
-        //NSLog(@"%@",[[self.userSettings valueForKey:@"MUSIC"] isEqualToString:@"TRUE"]);
         return NO;
     }
 }
 
 -(BOOL)isSoundOn{
-    if([[self.userSettings valueForKey:@"SOUND"] isEqualToString:@"YES"]){
+    if([[self.userSettings valueForKey:@"SOUND"] isEqualToString:@"TRUE"]){
         return YES;
     }else{
         return NO;
