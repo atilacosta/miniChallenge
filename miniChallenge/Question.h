@@ -26,5 +26,6 @@
 
 // Static method
 +(NSNumber *)getUniqueID;
++(void)resetUniqueID;
 
 @end

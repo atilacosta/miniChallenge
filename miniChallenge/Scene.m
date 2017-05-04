@@ -9,6 +9,7 @@
 #import "Scene.h"
 #import "Item.h"
 #import "Subject.h"
+#import "Question.h"
 //@interface Scene ()
 //
 //@property NSMutableArray *privateItemsList;
@@ -35,6 +36,8 @@
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
         
+        [Question resetUniqueID];
+        
         for (NSDictionary *currentDict in dict[@"itemsList"]){
             Item *currentItem = [[Item alloc] initWithData:currentDict withWidth:width withHeight:height];
             [_itemsList addObject:currentItem];
@@ -44,12 +47,12 @@
             // set position from plist info
             // add subview
         }
-//        for (Item *currentItem in _itemsList) {
-//            for (Subject *currentSub in currentItem.itemSubjects) {
-//                _TotalNumberOfQuestions += currentSub.questionsList.count;
-//            }
-//        }
-        _TotalNumberOfQuestions = 30;
+        for (Item *currentItem in _itemsList) {
+            for (Subject *currentSub in currentItem.itemSubjects) {
+                _TotalNumberOfQuestions += currentSub.questionsList.count;
+            }
+        }
+//        _TotalNumberOfQuestions = 30;
     }
     return self;
 }
