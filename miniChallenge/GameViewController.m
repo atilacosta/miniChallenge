@@ -163,7 +163,7 @@
         self.selectedItem = (Item *)sender;
     }
     
-    [self verifyItemSubjectState];
+    //[self verifyItemSubjectState];
     
     [self showSubjectView];
 }
@@ -273,7 +273,7 @@
         if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
-            self.resultText.textColor = [UIColor colorWithRed:56/255 green:158/255 blue:25/255 alpha:1];
+            self.resultText.textColor = [UIColor colorWithRed:56.0/255.0 green:158.0/255.0 blue:25.0/255.0 alpha:1];
             
             //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
@@ -283,7 +283,7 @@
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
             
             //Changing item button state after
-            [self verifyItemSubjectState];
+            //[self verifyItemSubjectState];
             [self verifyItemState];
             
 
@@ -329,6 +329,7 @@
             
         }
     }
+    [self verifyItemSubjectState];
 }
 
 // 3 - DONE
@@ -401,16 +402,22 @@
     }
 }
 
+
 -(void)verifyItemSubjectState{
     for(Subject *currentSubject in self.selectedItem.itemSubjects){
         for(UIButton *currentButton in self.buttonArray){
             if([currentButton.titleLabel.text isEqualToString:currentSubject.subjectName]){
+                
                 if(![currentSubject hasQuestionsAvaiable]){
+                    
                     [currentButton setEnabled:NO];
+                    [currentButton setAlpha:0.5];
+                    //[currentButton setTitle:currentSubject.subjectName forState:UIControlStateDisabled];
                 }
             }
         }
     }
+    
 }
 
 // To do:

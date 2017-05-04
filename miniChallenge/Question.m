@@ -47,4 +47,8 @@ int uniqueIDReference = -1;
     return @(uniqueIDReference);
 }
 
++(void)resetUniqueID{
+    uniqueIDReference = -1;
+}
+
 @end
