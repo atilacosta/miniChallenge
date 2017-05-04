@@ -69,7 +69,7 @@
     // Do any additional setup after loading the view.
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
-    
+    NSLog(@"%@",_selectedSceneDictionary);
     // Create the scene
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
