@@ -83,12 +83,13 @@
 }
 
 
-- (void)insertAnsweredQuestionsId:(NSNumber *)questionId{
+- (void)insertAnsweredQuestionsId:(NSNumber *)questionId andQuestionValue:(int)value{
     if(![_currentQuestionsIds containsObject:questionId]){
         [_currentQuestionsIds addObject:questionId];
         _answeredQuestionsIds = [[[NSSet alloc]initWithSet:_currentQuestionsIds]copy];
         _currentHits += [_numberOfHits intValue];
         _numberOfHits = [NSNumber numberWithInt:_currentHits];
+        _playerPoints = @([_playerPoints intValue] + value);
     }
 }
 

@@ -23,7 +23,7 @@
 
 - (id)initWithCoder:(NSCoder *)decoder;
 
-- (void)insertAnsweredQuestionsId:(NSNumber *)questionId;
+- (void)insertAnsweredQuestionsId:(NSNumber *)questionId andQuestionValue:(int)value;
 
 - (void)changeSoundStatus;
 
@@ -34,6 +34,7 @@
 - (BOOL)isSoundOn;
 
 - (BOOL)isMusicOn;
+
 
 
 
