@@ -254,7 +254,7 @@
             self.resultText.textColor = [UIColor greenColor];
             // show and update score
             
-            NSLog(@"%@", self.selectedQuestion.uniqueID);
+            //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
             [self incrementPlayerScore:self.selectedQuestion.value];
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID];
