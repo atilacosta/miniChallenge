@@ -382,6 +382,7 @@
                         <outlet property="selectedSubjectFour" destination="sWy-1p-78y" id="iPz-y7-7aA"/>
                         <outlet property="selectedSubjectOne" destination="LKE-fW-0K5" id="UPb-l5-s49"/>
                         <outlet property="selectedSubjectSix" destination="60G-u8-o7q" id="vck-KZ-zkM"/>
+                        <outlet property="selectedSubjectText" destination="PfY-BU-aUK" id="uAC-Hu-yvf"/>
                         <outlet property="selectedSubjectThree" destination="fLK-3S-YLb" id="rvC-AL-D9E"/>
                         <outlet property="selectedSubjectTwo" destination="F6F-Q3-AE5" id="cjv-dS-8yb"/>
                         <outlet property="subjectView" destination="ctw-t6-yP2" id="ZQv-kP-CRi"/>
