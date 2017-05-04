@@ -30,6 +30,7 @@
 @property (nonatomic) NSString *selectedAlternative;
 
 @property (nonatomic) NSNumber *userPoints;
+@property (nonatomic) NSNumber *userAnsweredCount;
 
 @property (nonatomic) BOOL hasAnswers;
 
