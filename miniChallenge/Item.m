@@ -49,7 +49,7 @@
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatioWithSize:width andWidthFlag:YES], heightInPoints/[self getItemRatioWithSize:height andWidthFlag:NO]);
         
-        NSLog(@"%@", self.itemName);
+        //NSLog(@"%@", self.itemName);
         [self setBackgroundImage:image forState:UIControlStateNormal];
     }
     return self;
