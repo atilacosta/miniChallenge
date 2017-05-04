@@ -67,6 +67,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     // Do any additional setup after loading the view.
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
@@ -111,6 +118,7 @@
     
     [self updateUserPointsAndAnsweredQuestionsCount];
     
+    //[self verifyItemSubjectState];
     
     [self.selectedScene addSubview:self.backButton];
     
@@ -118,7 +126,6 @@
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
-
 }
 
 - (void)dismissViews{
@@ -149,6 +156,9 @@
     if(self.selectedItem != (Item *)sender){
         self.selectedItem = (Item *)sender;
     }
+    
+    [self verifyItemSubjectState];
+    
     [self showSubjectView];
 }
 
@@ -253,7 +263,7 @@
         if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
-            self.resultText.textColor = [UIColor greenColor];
+            self.resultText.textColor = [UIColor colorWithRed:56/255 green:158/255 blue:25/255 alpha:1];
             
             //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
@@ -263,6 +273,7 @@
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
             
             //Changing item button state after
+            [self verifyItemSubjectState];
             [self verifyItemState];
             
 
@@ -380,11 +391,17 @@
     }
 }
 
-//-(void)verifyItemSubjectState{
-//    if(![self.selectedSubject hasQuestionsAvaiable]){
-//        
-//    }
-//}
+-(void)verifyItemSubjectState{
+    for(Subject *currentSubject in self.selectedItem.itemSubjects){
+        for(UIButton *currentButton in self.buttonArray){
+            if([currentButton.titleLabel.text isEqualToString:currentSubject.subjectName]){
+                if(![currentSubject hasQuestionsAvaiable]){
+                    [currentButton setEnabled:NO];
+                }
+            }
+        }
+    }
+}
 
 // To do:
 // resultView update score add question to answered in user. update label. and add score to user overall score.
