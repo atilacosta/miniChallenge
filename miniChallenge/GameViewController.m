@@ -36,6 +36,10 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *questionView;
+
+@property (weak, nonatomic) IBOutlet UILabel *selectedSubjectText;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *selectedQuestionText;
 
 @property (nonatomic) NSArray *alternativesArray;
@@ -48,6 +52,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *resultView;
+
+@property (weak, nonatomic) IBOutlet UILabel *resultSubjectName;
 
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
 @property (weak, nonatomic) IBOutlet UILabel *resultHint;
