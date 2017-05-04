@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-Ix-VwP">
-                                <rect key="frame" x="267" y="278" width="202" height="54.666666666666686"/>
+                                <rect key="frame" x="267" y="278" width="202" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lyx-Ix-VwP" secondAttribute="height" multiplier="181:49" id="L0t-y4-hr4"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-ig-y3l">
-                                <rect key="frame" x="267" y="340.66666666666669" width="202" height="54.666666666666629"/>
+                                <rect key="frame" x="267" y="341" width="202" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UBV-ig-y3l" secondAttribute="height" multiplier="181:49" id="goY-cN-ysu"/>
                                 </constraints>
@@ -98,13 +98,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings lettering" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-kg-TJf">
-                                <rect key="frame" x="221" y="17.333333333333329" width="294" height="48.333333333333343"/>
+                                <rect key="frame" x="221" y="17" width="294" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pcV-kg-TJf" secondAttribute="height" multiplier="67:11" id="S9b-P8-pSa"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAs-Se-YS0">
-                                <rect key="frame" x="242" y="138.33333333333334" width="121" height="96.333333333333314"/>
+                                <rect key="frame" x="242" y="138" width="121" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pAs-Se-YS0" secondAttribute="height" multiplier="63:50" id="oQ0-TN-rvV"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LG-8d-8BH">
-                                <rect key="frame" x="377" y="138.33333333333334" width="121" height="96.333333333333314"/>
+                                <rect key="frame" x="377" y="138" width="121" height="97"/>
                                 <state key="normal" backgroundImage="sound off"/>
                                 <connections>
                                     <action selector="toggleSound:" destination="0P5-6s-CiY" eventType="touchUpInside" id="YpK-rH-tWW"/>
@@ -161,13 +161,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character selection lettering" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Xg-fXT">
-                                <rect key="frame" x="110" y="15.333333333333332" width="516" height="52.333333333333343"/>
+                                <rect key="frame" x="110" y="15" width="516" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vVf-Xg-fXT" secondAttribute="height" multiplier="423:43" id="Swr-4m-ruK"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-MY-1VV">
-                                <rect key="frame" x="267" y="338.33333333333331" width="202" height="54.333333333333371"/>
+                                <rect key="frame" x="267" y="338" width="202" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mmZ-MY-1VV" secondAttribute="height" multiplier="26:7" id="vuM-Ib-9XA"/>
                                 </constraints>
@@ -177,7 +177,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-B9-Vt5">
-                                <rect key="frame" x="0.0" y="67.666666666666686" width="736" height="270.66666666666663"/>
+                                <rect key="frame" x="0.0" y="68" width="736" height="270"/>
                                 <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6T7-JU-g96">
@@ -214,7 +214,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vx-Sd-VJS">
-                                <rect key="frame" x="35" y="28.333333333333336" width="40" height="26.333333333333336"/>
+                                <rect key="frame" x="35" y="28" width="40" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6vx-Sd-VJS" secondAttribute="height" multiplier="23:15" id="1Tp-4S-4ob"/>
                                 </constraints>
@@ -244,6 +244,7 @@
                     </view>
                     <connections>
                         <outlet property="charCollectionView" destination="Sef-B9-Vt5" id="TUC-Wr-MR3"/>
+                        <outlet property="chooseButton" destination="mmZ-MY-1VV" id="pt0-Xd-Lcz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdi-U4-CmC" userLabel="First Responder" sceneMemberID="firstResponder"/>

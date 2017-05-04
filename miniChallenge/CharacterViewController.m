@@ -23,6 +23,7 @@
 @property CGSize selectedImageSize;
 @property NSInteger count;
 @property User *currentUser;
+@property (weak, nonatomic) IBOutlet UIButton *chooseButton;
 
 @end
 
@@ -42,6 +43,24 @@
 //--------------------//
 #pragma mark CollectionViewAnimation
 //--------------------//
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    NSIndexPath *indexPath =
+    [self.charCollectionView indexPathForItemAtPoint:
+     [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
+    //NSLog(@"%f",_charCollectionView.center.x);
+    [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.5 animations:^{
+        [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
+    }];
+    self.selectedSceneDictionary = _charArray[indexPath.item];
+    if (_count > indexPath.item) {
+        [_chooseButton setEnabled:YES];
+    }
+    else{
+        [_chooseButton setEnabled:NO];
+    }
+}
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     
     NSIndexPath *indexPath =
@@ -54,6 +73,12 @@
         [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
     }];
     self.selectedSceneDictionary = _charArray[indexPath.item];
+    if (_count > indexPath.item) {
+        [_chooseButton setEnabled:YES];
+    }
+    else{
+        [_chooseButton setEnabled:NO];
+    }
 }
 
 //--------------------//
@@ -86,14 +111,14 @@
 }
 //--------------------//
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSLog(@"%d",_charArray.count);
+    //NSLog(@"%d",_charArray.count);
     return _charArray.count;
 }
 //--------------------//
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
     cell.cellScene = _charArray[indexPath.row];
-    NSLog(@"%d %d",_count,indexPath.row);
+    //NSLog(@"%d %d",_count,indexPath.row);
     
     if(indexPath.row >= _count){
         cell.charImage.image = [UIImage imageNamed:@"unknown character"];
@@ -107,7 +132,7 @@
             leveledImage = [NSString stringWithFormat: @"%@ %d",cell.cellScene[@"sceneCharacterImage"],4];
         }
         cell.charImage.image = [UIImage imageNamed:leveledImage];
-        NSLog(@"%@",leveledImage);
+        //NSLog(@"%@",leveledImage);
     }
     
 

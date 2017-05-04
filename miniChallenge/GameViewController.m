@@ -68,10 +68,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
-    
+    NSLog(@"%@",_selectedSceneDictionary);
     // Create the scene
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
@@ -118,7 +117,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
-    
+    NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
+
 }
 
 - (void)dismissViews{
@@ -223,7 +223,12 @@
 
 -(void)enableButtons{
     for(Item *current in self.selectedScene.itemsList){
-        [current setEnabled:YES];
+        
+        if([current hasQuestionsRemainingForAllSubjects]){
+            [current setEnabled:YES];
+        } else{
+            [current setEnabled:NO];
+        }
     }
 }
 
@@ -251,7 +256,7 @@
             self.resultText.textColor = [UIColor greenColor];
             
             
-            NSLog(@"%@", self.selectedQuestion.uniqueID);
+            //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
             
             
@@ -363,7 +368,6 @@
     self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
     [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/50", self.userAnsweredCount]];
 }
-
 
 // To do:
 // resultView update score add question to answered in user. update label. and add score to user overall score.
