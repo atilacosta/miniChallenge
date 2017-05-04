@@ -261,14 +261,10 @@
             
             [self incrementPlayerScore:self.selectedQuestion.value];
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
-            if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
-                [self.selectedItem setEnabled:YES];
-            } else{
-                [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
-                [self.selectedItem setEnabled:NO];
-            }
             
-            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value ];
+            //Changing item button state after
+            [self verifyItemState];
+            
 
             [[currentUser sharedManager] saveConfiguration];
             
@@ -374,6 +370,21 @@
     self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
     [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/50", self.userAnsweredCount]];
 }
+
+-(void)verifyItemState{
+    if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
+        [self.selectedItem setEnabled:YES];
+    } else{
+        [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
+        [self.selectedItem setEnabled:NO];
+    }
+}
+
+//-(void)verifyItemSubjectState{
+//    if(![self.selectedSubject hasQuestionsAvaiable]){
+//        
+//    }
+//}
 
 // To do:
 // resultView update score add question to answered in user. update label. and add score to user overall score.
