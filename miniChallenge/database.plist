@@ -39,12 +39,10 @@
 								<key>questionID</key>
 								<string></string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Correct</string>
-									<key>Item 1</key>
 									<string>Incorrect</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
 								<dict>
 									<key>Item 1</key>

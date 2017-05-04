@@ -372,7 +372,7 @@
     [self.playerScore setText:[NSString stringWithFormat:@"Points: %@", self.userPoints]];
     
     self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
-    [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/50", self.userAnsweredCount]];
+    [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/%ld", self.userAnsweredCount, self.selectedScene.TotalNumberOfQuestions]];
 }
 
 // To do:

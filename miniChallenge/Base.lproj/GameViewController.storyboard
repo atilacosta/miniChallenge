@@ -241,12 +241,6 @@
                                                 <color key="textColor" red="0.92156862750000001" green="0.33333333329999998" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-Jh-INC">
-                                                <rect key="frame" x="0.0" y="51" width="444" height="34"/>
-                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DO-U1-Bzr">
                                                 <rect key="frame" x="-0.5" y="183.5" width="222" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="23"/>
@@ -268,6 +262,12 @@
                                                     <color key="titleColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-Jh-INC">
+                                                <rect key="frame" x="0.0" y="69" width="444" height="48"/>
+                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
