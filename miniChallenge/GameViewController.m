@@ -49,6 +49,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 
+@property (weak, nonatomic) IBOutlet UILabel *resultSubjectName;
+
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
 @property (weak, nonatomic) IBOutlet UILabel *resultHint;
 
