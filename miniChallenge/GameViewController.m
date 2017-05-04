@@ -255,12 +255,18 @@
             self.resultHint.text = @"";
             self.resultText.textColor = [UIColor greenColor];
             
-            
             //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
             
             
             [self incrementPlayerScore:self.selectedQuestion.value];
+            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
+            if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
+                [self.selectedItem setEnabled:YES];
+            } else{
+                [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
+                [self.selectedItem setEnabled:NO];
+            }
             
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value ];
 
