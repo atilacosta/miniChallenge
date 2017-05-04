@@ -9,6 +9,7 @@
 #import "Scene.h"
 #import "Item.h"
 #import "Subject.h"
+#import "Question.h"
 //@interface Scene ()
 //
 //@property NSMutableArray *privateItemsList;
@@ -34,6 +35,8 @@
         _itemsList = [NSMutableArray new];
         _name = dict[@"sceneName"];
         _backgroundImage = dict[@"sceneImage"];
+        
+        [Question resetUniqueID];
         
         for (NSDictionary *currentDict in dict[@"itemsList"]){
             Item *currentItem = [[Item alloc] initWithData:currentDict withWidth:width withHeight:height];

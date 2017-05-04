@@ -73,6 +73,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     // Do any additional setup after loading the view.
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
@@ -117,6 +124,7 @@
     
     [self updateUserPointsAndAnsweredQuestionsCount];
     
+    //[self verifyItemSubjectState];
     
     [self.selectedScene addSubview:self.backButton];
     
@@ -124,7 +132,6 @@
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
-
 }
 
 - (void)dismissViews{
@@ -155,6 +162,9 @@
     if(self.selectedItem != (Item *)sender){
         self.selectedItem = (Item *)sender;
     }
+    
+    //[self verifyItemSubjectState];
+    
     [self showSubjectView];
 }
 
@@ -263,7 +273,7 @@
         if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
-            self.resultText.textColor = [UIColor greenColor];
+            self.resultText.textColor = [UIColor colorWithRed:56.0/255.0 green:158.0/255.0 blue:25.0/255.0 alpha:1];
             
             //NSLog(@"%@", self.selectedQuestion.uniqueID);
             
@@ -271,14 +281,11 @@
             
             [self incrementPlayerScore:self.selectedQuestion.value];
             [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
-            if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
-                [self.selectedItem setEnabled:YES];
-            } else{
-                [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
-                [self.selectedItem setEnabled:NO];
-            }
             
-            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value ];
+            //Changing item button state after
+            //[self verifyItemSubjectState];
+            [self verifyItemState];
+            
 
             [[currentUser sharedManager] saveConfiguration];
             
@@ -322,6 +329,7 @@
             
         }
     }
+    [self verifyItemSubjectState];
 }
 
 // 3 - DONE
@@ -383,6 +391,33 @@
     
     self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
     [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/%ld", self.userAnsweredCount, self.selectedScene.TotalNumberOfQuestions]];
+}
+
+-(void)verifyItemState{
+    if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
+        [self.selectedItem setEnabled:YES];
+    } else{
+        [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
+        [self.selectedItem setEnabled:NO];
+    }
+}
+
+
+-(void)verifyItemSubjectState{
+    for(Subject *currentSubject in self.selectedItem.itemSubjects){
+        for(UIButton *currentButton in self.buttonArray){
+            if([currentButton.titleLabel.text isEqualToString:currentSubject.subjectName]){
+                
+                if(![currentSubject hasQuestionsAvaiable]){
+                    
+                    [currentButton setEnabled:NO];
+                    [currentButton setAlpha:0.5];
+                    //[currentButton setTitle:currentSubject.subjectName forState:UIControlStateDisabled];
+                }
+            }
+        }
+    }
+    
 }
 
 // To do:
