@@ -35,23 +35,19 @@
 								<key>questionPt</key>
 								<string>Eclipse solar é o fenômeno que ocorre quando a Lua oculta, parcialmente ou totalmente o Sol. Esta afirmação está:</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>200</string>
 								<key>questionID</key>
-								<string></string>
+								<string>1</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Correct</string>
-									<key>Item 1</key>
 									<string>Incorrect</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict>
-									<key>Item 1</key>
+								<array>
 									<string>Correta</string>
-									<key>Item 2</key>
 									<string>Errada</string>
-								</dict>
+								</array>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -65,7 +61,7 @@
 								<key>questionValue</key>
 								<string>100</string>
 								<key>questionID</key>
-								<string>1</string>
+								<string>2</string>
 								<key>questionChoices</key>
 								<array>
 									<string>Constellation</string>
@@ -93,7 +89,7 @@
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>2</integer>
+								<integer>3</integer>
 								<key>questionChoices</key>
 								<array>
 									<string>Star</string>
@@ -128,31 +124,23 @@
 								<key>questionPt</key>
 								<string>.......... é o nome da teoria que afirma que o Sol é o centro do universo.</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>100</string>
 								<key>questionID</key>
-								<string></string>
+								<string>4</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Heliocentrism</string>
-									<key>Item 1</key>
 									<string>Suncentrism</string>
-									<key>Item 2</key>
 									<string>Sunerism</string>
-									<key>Item 3</key>
 									<string>Geocentrism</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Heliocentrismo</string>
-									<key>Item 1</key>
 									<string>Solcentrismo</string>
-									<key>Item 2</key>
 									<string>Solarismo</string>
-									<key>Item 3</key>
 									<string>Geocentrismo</string>
-								</dict>
+								</array>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -166,29 +154,21 @@
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>3</integer>
+								<integer>5</integer>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Egyptian</string>
-									<key>Item 1</key>
 									<string>Aztecs</string>
-									<key>Item 2</key>
 									<string>Maya</string>
-									<key>Item 3</key>
 									<string>Greek</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Egípcios</string>
-									<key>Item 1</key>
 									<string>Maias</string>
-									<key>Item 2</key>
 									<string>Aztecas</string>
-									<key>Item 3</key>
 									<string>Gregos</string>
-								</dict>
+								</array>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -200,9 +180,9 @@
 								<key>questionPt</key>
 								<string>Por volta de 1537, foi proposta uma teoria que afirmava que o Sol seria o centro do Universo, essa teoria se chamava .......... e foi proposta por .......... .</string>
 								<key>questionValue</key>
-								<integer>0</integer>
+								<integer>300</integer>
 								<key>questionID</key>
-								<integer>0</integer>
+								<integer>6</integer>
 								<key>questionChoices</key>
 								<array>
 									<string>Heliocentrism - Nicolau Copérnico</string>
@@ -243,110 +223,87 @@
 						<key>subjectNamePt</key>
 						<string>Geografia</string>
 						<key>questionsList</key>
-						<dict>
-							<key>Item 0</key>
+						<array>
 							<dict>
 								<key>question</key>
 								<string>What is called the movement of the Earth around the Sun?</string>
 								<key>questionPt</key>
 								<string>Como se chama o movimento que a Terra faz em torno do Sol?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>200</string>
 								<key>questionID</key>
-								<string></string>
+								<string>7</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Translation</string>
-									<key>Item 1</key>
 									<string>Rotation</string>
-									<key>Item 2</key>
 									<string>Circulation</string>
-									<key>Item 3</key>
 									<string>Stroll</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Translação</string>
-									<key>Item 1</key>
 									<string>Circulação</string>
-									<key>Item 2</key>
 									<string>Passeio</string>
-									<key>Item 3</key>
 									<string>Rotação</string>
-								</dict>
+								</array>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
 								<string></string>
 							</dict>
-							<key>Item 1</key>
 							<dict>
 								<key>question</key>
 								<string>What is the biggest continent in the Earth planet?</string>
 								<key>questionPt</key>
-								<string></string>
+								<string>Qual é o maior continente do planeta Terra?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>100</string>
 								<key>questionID</key>
-								<string></string>
+								<string>8</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Asia</string>
-									<key>Item 1</key>
 									<string>Europe</string>
-									<key>Item 2</key>
 									<string>Africa</string>
-									<key>Item 3</key>
 									<string>America</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict/>
+								<array/>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
 								<string></string>
 							</dict>
-							<key>Item 2</key>
 							<dict>
 								<key>question</key>
 								<string>How many continents exists on Earth planet?</string>
 								<key>questionPt</key>
 								<string>Quantos continentes existem no planeta Terra?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>100</string>
 								<key>questionID</key>
-								<string></string>
+								<string>9</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>6</string>
-									<key>Item 1</key>
 									<string>5</string>
-									<key>Item 2</key>
 									<string>7</string>
-									<key>Item 3</key>
 									<string>8</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>6</string>
-									<key>Item 1</key>
 									<string>5</string>
-									<key>Item 2</key>
 									<string>7</string>
-									<key>Item 3</key>
 									<string>8</string>
-								</dict>
+								</array>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
 								<string></string>
 							</dict>
-						</dict>
+						</array>
 					</dict>
 					<dict>
 						<key>subjectName</key>
@@ -359,24 +316,20 @@
 								<key>question</key>
 								<string>What is the biggest planet from Solar System?</string>
 								<key>questionPt</key>
-								<string></string>
+								<string>Qual é o maior planeta do Sistema Solar?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>200</string>
 								<key>questionID</key>
-								<string></string>
+								<string>10</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Jupiter</string>
-									<key>Item 1</key>
 									<string>Saturn</string>
-									<key>Item 2</key>
 									<string>Neptune</string>
-									<key>Item 3</key>
 									<string>Earth</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict/>
+								<array/>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -386,24 +339,20 @@
 								<key>question</key>
 								<string>Which planets can be viewed by naked eye?</string>
 								<key>questionPt</key>
-								<string></string>
+								<string>Quais planetas podem ser vistos a olho nú?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>300</string>
 								<key>questionID</key>
-								<string></string>
+								<string>11</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>Jupiter, Mercury, Mars, Venus, Saturn</string>
-									<key>Item 1</key>
 									<string>Mars, Venus, Neptune, Sun, Saturn</string>
-									<key>Item 2</key>
 									<string>Mars, Neptune, Venus, Mercury, Uranus</string>
-									<key>Item 3</key>
 									<string>Neptune, Jupiter, Saturn, Uranus, Pluto</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict/>
+								<array/>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -413,24 +362,20 @@
 								<key>question</key>
 								<string>How many planets exist in the Solar System?</string>
 								<key>questionPt</key>
-								<string></string>
+								<string>Quantos planetas existem no Sistema Solar?</string>
 								<key>questionValue</key>
-								<string></string>
+								<string>100</string>
 								<key>questionID</key>
-								<string></string>
+								<string>12</string>
 								<key>questionChoices</key>
-								<dict>
-									<key>Item 0</key>
+								<array>
 									<string>7</string>
-									<key>Item 1</key>
 									<string>8</string>
-									<key>Item 2</key>
 									<string>9</string>
-									<key>Item 3</key>
 									<string>10</string>
-								</dict>
+								</array>
 								<key>questionChoicesPt</key>
-								<dict/>
+								<array/>
 								<key>questionHint</key>
 								<string></string>
 								<key>questionHintPt</key>
@@ -464,9 +409,9 @@
 								<key>questionPt</key>
 								<string>Asteroides são</string>
 								<key>questionValue</key>
-								<integer>0</integer>
+								<integer>100</integer>
 								<key>questionID</key>
-								<integer>0</integer>
+								<integer>13</integer>
 								<key>questionChoices</key>
 								<array>
 									<string>Small planets</string>
@@ -480,9 +425,9 @@
 									<string>Planeta</string>
 								</array>
 								<key>questionHint</key>
-								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
+								<string></string>
 							</dict>
 							<dict>
 								<key>question</key>
@@ -490,9 +435,9 @@
 								<key>questionPt</key>
 								<string></string>
 								<key>questionValue</key>
-								<integer>0</integer>
+								<integer>100</integer>
 								<key>questionID</key>
-								<integer>0</integer>
+								<integer>14</integer>
 								<key>questionChoices</key>
 								<array>
 									<string>Dinosaurs</string>
@@ -512,27 +457,27 @@
 							</dict>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>Asteroids are harmless?</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string></string>
 								<key>questionValue</key>
-								<integer>100</integer>
+								<integer>200</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>15</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Star</string>
-									<string>Planet</string>
+									<string>False</string>
+									<string>True</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
-									<string>Estrela</string>
-									<string>Planeta</string>
+									<string>Falso</string>
+									<string>Verdadeiro</string>
 								</array>
 								<key>questionHint</key>
-								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
+								<string></string>
 							</dict>
 						</array>
 					</dict>
@@ -540,38 +485,84 @@
 						<key>subjectName</key>
 						<string>History</string>
 						<key>subjectNamePt</key>
-						<string>Portuguese</string>
+						<string>História</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string>What is called a group of stars?</string>
+								<string>Asteroids brought water to earth?</string>
 								<key>questionPt</key>
-								<string>Como se chama um conjunto de estrelas?</string>
+								<string></string>
 								<key>questionValue</key>
-								<integer>100</integer>
+								<integer>300</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>16</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Constellation</string>
-									<string>Galaxy</string>
-									<string>Universe</string>
-									<string>Solar System</string>
-									<string>Nebula</string>
+									<string>True</string>
+									<string>False</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
-									<string>Constelação</string>
-									<string>Galáxia</string>
-									<string>Universo</string>
-									<string>Sistema Solar</string>
-									<string>Nébula</string>
+									<string>True</string>
+									<string>False</string>
 								</array>
 								<key>questionHint</key>
-								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Andromeda is a famous example of a group of stars.</string>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>Asteroids are also know as:</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>200</integer>
+								<key>questionID</key>
+								<integer>17</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Planetoids</string>
+									<string>Rocks</string>
+									<string>Stars</string>
+									<string>Constelations</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Planetóides</string>
+									<string>Pedras</string>
+									<string>Estrelas</string>
+									<string>Constelações</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>Halley was the first comet to be recognized as a periodic?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>300</integer>
+								<key>questionID</key>
+								<integer>18</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>True</string>
+									<string>False</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Verdadeiro</string>
+									<string>Falso</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
 							</dict>
 						</array>
 					</dict>
@@ -590,73 +581,69 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Geography</string>
+						<string>History</string>
+						<key>subjectNamePt</key>
+						<string>História</string>
+						<key>questionsList</key>
+						<array>
+							<dict>
+								<key>question</key>
+								<string>Who was the first man to travel outer space?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>300</integer>
+								<key>questionID</key>
+								<integer>19</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Iuri Gagarin</string>
+									<string>Neil Armstrong</string>
+									<string>Sergei Korolev</string>
+									<string>Aleksei Leonov</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string></string>
+									<string>Planeta</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>subjectName</key>
+						<string>Science</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>The rocket is the fastest space vehicle in existence.</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string></string>
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>20</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Star</string>
-									<string>Planet</string>
+									<string>True</string>
+									<string>False</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
-									<string>Estrela</string>
-									<string>Planeta</string>
+									<string>Verdadeiro</string>
+									<string>Falso</string>
 								</array>
 								<key>questionHint</key>
-								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string>Mithology</string>
-						<key>subjectNamePt</key>
-						<string>Portuguese</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>question</key>
-								<string>What is called a group of stars?</string>
-								<key>questionPt</key>
-								<string>Como se chama um conjunto de estrelas?</string>
-								<key>questionValue</key>
-								<integer>100</integer>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>questionChoices</key>
-								<array>
-									<string>Constellation</string>
-									<string>Galaxy</string>
-									<string>Universe</string>
-									<string>Solar System</string>
-									<string>Nebula</string>
-								</array>
-								<key>questionChoicesPt</key>
-								<array>
-									<string>Constelação</string>
-									<string>Galáxia</string>
-									<string>Universo</string>
-									<string>Sistema Solar</string>
-									<string>Nébula</string>
-								</array>
-								<key>questionHint</key>
-								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
-								<key>questionHintPt</key>
-								<string>Andromeda is a famous example of a group of stars.</string>
+								<string></string>
 							</dict>
 						</array>
 					</dict>
@@ -675,24 +662,50 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Art</string>
+						<string>History</string>
 						<key>subjectNamePt</key>
-						<string>Ciência</string>
+						<string>História</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>The first artificial satellite that existed on Earth is called Sputnik.</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string></string>
+								<key>questionValue</key>
+								<integer>200</integer>
+								<key>questionID</key>
+								<integer>21</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>True</string>
+									<string>False</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Verdadeiro</string>
+									<string>Falso</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>Sputnik was launched by which country?</string>
+								<key>questionPt</key>
+								<string></string>
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>22</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Star</string>
-									<string>Planet</string>
+									<string>USSR</string>
+									<string>Brazil</string>
+									<string>United States</string>
+									<string>China</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
@@ -700,48 +713,9 @@
 									<string>Planeta</string>
 								</array>
 								<key>questionHint</key>
-								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string>ED</string>
-						<key>subjectNamePt</key>
-						<string>Portuguese</string>
-						<key>questionsList</key>
-						<array>
-							<dict>
-								<key>question</key>
-								<string>What is called a group of stars?</string>
-								<key>questionPt</key>
-								<string>Como se chama um conjunto de estrelas?</string>
-								<key>questionValue</key>
-								<integer>100</integer>
-								<key>questionID</key>
-								<integer>1</integer>
-								<key>questionChoices</key>
-								<array>
-									<string>Constellation</string>
-									<string>Galaxy</string>
-									<string>Universe</string>
-									<string>Solar System</string>
-									<string>Nebula</string>
-								</array>
-								<key>questionChoicesPt</key>
-								<array>
-									<string>Constelação</string>
-									<string>Galáxia</string>
-									<string>Universo</string>
-									<string>Sistema Solar</string>
-									<string>Nébula</string>
-								</array>
-								<key>questionHint</key>
-								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
-								<key>questionHintPt</key>
-								<string>Andromeda is a famous example of a group of stars.</string>
+								<string></string>
 							</dict>
 						</array>
 					</dict>
@@ -760,19 +734,64 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string></string>
+						<string>Science</string>
 						<key>subjectNamePt</key>
-						<string></string>
-						<key>questionList</key>
-						<array/>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string></string>
-						<key>subjectNamePt</key>
-						<string></string>
-						<key>questionList</key>
-						<array/>
+						<string>Ciência</string>
+						<key>questionsList</key>
+						<array>
+							<dict>
+								<key>question</key>
+								<string>What is the distance, in kilometer, to go around the Moon?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>300</integer>
+								<key>questionID</key>
+								<integer>23</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>11.000 km</string>
+									<string>20.000 km</string>
+									<string>40.000 km</string>
+									<string>60.000 km</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Verdadeiro</string>
+									<string>Falso</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>What is the proportion of the Moon gravity and the Earth gravity?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>200</integer>
+								<key>questionID</key>
+								<integer>24</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>1/6</string>
+									<string>1/2</string>
+									<string>1/4</string>
+									<string>it is the same</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string></string>
+									<string></string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+						</array>
 					</dict>
 				</array>
 			</dict>
