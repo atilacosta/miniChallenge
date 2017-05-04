@@ -23,6 +23,7 @@
 @property CGSize selectedImageSize;
 @property NSInteger count;
 @property User *currentUser;
+@property (weak, nonatomic) IBOutlet UIButton *chooseButton;
 
 @end
 
@@ -42,6 +43,24 @@
 //--------------------//
 #pragma mark CollectionViewAnimation
 //--------------------//
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    NSIndexPath *indexPath =
+    [self.charCollectionView indexPathForItemAtPoint:
+     [self.view convertPoint:[self.view center] toView:self.charCollectionView]];
+    //NSLog(@"%f",_charCollectionView.center.x);
+    [self.charCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    CharCollectionViewCell *currentCell = [self.charCollectionView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.5 animations:^{
+        [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
+    }];
+    self.selectedSceneDictionary = _charArray[indexPath.item];
+    if (_count > indexPath.item) {
+        [_chooseButton setEnabled:YES];
+    }
+    else{
+        [_chooseButton setEnabled:NO];
+    }
+}
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     
     NSIndexPath *indexPath =
@@ -54,6 +73,12 @@
         [currentCell.charImage setFrame:CGRectMake(0,0,_selectedImageSize.width,_selectedImageSize.height)];
     }];
     self.selectedSceneDictionary = _charArray[indexPath.item];
+    if (_count > indexPath.item) {
+        [_chooseButton setEnabled:YES];
+    }
+    else{
+        [_chooseButton setEnabled:NO];
+    }
 }
 
 //--------------------//

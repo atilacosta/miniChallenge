@@ -15,6 +15,8 @@ int uniqueIDReference = -1;
 
 - (instancetype)initWithDictionary: (NSDictionary *)dict
 {
+    
+    NSLog(@"printing QUESTION with dict = %@",dict);
     self = [super init];
     if (self) {
         _uniqueID = [Question getUniqueID];

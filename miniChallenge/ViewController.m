@@ -28,6 +28,7 @@
     [super viewDidLoad];
     User *userAux;
     userAux = [[currentUser sharedManager]user];
+    //[[[currentUser sharedManager]user]changeMusicStatus];
     [[currentUser sharedManager]saveConfiguration];
 
 

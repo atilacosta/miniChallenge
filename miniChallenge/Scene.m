@@ -8,7 +8,7 @@
 
 #import "Scene.h"
 #import "Item.h"
-
+#import "Subject.h"
 //@interface Scene ()
 //
 //@property NSMutableArray *privateItemsList;
@@ -44,10 +44,16 @@
             // set position from plist info
             // add subview
         }
-        
+//        for (Item *currentItem in _itemsList) {
+//            for (Subject *currentSub in currentItem.itemSubjects) {
+//                _TotalNumberOfQuestions += currentSub.questionsList.count;
+//            }
+//        }
+        _TotalNumberOfQuestions = 30;
     }
     return self;
 }
+
 
 // Overrides the itemList property getter
 //-(NSArray *)itemsList {

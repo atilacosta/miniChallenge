@@ -16,7 +16,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *backgroundImage;
 //@property (nonatomic) Character *character;
-
+@property (nonatomic) NSInteger TotalNumberOfQuestions;
 //@property (nonatomic) NSNumber *width,*height;
 
 @property (nonatomic) NSMutableArray<Item *> *itemsList;

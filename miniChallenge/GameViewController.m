@@ -67,10 +67,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.width = @(self.view.frame.size.width);
     self.height = @(self.view.frame.size.height);
-    
+    NSLog(@"%@",_selectedSceneDictionary);
     // Create the scene
     self.selectedScene = [[Scene alloc] initWithDictionary:self.selectedSceneDictionary withWidth:self.width withHeight:self.height];
     [self.backgroundImage setImage:[UIImage imageNamed:self.selectedScene.name]];
@@ -115,7 +114,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissViews)];
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
-    
+    NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
+
 }
 
 - (void)dismissViews{
