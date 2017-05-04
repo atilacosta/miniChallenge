@@ -246,7 +246,7 @@
 
 // 2 - DONE
 - (void)updateQuestionView{
-    self.selectedItemName.text = self.selectedItem.itemName; // new
+    self.selectedSubjectText.text = self.selectedSubject.subjectName; // new
     self.selectedQuestionText.text = self.selectedQuestion.question;
     [self setAlternativesName];
 }
