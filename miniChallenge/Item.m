@@ -40,12 +40,16 @@
             [self setEnabled:NO];
         }
         
+        
+        
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatio], heightInPoints/[self getItemRatio]);
+        //NSLog(@"%@ %@", width, height);
         
-        //        [self setBackgroundColor:[UIColor colorWithPatternImage:image]];
+        self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatioWithSize:width andWidthFlag:YES], heightInPoints/[self getItemRatioWithSize:height andWidthFlag:NO]);
+        
+        NSLog(@"%@", self.itemName);
         [self setBackgroundImage:image forState:UIControlStateNormal];
     }
     return self;
@@ -81,21 +85,63 @@
     return NO;
 }
 
-- (float)getItemRatio{
+- (double)getItemRatioWithSize:(NSNumber *)size andWidthFlag:(BOOL)isWidth{
+    double newRatio = 0.0;
     
     if ([self.itemName isEqualToString:@"Sun"]) {
-        return 0.8;
+        if(isWidth == 1){
+            newRatio = (736 * 0.8)/[size intValue];
+        } else{
+            newRatio = (414 * 0.8)/[size intValue];
+        }
     } else if ([self.itemName isEqualToString:@"Earth"]) {
-        return 1.6;
+        if(isWidth == 1){
+            newRatio = (736 * 1.6)/[size intValue];
+        } else{
+            newRatio = (414 * 1.6)/[size intValue];
+        }
     } else if ([self.itemName isEqualToString:@"Comet"]) {
-        return 2.1;
+        if(isWidth == 1){
+            newRatio = (736 * 2.1)/[size intValue];
+        } else{
+            newRatio = (414 * 2.1)/[size intValue];
+        }
     } else if ([self.itemName isEqualToString:@"Satellite"]) {
-        return 2.0;
+        if(isWidth == 1){
+            newRatio = (736 * 2.0)/[size intValue];
+        } else{
+            newRatio = (414 * 2.0)/[size intValue];
+        }
     } else if ([self.itemName isEqualToString:@"Spaceship"]) {
-        return 2.6;
+        if(isWidth == 1){
+            newRatio = (736 * 2.6)/[size intValue];
+        } else{
+            newRatio = (414 * 2.6)/[size intValue];
+        }
     } else {
-        return 2;
+        if(isWidth == 1){
+            newRatio = (736 * 2.0)/[size intValue];
+        } else{
+            newRatio = (414 * 2.0)/[size intValue];
+        }
     }
+    
+    return newRatio;
+    
 }
+
+//- (float)updateRatio:(float)ratio andNewSize:(NSNumber *)size withWidthFlag:(BOOL)isWidth{
+//    
+//    float newRatio = 0.0;
+//    
+//    if(isWidth == 1){
+//       newRatio = ([size intValue] * ratio)/736;
+//    } else{
+//       newRatio = ([size intValue] * ratio)/414;
+//    }
+//    
+//    return newRatio;
+//    
+//}
 
 @end

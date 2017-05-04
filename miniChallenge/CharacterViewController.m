@@ -111,14 +111,14 @@
 }
 //--------------------//
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSLog(@"%d",_charArray.count);
+    //NSLog(@"%d",_charArray.count);
     return _charArray.count;
 }
 //--------------------//
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CharCollectionViewCell *cell = [_charCollectionView dequeueReusableCellWithReuseIdentifier:@"charCell" forIndexPath:indexPath];
     cell.cellScene = _charArray[indexPath.row];
-    NSLog(@"%d %d",_count,indexPath.row);
+    //NSLog(@"%d %d",_count,indexPath.row);
     
     if(indexPath.row >= _count){
         cell.charImage.image = [UIImage imageNamed:@"unknown character"];
@@ -132,7 +132,7 @@
             leveledImage = [NSString stringWithFormat: @"%@ %d",cell.cellScene[@"sceneCharacterImage"],4];
         }
         cell.charImage.image = [UIImage imageNamed:leveledImage];
-        NSLog(@"%@",leveledImage);
+        //NSLog(@"%@",leveledImage);
     }
     
 

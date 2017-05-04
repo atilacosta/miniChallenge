@@ -57,6 +57,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *goBackToScene;
 
 @property (weak, nonatomic) IBOutlet UILabel *playerScore;
+@property (weak, nonatomic) IBOutlet UILabel *playerQuestionsCounter;
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
@@ -107,7 +108,9 @@
     [self.goBackToObject addTarget:self action:@selector(showSubjectView) forControlEvents:UIControlEventTouchUpInside];
     [self.goBackToScene addTarget:self action:@selector(dismissViews) forControlEvents:UIControlEventTouchUpInside];
     
-    self.userPoints = [[currentUser sharedManager] user].playerPoints;
+    
+    [self updateUserPointsAndAnsweredQuestionsCount];
+    
     
     [self.selectedScene addSubview:self.backButton];
     
@@ -141,7 +144,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (IBAction)itemPressed:(UIButton *)sender{
     if(self.selectedItem != (Item *)sender){
@@ -252,18 +254,25 @@
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
             self.resultText.textColor = [UIColor greenColor];
-            // show and update score
             
-            NSLog(@"%@", self.selectedQuestion.uniqueID);
+            //NSLog(@"%@", self.selectedQuestion.uniqueID);
+            
+            
             
             [self incrementPlayerScore:self.selectedQuestion.value];
-            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID];
+            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value];
             if([self.selectedItem hasQuestionsRemainingForAllSubjects]){
                 [self.selectedItem setEnabled:YES];
             } else{
                 [self.selectedItem setBackgroundImage:[UIImage imageNamed:self.selectedItem.itemName] forState:UIControlStateDisabled];
                 [self.selectedItem setEnabled:NO];
             }
+            
+            [[[currentUser sharedManager] user] insertAnsweredQuestionsId:self.selectedQuestion.uniqueID andQuestionValue:self.selectedQuestion.value ];
+
+            [[currentUser sharedManager] saveConfiguration];
+            
+            [self updateUserPointsAndAnsweredQuestionsCount];
             
         } else {
             self.resultText.text = @"Incorrect!!";
@@ -353,13 +362,17 @@
 - (void)incrementPlayerScore:(int)questionPoints{
     
     self.userPoints = @([self.userPoints intValue] + questionPoints);
-    [[currentUser sharedManager] user].playerPoints = self.userPoints;
-    [self updatePoints];
+    self.userAnsweredCount = @([self.userAnsweredCount intValue] + 1);
+//    [self updateUserPointsAndAnsweredQuestionsCount];
     
 }
 
-- (void)updatePoints{
-    [self.playerScore setText:[NSString stringWithFormat:@"%@", self.userPoints]];
+-(void)updateUserPointsAndAnsweredQuestionsCount {
+    self.userPoints = [[currentUser sharedManager] user].playerPoints;
+    [self.playerScore setText:[NSString stringWithFormat:@"Points: %@", self.userPoints]];
+    
+    self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
+    [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/50", self.userAnsweredCount]];
 }
 
 // To do:
