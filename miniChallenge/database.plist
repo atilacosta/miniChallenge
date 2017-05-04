@@ -31,22 +31,82 @@
 						<array>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>Solar eclipse is a type of eclipse that occurs when the moon hidden, partially or totally the Sun. This affirmation is:</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string>Eclipse solar é o fenômeno que ocorre quando a Lua oculta, parcialmente ou totalmente o Sol. Esta afirmação está:</string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Correct</string>
+									<key>Item 1</key>
+									<string>Incorrect</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict>
+									<key>Item 1</key>
+									<string>Correta</string>
+									<key>Item 2</key>
+									<string>Errada</string>
+								</dict>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>What is called a group of stars?</string>
+								<key>questionPt</key>
+								<string>Como se chama um conjunto de estrelas?</string>
+								<key>questionValue</key>
+								<string>100</string>
+								<key>questionID</key>
+								<string>1</string>
+								<key>questionChoices</key>
+								<array>
+									<string>Constellation</string>
+									<string>Galaxy</string>
+									<string>Solar System</string>
+									<string>Nebula</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Constelação</string>
+									<string>Galáxia</string>
+									<string>Sistema Solar</string>
+									<string>Nébula</string>
+								</array>
+								<key>questionHint</key>
+								<string>Andromeda is a famous example of a group of stars.</string>
+								<key>questionHintPt</key>
+								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>The sun is a:</string>
+								<key>questionPt</key>
+								<string>O sol é um(a) ...</string>
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>2</integer>
 								<key>questionChoices</key>
 								<array>
 									<string>Star</string>
 									<string>Planet</string>
+									<string>System</string>
+									<string>Comet</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
 									<string>Estrela</string>
 									<string>Planeta</string>
+									<string>Sistema</string>
+									<string>Cometa</string>
 								</array>
 								<key>questionHint</key>
 								<string>Planets orbit around hot celestial bodies called stars.</string>
@@ -57,40 +117,110 @@
 					</dict>
 					<dict>
 						<key>subjectName</key>
-						<string>English</string>
+						<string>History</string>
 						<key>subjectNamePt</key>
-						<string>Portuguese</string>
+						<string>História</string>
 						<key>questionsList</key>
 						<array>
 							<dict>
 								<key>question</key>
-								<string>What is called a group of stars?</string>
+								<string>.......... this theory states that the sun is the center of the universe</string>
 								<key>questionPt</key>
-								<string>Como se chama um conjunto de estrelas?</string>
+								<string>.......... é o nome da teoria que afirma que o Sol é o centro do universo.</string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Heliocentrism</string>
+									<key>Item 1</key>
+									<string>Suncentrism</string>
+									<key>Item 2</key>
+									<string>Sunerism</string>
+									<key>Item 3</key>
+									<string>Geocentrism</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Heliocentrismo</string>
+									<key>Item 1</key>
+									<string>Solcentrismo</string>
+									<key>Item 2</key>
+									<string>Solarismo</string>
+									<key>Item 3</key>
+									<string>Geocentrismo</string>
+								</dict>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>Wich civilization used to worship the Sun?</string>
+								<key>questionPt</key>
+								<string>Qual povo cultivava o Sol como um deus?</string>
 								<key>questionValue</key>
 								<integer>100</integer>
 								<key>questionID</key>
-								<integer>1</integer>
+								<integer>3</integer>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Egyptian</string>
+									<key>Item 1</key>
+									<string>Aztecs</string>
+									<key>Item 2</key>
+									<string>Maya</string>
+									<key>Item 3</key>
+									<string>Greek</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Egípcios</string>
+									<key>Item 1</key>
+									<string>Maias</string>
+									<key>Item 2</key>
+									<string>Aztecas</string>
+									<key>Item 3</key>
+									<string>Gregos</string>
+								</dict>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>Around 1537, a theory was proposed and affirms that the Sun is the center of Universe, this theory was called ........... and was proposed by ............ .</string>
+								<key>questionPt</key>
+								<string>Por volta de 1537, foi proposta uma teoria que afirmava que o Sol seria o centro do Universo, essa teoria se chamava .......... e foi proposta por .......... .</string>
+								<key>questionValue</key>
+								<integer>0</integer>
+								<key>questionID</key>
+								<integer>0</integer>
 								<key>questionChoices</key>
 								<array>
-									<string>Constellation</string>
-									<string>Galaxy</string>
-									<string>Universe</string>
-									<string>Solar System</string>
-									<string>Nebula</string>
+									<string>Heliocentrism - Nicolau Copérnico</string>
+									<string>Heliocentrism - Johannes Kepler</string>
+									<string>Geocentrism - Galileu Galilei</string>
+									<string>Geocentrism - Nicolau Copérnico</string>
 								</array>
 								<key>questionChoicesPt</key>
 								<array>
-									<string>Constelação</string>
-									<string>Galáxia</string>
-									<string>Universo</string>
-									<string>Sistema Solar</string>
-									<string>Nébula</string>
+									<string>Heliocentrismo - Nicolau Copérnico</string>
+									<string>Heliocentrismo - Johannes Kepler</string>
+									<string>Geocentrismo - Galileu Galilei</string>
+									<string>Geocentrismo - Nicolau Copérnico</string>
 								</array>
-								<key>questionHint</key>
-								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<key>questionHit</key>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Andromeda is a famous example of a group of stars.</string>
+								<string></string>
 							</dict>
 						</array>
 					</dict>
@@ -109,75 +239,207 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
+						<string>Geography</string>
+						<key>subjectNamePt</key>
+						<string>Geografia</string>
+						<key>questionList</key>
+						<dict>
+							<key>Item 0</key>
+							<dict>
+								<key>question</key>
+								<string>What is called the movement of the Earth around the Sun?</string>
+								<key>questionPt</key>
+								<string>Como se chama o movimento que a Terra faz em torno do Sol?</string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Translation</string>
+									<key>Item 1</key>
+									<string>Rotation</string>
+									<key>Item 2</key>
+									<string>Circulation</string>
+									<key>Item 3</key>
+									<string>Stroll</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Translação</string>
+									<key>Item 1</key>
+									<string>Circulação</string>
+									<key>Item 2</key>
+									<string>Passeio</string>
+									<key>Item 3</key>
+									<string>Rotação</string>
+								</dict>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<key>Item 1</key>
+							<dict>
+								<key>question</key>
+								<string>What is the biggest continent in the Earth planet?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>Asia</string>
+									<key>Item 1</key>
+									<string>Europe</string>
+									<key>Item 2</key>
+									<string>Africa</string>
+									<key>Item 3</key>
+									<string>America</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<string></string>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+							<key>Item 2</key>
+							<dict>
+								<key>question</key>
+								<string>How many continents exists on Earth planet?</string>
+								<key>questionPt</key>
+								<string>Quantos continentes existem no planeta Terra?</string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>6</string>
+									<key>Item 1</key>
+									<string>5</string>
+									<key>Item 2</key>
+									<string>7</string>
+									<key>Item 3</key>
+									<string>8</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict>
+									<key>Item 0</key>
+									<string>6</string>
+									<key>Item 1</key>
+									<string>5</string>
+									<key>Item 2</key>
+									<string>7</string>
+									<key>Item 3</key>
+									<string>8</string>
+								</dict>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>subjectName</key>
 						<string>Science</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
-						<array>
+						<dict>
+							<key>Item 0</key>
 							<dict>
 								<key>question</key>
-								<string>Is the Sun a planet or a star?</string>
+								<string>What is the biggest planet from Solar System?</string>
 								<key>questionPt</key>
-								<string>O sol é um planeta ou uma estrela?</string>
+								<string></string>
 								<key>questionValue</key>
-								<integer>100</integer>
+								<string></string>
 								<key>questionID</key>
-								<integer>1</integer>
+								<string></string>
 								<key>questionChoices</key>
-								<array>
-									<string>Star</string>
-									<string>Planet</string>
-								</array>
+								<dict>
+									<key>Item 0</key>
+									<string>Jupiter</string>
+									<key>Item 1</key>
+									<string>Saturn</string>
+									<key>Item 2</key>
+									<string>Neptune</string>
+									<key>Item 3</key>
+									<string>Earth</string>
+								</dict>
 								<key>questionChoicesPt</key>
-								<array>
-									<string>Estrela</string>
-									<string>Planeta</string>
-								</array>
+								<dict/>
 								<key>questionHint</key>
-								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
+								<string></string>
 							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string>English</string>
-						<key>subjectNamePt</key>
-						<string>Portuguese</string>
-						<key>questionsList</key>
-						<array>
+							<key>Item 1</key>
 							<dict>
 								<key>question</key>
-								<string>What is called a group of stars?</string>
+								<string>Wich planets can be viewed by naked eye?</string>
 								<key>questionPt</key>
-								<string>Como se chama um conjunto de estrelas?</string>
+								<string></string>
 								<key>questionValue</key>
-								<integer>100</integer>
+								<string></string>
 								<key>questionID</key>
-								<integer>1</integer>
+								<string></string>
 								<key>questionChoices</key>
-								<array>
-									<string>Constellation</string>
-									<string>Galaxy</string>
-									<string>Universe</string>
-									<string>Solar System</string>
-									<string>Nebula</string>
-								</array>
+								<dict>
+									<key>Item 0</key>
+									<string>Jupiter, Mercury, Mars, Venus, Saturn</string>
+									<key>Item 1</key>
+									<string>Mars, Venus, Neptune, Sun, Saturn</string>
+									<key>Item 2</key>
+									<string>Mars, Neptune, Venus, Mercury, Uranus</string>
+									<key>Item 3</key>
+									<string>Neptune, Jupiter, Saturn, Uranus, Pluto</string>
+								</dict>
 								<key>questionChoicesPt</key>
-								<array>
-									<string>Constelação</string>
-									<string>Galáxia</string>
-									<string>Universo</string>
-									<string>Sistema Solar</string>
-									<string>Nébula</string>
-								</array>
+								<dict/>
 								<key>questionHint</key>
-								<string>Andromeda é um exemplo famoso de grupo de estrelas.</string>
+								<string></string>
 								<key>questionHintPt</key>
-								<string>Andromeda is a famous example of a group of stars.</string>
+								<string></string>
 							</dict>
-						</array>
+							<key>Item 2</key>
+							<dict>
+								<key>question</key>
+								<string>How many planets exist in the Solar System?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<string></string>
+								<key>questionID</key>
+								<string></string>
+								<key>questionChoices</key>
+								<dict>
+									<key>Item 0</key>
+									<string>7</string>
+									<key>Item 1</key>
+									<string>8</string>
+									<key>Item 2</key>
+									<string>9</string>
+									<key>Item 3</key>
+									<string>10</string>
+								</dict>
+								<key>questionChoicesPt</key>
+								<dict/>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
+						</dict>
 					</dict>
 				</array>
 			</dict>
@@ -194,11 +456,63 @@
 				<array>
 					<dict>
 						<key>subjectName</key>
-						<string>Math</string>
+						<string>Science</string>
 						<key>subjectNamePt</key>
 						<string>Ciência</string>
 						<key>questionsList</key>
 						<array>
+							<dict>
+								<key>question</key>
+								<string>Asteroids are...</string>
+								<key>questionPt</key>
+								<string>Asteroides são</string>
+								<key>questionValue</key>
+								<integer>0</integer>
+								<key>questionID</key>
+								<integer>0</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Small planets</string>
+									<string>Stars</string>
+									<string>Meteors</string>
+									<string>Galaxies</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Estrela</string>
+									<string>Planeta</string>
+								</array>
+								<key>questionHint</key>
+								<string>Planets orbit around hot celestial bodies called stars.</string>
+								<key>questionHintPt</key>
+								<string>Planetas orbitam em volta de corpos celestiais quentes chamados estrelas.</string>
+							</dict>
+							<dict>
+								<key>question</key>
+								<string>The impact of an asteroid caused the extinction of the?</string>
+								<key>questionPt</key>
+								<string></string>
+								<key>questionValue</key>
+								<integer>0</integer>
+								<key>questionID</key>
+								<integer>0</integer>
+								<key>questionChoices</key>
+								<array>
+									<string>Dinosaurs</string>
+									<string>Ants</string>
+									<string>Camels</string>
+									<string>Sabertooth tigers</string>
+								</array>
+								<key>questionChoicesPt</key>
+								<array>
+									<string>Estrela</string>
+									<string>Planeta</string>
+								</array>
+								<key>questionHint</key>
+								<string></string>
+								<key>questionHintPt</key>
+								<string></string>
+							</dict>
 							<dict>
 								<key>question</key>
 								<string>Is the Sun a planet or a star?</string>
@@ -518,6 +832,35 @@
 								<string>Andromeda is a famous example of a group of stars.</string>
 							</dict>
 						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>itemName</key>
+				<string>Moon</string>
+				<key>itemNamePt</key>
+				<string>Lua</string>
+				<key>itemPosX</key>
+				<string>285</string>
+				<key>itemPosY</key>
+				<string>225</string>
+				<key>subjecsList</key>
+				<array>
+					<dict>
+						<key>subjectName</key>
+						<string></string>
+						<key>subjectNamePt</key>
+						<string></string>
+						<key>questionList</key>
+						<array/>
+					</dict>
+					<dict>
+						<key>subjectName</key>
+						<string></string>
+						<key>subjectNamePt</key>
+						<string></string>
+						<key>questionList</key>
+						<array/>
 					</dict>
 				</array>
 			</dict>
