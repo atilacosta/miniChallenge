@@ -44,12 +44,12 @@
             // set position from plist info
             // add subview
         }
-//        for (Item *currentItem in _itemsList) {
-//            for (Subject *currentSub in currentItem.itemSubjects) {
-//                _TotalNumberOfQuestions += currentSub.questionsList.count;
-//            }
-//        }
-        _TotalNumberOfQuestions = 30;
+        for (Item *currentItem in _itemsList) {
+            for (Subject *currentSub in currentItem.itemSubjects) {
+                _TotalNumberOfQuestions += currentSub.questionsList.count;
+            }
+        }
+//        _TotalNumberOfQuestions = 30;
     }
     return self;
 }

@@ -36,6 +36,10 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *questionView;
+
+@property (weak, nonatomic) IBOutlet UILabel *selectedSubjectText;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *selectedQuestionText;
 
 @property (nonatomic) NSArray *alternativesArray;
@@ -48,6 +52,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *resultView;
+
+@property (weak, nonatomic) IBOutlet UILabel *resultSubjectName;
 
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
 @property (weak, nonatomic) IBOutlet UILabel *resultHint;
@@ -250,11 +256,15 @@
 
 // 2 - DONE
 - (void)updateQuestionView{
+    self.selectedSubjectText.text = self.selectedSubject.subjectName; // new
     self.selectedQuestionText.text = self.selectedQuestion.question;
     [self setAlternativesName];
 }
 
 - (void)updateResultView{
+    
+    self.resultSubjectName.text = self.selectedSubject.subjectName; // new
+    
     if (self.selectedQuestion == nil) {
         self.resultText.text = @"There are no more avaible questions for this subject at the moment";
         self.resultHint.text = @"Try another subject";
@@ -379,7 +389,7 @@
     [self.playerScore setText:[NSString stringWithFormat:@"Points: %@", self.userPoints]];
     
     self.userAnsweredCount = @([[[currentUser sharedManager] user].answeredQuestionsIds count]);
-    [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/50", self.userAnsweredCount]];
+    [self.playerQuestionsCounter setText:[NSString stringWithFormat:@"Questions: %@/%ld", self.userAnsweredCount, self.selectedScene.TotalNumberOfQuestions]];
 }
 
 -(void)verifyItemState{

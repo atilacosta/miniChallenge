@@ -254,15 +254,9 @@
                                         <rect key="frame" x="12" y="68" width="444" height="282"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result (correct or not)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-hY-EYk">
-                                                <rect key="frame" x="0.0" y="3" width="444" height="51"/>
+                                                <rect key="frame" x="0.0" y="17" width="444" height="51"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="35"/>
                                                 <color key="textColor" red="0.92156862750000001" green="0.33333333329999998" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-Jh-INC">
-                                                <rect key="frame" x="0.0" y="54" width="444" height="26"/>
-                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="16"/>
-                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DO-U1-Bzr">
@@ -286,6 +280,12 @@
                                                     <color key="titleColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-Jh-INC">
+                                                <rect key="frame" x="0.0" y="69" width="444" height="48"/>
+                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -297,7 +297,7 @@
                                             <constraint firstItem="4DO-U1-Bzr" firstAttribute="height" secondItem="1Yn-0f-AVv" secondAttribute="height" multiplier="0.15" id="AYn-bl-jKB"/>
                                             <constraint firstItem="FOK-hY-EYk" firstAttribute="height" secondItem="1Yn-0f-AVv" secondAttribute="height" multiplier="0.18" id="I5U-mx-JSC"/>
                                             <constraint firstItem="wD9-Ui-BIZ" firstAttribute="width" secondItem="4DO-U1-Bzr" secondAttribute="width" id="JQe-fc-xSz"/>
-                                            <constraint firstItem="FOK-hY-EYk" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="0.2" id="MiR-rF-kVb"/>
+                                            <constraint firstItem="FOK-hY-EYk" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="0.3" id="MiR-rF-kVb"/>
                                             <constraint firstItem="UNc-os-2LU" firstAttribute="width" secondItem="wD9-Ui-BIZ" secondAttribute="width" id="U7o-62-NfI"/>
                                             <constraint firstItem="FOK-hY-EYk" firstAttribute="leading" secondItem="1Yn-0f-AVv" secondAttribute="leading" id="XSO-ii-2Jd"/>
                                             <constraint firstItem="UNc-os-2LU" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" id="avz-Jg-TzN"/>
@@ -367,6 +367,7 @@
                         <outlet property="playerScore" destination="iai-GL-UrR" id="sWs-VD-smG"/>
                         <outlet property="questionView" destination="UOA-zT-18C" id="ts6-A9-cU0"/>
                         <outlet property="resultHint" destination="Qiq-Jh-INC" id="7id-Hy-ABd"/>
+                        <outlet property="resultSubjectName" destination="IYV-IQ-YYN" id="4Vg-Wf-vg3"/>
                         <outlet property="resultText" destination="FOK-hY-EYk" id="MMa-yK-iaA"/>
                         <outlet property="resultView" destination="qir-dE-vN8" id="m8t-Ha-WQD"/>
                         <outlet property="selectedAlternativeFive" destination="Qa6-MS-NUm" id="UON-4r-NPW"/>
@@ -381,6 +382,7 @@
                         <outlet property="selectedSubjectFour" destination="sWy-1p-78y" id="iPz-y7-7aA"/>
                         <outlet property="selectedSubjectOne" destination="LKE-fW-0K5" id="UPb-l5-s49"/>
                         <outlet property="selectedSubjectSix" destination="60G-u8-o7q" id="vck-KZ-zkM"/>
+                        <outlet property="selectedSubjectText" destination="PfY-BU-aUK" id="uAC-Hu-yvf"/>
                         <outlet property="selectedSubjectThree" destination="fLK-3S-YLb" id="rvC-AL-D9E"/>
                         <outlet property="selectedSubjectTwo" destination="F6F-Q3-AE5" id="cjv-dS-8yb"/>
                         <outlet property="subjectView" destination="ctw-t6-yP2" id="ZQv-kP-CRi"/>
