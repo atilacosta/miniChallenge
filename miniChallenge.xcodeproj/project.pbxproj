@@ -317,7 +317,7 @@
 				TargetAttributes = {
 					C35FA0961EA53BDB00E1DD29 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 56DSU8JZV3;
+						DevelopmentTeam = EEURGQP3PV;
 						ProvisioningStyle = Automatic;
 					};
 					C35FA0AF1EA53BDB00E1DD29 = {
@@ -567,12 +567,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56DSU8JZV3;
+				DEVELOPMENT_TEAM = EEURGQP3PV;
 				INFOPLIST_FILE = miniChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idhacompany.miniChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -580,12 +581,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56DSU8JZV3;
+				DEVELOPMENT_TEAM = EEURGQP3PV;
 				INFOPLIST_FILE = miniChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.idhacompany.miniChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
