@@ -45,12 +45,14 @@
         CGFloat heightInPoints = image.size.height;
         CGFloat widthInPoints = image.size.width;
         
-        //NSLog(@"%@ %@", width, height);
         
         self.frame = CGRectMake([_itemPosX intValue], [_itemPosY intValue], widthInPoints/[self getItemRatioWithSize:width andWidthFlag:YES], heightInPoints/[self getItemRatioWithSize:height andWidthFlag:NO]);
         
-        //NSLog(@"%@", self.itemName);
-        [self setBackgroundImage:image forState:UIControlStateNormal];
+        if([self isEnabled]){
+            [self setBackgroundImage:image forState:UIControlStateNormal];
+        } else{
+            [self setBackgroundImage:image forState:UIControlStateDisabled];
+        }
     }
     return self;
 }
