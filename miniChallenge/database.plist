@@ -829,35 +829,6 @@
 					</dict>
 				</array>
 			</dict>
-			<dict>
-				<key>itemName</key>
-				<string>Moon</string>
-				<key>itemNamePt</key>
-				<string>Lua</string>
-				<key>itemPosX</key>
-				<string>285</string>
-				<key>itemPosY</key>
-				<string>225</string>
-				<key>subjecsList</key>
-				<array>
-					<dict>
-						<key>subjectName</key>
-						<string></string>
-						<key>subjectNamePt</key>
-						<string></string>
-						<key>questionList</key>
-						<array/>
-					</dict>
-					<dict>
-						<key>subjectName</key>
-						<string></string>
-						<key>subjectNamePt</key>
-						<string></string>
-						<key>questionList</key>
-						<array/>
-					</dict>
-				</array>
-			</dict>
 		</array>
 	</dict>
 	<dict>
