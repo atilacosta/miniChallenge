@@ -242,11 +242,15 @@
 
 // 2 - DONE
 - (void)updateQuestionView{
+    self.selectedItemName.text = self.selectedItem.itemName; // new
     self.selectedQuestionText.text = self.selectedQuestion.question;
     [self setAlternativesName];
 }
 
 - (void)updateResultView{
+    
+    self.resultSubjectName.text = self.selectedSubject.subjectName; // new
+    
     if (self.selectedQuestion == nil) {
         self.resultText.text = @"There are no more avaible questions for this subject at the moment";
         self.resultHint.text = @"Try another subject";
