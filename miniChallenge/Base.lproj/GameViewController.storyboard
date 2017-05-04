@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KhV-QB-1mz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KhV-QB-1mz">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="20" width="667" height="355"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c85-iP-CdJ">
-                                <rect key="frame" x="31.5" y="25.5" width="37" height="24"/>
+                                <rect key="frame" x="32" y="26" width="37" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c85-iP-CdJ" secondAttribute="height" multiplier="23:15" id="hR5-K8-OPl"/>
                                 </constraints>
@@ -63,12 +63,11 @@
                                 <rect key="frame" x="100" y="7" width="467" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwF-vi-BND">
-                                        <rect key="frame" x="11.5" y="68.5" width="444" height="282"/>
+                                        <rect key="frame" x="12" y="68" width="444" height="282"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKE-fW-0K5">
-                                                <rect key="frame" x="4" y="94" width="101" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="17"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKE-fW-0K5">
+                                                <rect key="frame" x="0.0" y="0.0" width="222" height="282"/>
+                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="30"/>
                                                 <state key="normal" title="Sub 1">
                                                     <color key="titleColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -89,10 +88,9 @@
                                                     <color key="titleColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6F-Q3-AE5">
-                                                <rect key="frame" x="170" y="94" width="90" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="17"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6F-Q3-AE5">
+                                                <rect key="frame" x="222" y="0.0" width="222" height="282"/>
+                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="30"/>
                                                 <state key="normal" title="Sub 2">
                                                     <color key="titleColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -122,16 +120,24 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="F6F-Q3-AE5" firstAttribute="centerY" secondItem="LKE-fW-0K5" secondAttribute="centerY" id="29n-Ne-caB"/>
+                                            <constraint firstItem="LKE-fW-0K5" firstAttribute="width" secondItem="RwF-vi-BND" secondAttribute="width" multiplier="0.5" id="2Sr-zp-zFZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Fxo-sK-QlV" secondAttribute="trailing" id="FbZ-LD-ai7"/>
                                             <constraint firstItem="Fxo-sK-QlV" firstAttribute="top" secondItem="RwF-vi-BND" secondAttribute="top" id="IWl-fb-iNc"/>
+                                            <constraint firstItem="F6F-Q3-AE5" firstAttribute="height" secondItem="LKE-fW-0K5" secondAttribute="height" id="J17-94-9si"/>
                                             <constraint firstItem="Fxo-sK-QlV" firstAttribute="leading" secondItem="RwF-vi-BND" secondAttribute="leading" id="LZf-Rh-96e"/>
                                             <constraint firstAttribute="width" secondItem="RwF-vi-BND" secondAttribute="height" multiplier="74:47" id="Wbn-DN-Doc"/>
+                                            <constraint firstItem="LKE-fW-0K5" firstAttribute="height" secondItem="RwF-vi-BND" secondAttribute="height" id="jnV-bF-LbO"/>
                                             <constraint firstItem="Fxo-sK-QlV" firstAttribute="height" secondItem="RwF-vi-BND" secondAttribute="height" multiplier="0.18" id="m22-6g-7wS"/>
+                                            <constraint firstItem="LKE-fW-0K5" firstAttribute="centerY" secondItem="RwF-vi-BND" secondAttribute="centerY" id="n6h-aR-vCX"/>
+                                            <constraint firstItem="F6F-Q3-AE5" firstAttribute="centerX" secondItem="RwF-vi-BND" secondAttribute="centerX" multiplier="1.5" id="nlo-2C-0hb"/>
+                                            <constraint firstItem="F6F-Q3-AE5" firstAttribute="width" secondItem="LKE-fW-0K5" secondAttribute="width" id="rM5-D9-jh5"/>
+                                            <constraint firstItem="LKE-fW-0K5" firstAttribute="centerX" secondItem="RwF-vi-BND" secondAttribute="centerX" multiplier="0.5" id="sdS-0b-vId"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-Ik-A8T">
-                                        <rect key="frame" x="0.0" y="0.0" width="467" height="68.5"/>
-                                        <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-Ik-A8T">
+                                        <rect key="frame" x="0.0" y="0.0" width="467" height="68"/>
+                                        <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="39"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
@@ -152,62 +158,74 @@
                                 <rect key="frame" x="100" y="7" width="467" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBJ-bG-xUc">
-                                        <rect key="frame" x="11.5" y="68" width="444" height="282"/>
+                                        <rect key="frame" x="12" y="68" width="444" height="282"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLi-zE-PcI">
-                                                <rect key="frame" x="159" y="105" width="120" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLi-zE-PcI">
+                                                <rect key="frame" x="0.0" y="71" width="444" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="18"/>
                                                 <state key="normal" title="Alt 1">
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-aw-r5N">
-                                                <rect key="frame" x="159" y="134" width="120" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-aw-r5N">
+                                                <rect key="frame" x="0.0" y="113" width="444" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="18"/>
                                                 <state key="normal" title="Alt 2">
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-4r-jpL">
-                                                <rect key="frame" x="159" y="164" width="120" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-4r-jpL">
+                                                <rect key="frame" x="0.0" y="156" width="444" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="18"/>
                                                 <state key="normal" title="Alt 3">
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-PL-5Wa">
-                                                <rect key="frame" x="159" y="194" width="120" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-PL-5Wa">
+                                                <rect key="frame" x="0.0" y="198" width="444" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="18"/>
                                                 <state key="normal" title="Alt 4">
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leorem ipsiuonson dolor sit amet consectetuerson adipiscien. Leorem ipsiuonson dolor sit amet consectetuerson adipiscien" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-3P-zGU">
+                                                <rect key="frame" x="0.0" y="3" width="444" height="50"/>
+                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="20"/>
+                                                <color key="textColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-MS-NUm">
-                                                <rect key="frame" x="159" y="222" width="120" height="45"/>
+                                                <rect key="frame" x="159" y="237" width="120" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="18"/>
                                                 <state key="normal" title="Alt 5">
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Leorem ipsiuonson dolor sit amet consectetuerson adipiscien. Leorem ipsiuonson dolor sit amet consectetuerson adipiscien" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-3P-zGU">
-                                                <rect key="frame" x="0.0" y="0.0" width="444" height="80"/>
-                                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="20"/>
-                                                <color key="textColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="highlightedColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="cW4-PL-5Wa" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="1.55" id="4w0-3i-xGz"/>
                                             <constraint firstItem="Hx1-3P-zGU" firstAttribute="height" secondItem="HBJ-bG-xUc" secondAttribute="height" multiplier="0.18" id="8Nv-X5-ljj"/>
+                                            <constraint firstItem="pDp-4r-jpL" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="1.25" id="FJZ-CN-kbu"/>
+                                            <constraint firstItem="b2H-aw-r5N" firstAttribute="height" secondItem="yLi-zE-PcI" secondAttribute="height" id="Fzt-Tc-zJ7"/>
+                                            <constraint firstAttribute="trailing" secondItem="b2H-aw-r5N" secondAttribute="trailing" id="Gyh-jG-8yj"/>
                                             <constraint firstAttribute="width" secondItem="HBJ-bG-xUc" secondAttribute="height" multiplier="74:47" id="J2b-Kh-u32"/>
+                                            <constraint firstItem="yLi-zE-PcI" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.65" id="QJn-Pe-20v"/>
+                                            <constraint firstItem="b2H-aw-r5N" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="Qko-97-AEN"/>
+                                            <constraint firstItem="cW4-PL-5Wa" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="W5f-o4-FFn"/>
+                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.2" id="W7A-Jo-WFH"/>
+                                            <constraint firstItem="pDp-4r-jpL" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="XlY-qp-M69"/>
+                                            <constraint firstAttribute="trailing" secondItem="yLi-zE-PcI" secondAttribute="trailing" id="Yg5-Wz-eWq"/>
+                                            <constraint firstItem="b2H-aw-r5N" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.95" id="adD-NK-L1c"/>
+                                            <constraint firstItem="yLi-zE-PcI" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="axO-hO-KAs"/>
+                                            <constraint firstAttribute="trailing" secondItem="pDp-4r-jpL" secondAttribute="trailing" id="c07-Tk-zcV"/>
+                                            <constraint firstItem="pDp-4r-jpL" firstAttribute="height" secondItem="b2H-aw-r5N" secondAttribute="height" id="cv0-Dm-YnM"/>
                                             <constraint firstAttribute="trailing" secondItem="Hx1-3P-zGU" secondAttribute="trailing" id="ein-Ht-NY0"/>
                                             <constraint firstItem="Hx1-3P-zGU" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="iHg-nr-YJQ"/>
-                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="top" secondItem="HBJ-bG-xUc" secondAttribute="top" id="kfQ-cX-rn2"/>
+                                            <constraint firstAttribute="trailing" secondItem="cW4-PL-5Wa" secondAttribute="trailing" id="pKl-3z-bX2"/>
+                                            <constraint firstItem="cW4-PL-5Wa" firstAttribute="height" secondItem="pDp-4r-jpL" secondAttribute="height" id="pXG-OQ-sUo"/>
+                                            <constraint firstItem="yLi-zE-PcI" firstAttribute="height" secondItem="HBJ-bG-xUc" secondAttribute="height" multiplier="0.15" id="toi-oM-caA"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subjectLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfY-BU-aUK">
@@ -233,30 +251,30 @@
                                 <rect key="frame" x="100" y="7" width="467" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Yn-0f-AVv">
-                                        <rect key="frame" x="11.5" y="67.5" width="444" height="282"/>
+                                        <rect key="frame" x="12" y="68" width="444" height="282"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result (correct or not)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-hY-EYk">
-                                                <rect key="frame" x="0.0" y="0.0" width="444" height="51"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result (correct or not)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-hY-EYk">
+                                                <rect key="frame" x="0.0" y="3" width="444" height="51"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="35"/>
                                                 <color key="textColor" red="0.92156862750000001" green="0.33333333329999998" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DO-U1-Bzr">
-                                                <rect key="frame" x="-0.5" y="183.5" width="222" height="42"/>
+                                                <rect key="frame" x="111" y="191" width="222" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="23"/>
                                                 <state key="normal" title="BACK TO SCENE">
                                                     <color key="titleColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-os-2LU">
-                                                <rect key="frame" x="111" y="148" width="222" height="42"/>
+                                                <rect key="frame" x="111" y="106" width="222" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="23"/>
                                                 <state key="normal" title="NEXT QUESTION">
                                                     <color key="titleColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD9-Ui-BIZ">
-                                                <rect key="frame" x="222" y="183.5" width="222" height="42"/>
+                                                <rect key="frame" x="111" y="148" width="222" height="42"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="23"/>
                                                 <state key="normal" title="BACK TO OBJECT">
                                                     <color key="titleColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,19 +290,20 @@
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="4DO-U1-Bzr" firstAttribute="width" secondItem="1Yn-0f-AVv" secondAttribute="width" multiplier="0.5" id="6zt-hO-dk6"/>
-                                            <constraint firstItem="UNc-os-2LU" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="1.2" id="7P7-Qy-FQ3"/>
-                                            <constraint firstItem="4DO-U1-Bzr" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="1.45" id="9eN-Mw-FO2"/>
+                                            <constraint firstItem="UNc-os-2LU" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="0.9" id="7P7-Qy-FQ3"/>
+                                            <constraint firstItem="wD9-Ui-BIZ" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="1.2" id="8O9-vc-VlH"/>
+                                            <constraint firstItem="4DO-U1-Bzr" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="1.5" id="9eN-Mw-FO2"/>
                                             <constraint firstItem="Qiq-Jh-INC" firstAttribute="leading" secondItem="1Yn-0f-AVv" secondAttribute="leading" id="9qb-Th-HUv"/>
                                             <constraint firstItem="4DO-U1-Bzr" firstAttribute="height" secondItem="1Yn-0f-AVv" secondAttribute="height" multiplier="0.15" id="AYn-bl-jKB"/>
                                             <constraint firstItem="FOK-hY-EYk" firstAttribute="height" secondItem="1Yn-0f-AVv" secondAttribute="height" multiplier="0.18" id="I5U-mx-JSC"/>
-                                            <constraint firstItem="FOK-hY-EYk" firstAttribute="top" secondItem="1Yn-0f-AVv" secondAttribute="top" id="JQH-PQ-Oc5"/>
                                             <constraint firstItem="wD9-Ui-BIZ" firstAttribute="width" secondItem="4DO-U1-Bzr" secondAttribute="width" id="JQe-fc-xSz"/>
-                                            <constraint firstItem="wD9-Ui-BIZ" firstAttribute="centerY" secondItem="4DO-U1-Bzr" secondAttribute="centerY" id="LFR-GO-6tr"/>
+                                            <constraint firstItem="FOK-hY-EYk" firstAttribute="centerY" secondItem="1Yn-0f-AVv" secondAttribute="centerY" multiplier="0.2" id="MiR-rF-kVb"/>
                                             <constraint firstItem="UNc-os-2LU" firstAttribute="width" secondItem="wD9-Ui-BIZ" secondAttribute="width" id="U7o-62-NfI"/>
                                             <constraint firstItem="FOK-hY-EYk" firstAttribute="leading" secondItem="1Yn-0f-AVv" secondAttribute="leading" id="XSO-ii-2Jd"/>
                                             <constraint firstItem="UNc-os-2LU" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" id="avz-Jg-TzN"/>
-                                            <constraint firstItem="wD9-Ui-BIZ" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" multiplier="1.5" id="bTv-UQ-GcO"/>
-                                            <constraint firstItem="4DO-U1-Bzr" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" multiplier="0.5" id="hHI-5C-CDL"/>
+                                            <constraint firstItem="wD9-Ui-BIZ" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" id="bTv-UQ-GcO"/>
+                                            <constraint firstItem="Qiq-Jh-INC" firstAttribute="height" secondItem="FOK-hY-EYk" secondAttribute="height" multiplier="0.5" id="dAA-3E-thj"/>
+                                            <constraint firstItem="4DO-U1-Bzr" firstAttribute="centerX" secondItem="1Yn-0f-AVv" secondAttribute="centerX" id="hHI-5C-CDL"/>
                                             <constraint firstAttribute="trailing" secondItem="Qiq-Jh-INC" secondAttribute="trailing" id="hPf-OZ-MMQ"/>
                                             <constraint firstAttribute="width" secondItem="1Yn-0f-AVv" secondAttribute="height" multiplier="74:47" id="j7d-P8-Yn4"/>
                                             <constraint firstItem="Qiq-Jh-INC" firstAttribute="top" secondItem="FOK-hY-EYk" secondAttribute="bottom" id="l3W-dN-p6g"/>
@@ -294,7 +313,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subjectLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYV-IQ-YYN">
-                                        <rect key="frame" x="0.0" y="0.0" width="467" height="67.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="467" height="68"/>
                                         <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="39"/>
                                         <color key="textColor" red="0.035294117649999998" green="0.098039215690000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -348,6 +367,7 @@
                         <outlet property="playerScore" destination="iai-GL-UrR" id="sWs-VD-smG"/>
                         <outlet property="questionView" destination="UOA-zT-18C" id="ts6-A9-cU0"/>
                         <outlet property="resultHint" destination="Qiq-Jh-INC" id="7id-Hy-ABd"/>
+                        <outlet property="resultSubjectName" destination="IYV-IQ-YYN" id="4Vg-Wf-vg3"/>
                         <outlet property="resultText" destination="FOK-hY-EYk" id="MMa-yK-iaA"/>
                         <outlet property="resultView" destination="qir-dE-vN8" id="m8t-Ha-WQD"/>
                         <outlet property="selectedAlternativeFive" destination="Qa6-MS-NUm" id="UON-4r-NPW"/>

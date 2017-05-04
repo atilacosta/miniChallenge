@@ -22,9 +22,13 @@
         
         _subjectName = data[@"subjectName"];
 
-        NSLog(@"DICT QUESTIONS = %@",data);
+        //NSLog(@"DICT QUESTIONS = %@",data);
+        
+        
+        
         for(NSDictionary *currentQuestion in data[@"questionsList"]){
             [self.questionsList addObject:[[Question alloc]initWithDictionary:currentQuestion]];
+            NSLog(@"%@", currentQuestion);
         
         }
     
