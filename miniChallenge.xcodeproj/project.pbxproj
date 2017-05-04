@@ -10,6 +10,7 @@
 		03DB5C801EA9147700EDE172 /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03DB5C7F1EA9147700EDE172 /* database.plist */; };
 		03DB5C831EA9259700EDE172 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB5C821EA9259700EDE172 /* Subject.m */; };
 		03F5478E1EA7E5190033C2C4 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F5478D1EA7E5190033C2C4 /* Item.m */; };
+		7D951E651EBA619300E0187D /* Supersonic Rocketship.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D951E641EBA619300E0187D /* Supersonic Rocketship.ttf */; };
 		7DD935031EA921BC0040242F /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD935021EA921BC0040242F /* Scene.m */; };
 		7DECBF881EA932A500E44078 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DECBF871EA932A500E44078 /* Question.m */; };
 		AF336D081EB3BE3F008DDDA7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF336D061EB3BE3F008DDDA7 /* GameViewController.storyboard */; };
@@ -63,6 +64,7 @@
 		03DB5C821EA9259700EDE172 /* Subject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
 		03F5478C1EA7E5190033C2C4 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		03F5478D1EA7E5190033C2C4 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		7D951E641EBA619300E0187D /* Supersonic Rocketship.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supersonic Rocketship.ttf"; sourceTree = "<group>"; };
 		7DD935011EA921BC0040242F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		7DD935021EA921BC0040242F /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		7DECBF861EA932A500E44078 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
 				C35FA0A31EA53BDB00E1DD29 /* Main.storyboard */,
 				AF336D061EB3BE3F008DDDA7 /* GameViewController.storyboard */,
+				7D951E641EBA619300E0187D /* Supersonic Rocketship.ttf */,
 				C316E2081EAE8F690036E2C8 /* AudioManager.h */,
 				C316E2091EAE8F690036E2C8 /* AudioManager.m */,
 				C316E2051EAE8E4D0036E2C8 /* SettingsViewController.h */,
@@ -365,6 +368,7 @@
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
 				C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */,
 				C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */,
+				7D951E651EBA619300E0187D /* Supersonic Rocketship.ttf in Resources */,
 				C39E06251EAE727000AA148D /* fill2@2x.png in Resources */,
 				C39E06211EAE727000AA148D /* characterSelection.png in Resources */,
 				AF336D081EB3BE3F008DDDA7 /* GameViewController.storyboard in Resources */,

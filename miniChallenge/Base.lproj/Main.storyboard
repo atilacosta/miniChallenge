@@ -188,7 +188,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="charCell" id="c1Y-3m-bnx" customClass="CharCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="11" width="168" height="247"/>
+                                        <rect key="frame" x="0.0" y="11.666666666666666" width="168" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="168" height="247"/>
@@ -256,7 +256,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9bx-fU-zt7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uEb-ZN-0S2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uEb-ZN-0S2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
