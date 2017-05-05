@@ -29,7 +29,6 @@
         
         
         for(NSDictionary *currentSubject in data[@"subjectsList"]){
-            //NSLog(@"%@",currentSubject);
             [self.itemSubjects addObject:[[Subject alloc] initWithData:currentSubject]];
         }
         
@@ -52,6 +51,7 @@
             [self setBackgroundImage:image forState:UIControlStateNormal];
         } else{
             [self setBackgroundImage:image forState:UIControlStateDisabled];
+            NSLog(@"%@",self.itemName);
         }
     }
     return self;

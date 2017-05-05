@@ -132,6 +132,8 @@
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     NSLog(@"-------------- %ld --------------",(long)_selectedScene.TotalNumberOfQuestions);
+    
+    
 }
 
 - (void)dismissViews{
@@ -273,7 +275,8 @@
         if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
-            self.resultText.textColor = [UIColor colorWithRed:56.0/255.0 green:158.0/255.0 blue:25.0/255.0 alpha:1];
+            self.resultText.textColor = [UIColor colorWithRed:67.0f/255.0f green:170.0f/255.0f blue:33.0f/255.0f alpha:1];
+            //self.resultText.textColor  = [UIColor greenColor];
             
             //NSLog(@"%@", self.selectedQuestion.uniqueID);
             

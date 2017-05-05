@@ -188,8 +188,8 @@
                                                     <color key="titleColor" red="0.035294117647058823" green="0.098039215686274508" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leorem ipsiuonson dolor sit amet consectetuerson adipiscien. Leorem ipsiuonson dolor sit amet consectetuerson adipiscien" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-3P-zGU">
-                                                <rect key="frame" x="0.0" y="3" width="444" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leorem ipsiuonson dolor sit amet consectetuerson adipiscien. Leorem ipsiuonson dolor sit amet consectetuerson adipiscien" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-3P-zGU">
+                                                <rect key="frame" x="0.0" y="4.5" width="444" height="56"/>
                                                 <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="20"/>
                                                 <color key="textColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="highlightedColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -206,7 +206,7 @@
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="cW4-PL-5Wa" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="1.55" id="4w0-3i-xGz"/>
-                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="height" secondItem="HBJ-bG-xUc" secondAttribute="height" multiplier="0.18" id="8Nv-X5-ljj"/>
+                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="height" secondItem="HBJ-bG-xUc" secondAttribute="height" multiplier="0.2" id="8Nv-X5-ljj"/>
                                             <constraint firstItem="pDp-4r-jpL" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="1.25" id="FJZ-CN-kbu"/>
                                             <constraint firstItem="b2H-aw-r5N" firstAttribute="height" secondItem="yLi-zE-PcI" secondAttribute="height" id="Fzt-Tc-zJ7"/>
                                             <constraint firstAttribute="trailing" secondItem="b2H-aw-r5N" secondAttribute="trailing" id="Gyh-jG-8yj"/>
@@ -214,7 +214,7 @@
                                             <constraint firstItem="yLi-zE-PcI" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.65" id="QJn-Pe-20v"/>
                                             <constraint firstItem="b2H-aw-r5N" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="Qko-97-AEN"/>
                                             <constraint firstItem="cW4-PL-5Wa" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="W5f-o4-FFn"/>
-                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.2" id="W7A-Jo-WFH"/>
+                                            <constraint firstItem="Hx1-3P-zGU" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.23" id="W7A-Jo-WFH"/>
                                             <constraint firstItem="pDp-4r-jpL" firstAttribute="leading" secondItem="HBJ-bG-xUc" secondAttribute="leading" id="XlY-qp-M69"/>
                                             <constraint firstAttribute="trailing" secondItem="yLi-zE-PcI" secondAttribute="trailing" id="Yg5-Wz-eWq"/>
                                             <constraint firstItem="b2H-aw-r5N" firstAttribute="centerY" secondItem="HBJ-bG-xUc" secondAttribute="centerY" multiplier="0.95" id="adD-NK-L1c"/>

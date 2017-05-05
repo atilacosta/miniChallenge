@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9bx-fU-zt7">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Supersonic Rocketship.ttf">
+            <string>SupersonicRocketship</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -120,16 +125,29 @@
                                     <action selector="toggleSound:" destination="0P5-6s-CiY" eventType="touchUpInside" id="YpK-rH-tWW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-iR-wRn">
+                                <rect key="frame" x="0.0" y="269.66666666666669" width="736" height="40"/>
+                                <fontDescription key="fontDescription" name="SupersonicRocketship" family="Supersonic Rocketship" pointSize="30"/>
+                                <state key="normal" title="RESET PROGRESS">
+                                    <color key="titleColor" red="0.94640177488327026" green="0.41869965195655823" blue="0.13468635082244873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetDefault:" destination="0P5-6s-CiY" eventType="touchUpInside" id="R7p-hX-GTL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.026610895990000001" green="0.12884044650000001" blue="0.17059215899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qfb-mk-7BY" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" multiplier="1.8" constant="-7" id="3Eo-2K-jGU"/>
                             <constraint firstItem="6LG-8d-8BH" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" multiplier="0.9" id="610-QK-Wd4"/>
                             <constraint firstItem="qfb-mk-7BY" firstAttribute="width" secondItem="J3u-Oy-RR8" secondAttribute="width" multiplier="0.275" id="8Aw-Lb-R3h"/>
+                            <constraint firstItem="Dzl-iR-wRn" firstAttribute="centerX" secondItem="J3u-Oy-RR8" secondAttribute="centerX" id="A6D-em-uEs"/>
                             <constraint firstItem="6LG-8d-8BH" firstAttribute="width" secondItem="pAs-Se-YS0" secondAttribute="width" id="CYk-s5-A5E"/>
                             <constraint firstItem="pAs-Se-YS0" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" multiplier="0.9" id="HSc-4J-ebk"/>
                             <constraint firstItem="pcV-kg-TJf" firstAttribute="width" secondItem="J3u-Oy-RR8" secondAttribute="width" multiplier="0.4" id="LwO-RZ-OBN"/>
+                            <constraint firstItem="Dzl-iR-wRn" firstAttribute="centerY" secondItem="J3u-Oy-RR8" secondAttribute="centerY" multiplier="1.4" id="OUg-cV-dHE"/>
                             <constraint firstItem="pAs-Se-YS0" firstAttribute="width" secondItem="qfb-mk-7BY" secondAttribute="width" multiplier="0.6" id="Orb-0s-uqg"/>
+                            <constraint firstItem="Dzl-iR-wRn" firstAttribute="width" secondItem="J3u-Oy-RR8" secondAttribute="width" id="WEA-iP-WRm"/>
                             <constraint firstItem="qfb-mk-7BY" firstAttribute="centerX" secondItem="J3u-Oy-RR8" secondAttribute="centerX" id="beF-JN-iw4"/>
                             <constraint firstItem="pcV-kg-TJf" firstAttribute="centerX" secondItem="J3u-Oy-RR8" secondAttribute="centerX" id="j6D-cc-tFY"/>
                             <constraint firstItem="pAs-Se-YS0" firstAttribute="leading" secondItem="qfb-mk-7BY" secondAttribute="leading" multiplier="0.909" id="j6j-Yw-MTO"/>
@@ -188,7 +206,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="charCell" id="c1Y-3m-bnx" customClass="CharCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="11.666666666666666" width="168" height="247"/>
+                                        <rect key="frame" x="0.0" y="11" width="168" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="168" height="247"/>
@@ -257,7 +275,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9bx-fU-zt7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uEb-ZN-0S2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uEb-ZN-0S2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

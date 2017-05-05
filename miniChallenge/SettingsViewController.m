@@ -40,6 +40,17 @@
 - (IBAction)toggleSound:(UIButton *)sender {
     
 }
+- (IBAction)resetDefault:(id)sender {
+    [[[currentUser sharedManager] user] initWithUserId:[NSNumber numberWithInt:1]];
+    [[currentUser sharedManager] saveConfiguration];
+    if([[[currentUser sharedManager] user] isMusicOn]){
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music on"] forState:UIControlStateNormal];
+    }
+    else{
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music off"] forState:UIControlStateNormal];
+    }
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
