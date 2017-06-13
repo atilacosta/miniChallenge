@@ -270,11 +270,24 @@
     if (self.selectedQuestion == nil) {
         self.resultText.text = @"There are no more avaible questions for this subject at the moment";
         self.resultHint.text = @"Try another subject";
-        self.resultText.textColor = [UIColor blackColor];
+        
+        self.resultText.textColor = [UIColor colorWithRed:235.0f / 255.0f green:85.0f / 255.0f blue:28.0f / 255.0f alpha:1.0f];
+        self.resultHint.textColor = [UIColor colorWithRed:235.0f / 255.0f green:85.0f / 255.0f blue:28.0f / 255.0f alpha:1.0f];
+        
+        //self.resultText.textColor = [UIColor blackColor];
     }else {
         if([self.selectedQuestion gradeQuestionWithAlternative:self.selectedAlternative]){ // The answer is correct
             self.resultText.text = @"Correct!!";
             self.resultHint.text = @"";
+
+//            
+//            if(self.selectedQuestion.value){
+//                [self.resultHint setText:[NSString stringWithFormat:@"+ %d", self.selectedQuestion.value]];
+//                self.resultHint.textColor = [UIColor colorWithRed:67.0f/255.0f green:170.0f/255.0f blue:33.0f/255.0f alpha:1];
+//            }
+            
+            
+            
             self.resultText.textColor = [UIColor colorWithRed:67.0f/255.0f green:170.0f/255.0f blue:33.0f/255.0f alpha:1];
             //self.resultText.textColor  = [UIColor greenColor];
             
@@ -291,6 +304,7 @@
             
 
             [[currentUser sharedManager] saveConfiguration];
+            
             
             [self updateUserPointsAndAnsweredQuestionsCount];
             
@@ -332,7 +346,7 @@
             
         }
     }
-    [self verifyItemSubjectState];
+    //[self verifyItemSubjectState];
 }
 
 // 3 - DONE
@@ -406,22 +420,23 @@
 }
 
 
--(void)verifyItemSubjectState{
-    for(Subject *currentSubject in self.selectedItem.itemSubjects){
-        for(UIButton *currentButton in self.buttonArray){
-            if([currentButton.titleLabel.text isEqualToString:currentSubject.subjectName]){
-                
-                if(![currentSubject hasQuestionsAvaiable]){
-                    
-                    [currentButton setEnabled:NO];
-                    [currentButton setAlpha:0.5];
-                    //[currentButton setTitle:currentSubject.subjectName forState:UIControlStateDisabled];
-                }
-            }
-        }
-    }
-    
-}
+//-(void)verifyItemSubjectState{
+//
+//    for(Subject *currentSubject in self.selectedItem.itemSubjects){
+//        for(UIButton *currentButton in self.buttonArray){
+//            if([currentButton.titleLabel.text isEqualToString:currentSubject.subjectName]){
+//                
+//                if(![currentSubject hasQuestionsAvaiable]){
+//                    if([self.selectedItem.itemName isEqualToString:currentButton.titleLabel.text]){
+//                        [currentButton setEnabled:NO];
+//                        [currentButton setAlpha:0.5];
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    
+//}
 
 // To do:
 // resultView update score add question to answered in user. update label. and add score to user overall score.
