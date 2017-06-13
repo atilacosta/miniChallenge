@@ -17,8 +17,6 @@
 		C316E2071EAE8E4D0036E2C8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C316E2061EAE8E4D0036E2C8 /* SettingsViewController.m */; };
 		C316E20A1EAE8F690036E2C8 /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C316E2091EAE8F690036E2C8 /* AudioManager.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
-		C32DA4641EA6AB5500130808 /* astro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4631EA6AB5500130808 /* astro.jpg */; };
-		C32DA4661EA7E80D00130808 /* personagem.png in Resources */ = {isa = PBXBuildFile; fileRef = C32DA4651EA7E80D00130808 /* personagem.png */; };
 		C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA09B1EA53BDB00E1DD29 /* main.m */; };
 		C35FA09F1EA53BDB00E1DD29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */; };
 		C35FA0A21EA53BDB00E1DD29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0A11EA53BDB00E1DD29 /* ViewController.m */; };
@@ -29,14 +27,7 @@
 		C35FA0C01EA53BDB00E1DD29 /* miniChallengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0BF1EA53BDB00E1DD29 /* miniChallengeUITests.m */; };
 		C35FA0CF1EA53BFC00E1DD29 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */; };
 		C35FA0D21EA53CA000E1DD29 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */; };
-		C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */; };
 		C37FA1DE1EBA3ECC0021ADCA /* soundtrack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */; };
-		C39E06161EA92BC900AA148D /* personagem 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06131EA92BC900AA148D /* personagem 1.png */; };
-		C39E06171EA92BC900AA148D /* personagem 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E06141EA92BC900AA148D /* personagem 2.png */; };
-		C39E06211EAE727000AA148D /* characterSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061B1EAE727000AA148D /* characterSelection.png */; };
-		C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061C1EAE727000AA148D /* characterSelection@2x.png */; };
-		C39E06251EAE727000AA148D /* fill2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39E061F1EAE727000AA148D /* fill2@2x.png */; };
-		C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39E06271EAE7F6C00AA148D /* test.mp3 */; };
 		E8C50E451EB3A23C0099CFFC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C50E441EB3A23C0099CFFC /* User.m */; };
 		E8C50E481EB3AC1A0099CFFC /* currentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C50E471EB3AC1A0099CFFC /* currentUser.m */; };
 /* End PBXBuildFile section */
@@ -77,8 +68,6 @@
 		C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundtrack.m4a; sourceTree = "<group>"; };
 		C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharCollectionViewCell.h; sourceTree = "<group>"; };
 		C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharCollectionViewCell.m; sourceTree = "<group>"; };
-		C32DA4631EA6AB5500130808 /* astro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astro.jpg; sourceTree = "<group>"; };
-		C32DA4651EA7E80D00130808 /* personagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personagem.png; sourceTree = "<group>"; };
 		C35FA0971EA53BDB00E1DD29 /* miniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35FA09B1EA53BDB00E1DD29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,16 +88,6 @@
 		C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
 		C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
-		C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Third View 1.jpg"; sourceTree = "<group>"; };
-		C39E06131EA92BC900AA148D /* personagem 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 1.png"; sourceTree = "<group>"; };
-		C39E06141EA92BC900AA148D /* personagem 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personagem 2.png"; sourceTree = "<group>"; };
-		C39E061B1EAE727000AA148D /* characterSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = characterSelection.png; sourceTree = "<group>"; };
-		C39E061C1EAE727000AA148D /* characterSelection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "characterSelection@2x.png"; sourceTree = "<group>"; };
-		C39E061D1EAE727000AA148D /* characterSelection@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "characterSelection@3x.png"; sourceTree = "<group>"; };
-		C39E061E1EAE727000AA148D /* fill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fill2.png; sourceTree = "<group>"; };
-		C39E061F1EAE727000AA148D /* fill2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@2x.png"; sourceTree = "<group>"; };
-		C39E06201EAE727000AA148D /* fill2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fill2@3x.png"; sourceTree = "<group>"; };
-		C39E06271EAE7F6C00AA148D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		C39E062A1EAE804900AA148D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E8C50E431EB3A23C0099CFFC /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E8C50E441EB3A23C0099CFFC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -165,53 +144,11 @@
 		C35FA0991EA53BDB00E1DD29 /* miniChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				E8C50E431EB3A23C0099CFFC /* User.h */,
-				E8C50E441EB3A23C0099CFFC /* User.m */,
-				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
-				E8C50E461EB3AC1A0099CFFC /* currentUser.h */,
-				E8C50E471EB3AC1A0099CFFC /* currentUser.m */,
-				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
-				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
-				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
+				E82B89AB1EF07A3F00E86308 /* Controllers */,
+				E82B89AC1EF07AB400E86308 /* Classes */,
 				C35FA0A31EA53BDB00E1DD29 /* Main.storyboard */,
 				AF336D061EB3BE3F008DDDA7 /* GameViewController.storyboard */,
-				7D951E641EBA619300E0187D /* Supersonic Rocketship.ttf */,
-				C316E2081EAE8F690036E2C8 /* AudioManager.h */,
-				C316E2091EAE8F690036E2C8 /* AudioManager.m */,
-				C316E2051EAE8E4D0036E2C8 /* SettingsViewController.h */,
-				C316E2061EAE8E4D0036E2C8 /* SettingsViewController.m */,
-				C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */,
-				C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */,
-				C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */,
-				C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */,
-				C35FA0CD1EA53BFC00E1DD29 /* GameViewController.h */,
-				C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */,
-				7DD935011EA921BC0040242F /* Scene.h */,
-				7DD935021EA921BC0040242F /* Scene.m */,
-				03F5478C1EA7E5190033C2C4 /* Item.h */,
-				03F5478D1EA7E5190033C2C4 /* Item.m */,
-				03DB5C811EA9259700EDE172 /* Subject.h */,
-				03DB5C821EA9259700EDE172 /* Subject.m */,
-				7DECBF861EA932A500E44078 /* Question.h */,
-				7DECBF871EA932A500E44078 /* Question.m */,
-				C35FA0D31EA53DEF00E1DD29 /* Third View 1.jpg */,
-				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
-				C32DA4631EA6AB5500130808 /* astro.jpg */,
-				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
-				C32DA4651EA7E80D00130808 /* personagem.png */,
-				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
-				C39E06131EA92BC900AA148D /* personagem 1.png */,
-				C39E06141EA92BC900AA148D /* personagem 2.png */,
-				C39E061B1EAE727000AA148D /* characterSelection.png */,
-				C39E061C1EAE727000AA148D /* characterSelection@2x.png */,
-				C39E061D1EAE727000AA148D /* characterSelection@3x.png */,
-				C39E061E1EAE727000AA148D /* fill2.png */,
-				C39E061F1EAE727000AA148D /* fill2@2x.png */,
-				C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */,
-				C39E06201EAE727000AA148D /* fill2@3x.png */,
-				C39E06271EAE7F6C00AA148D /* test.mp3 */,
 				C35FA09A1EA53BDB00E1DD29 /* Supporting Files */,
-				03DB5C7F1EA9147700EDE172 /* database.plist */,
 			);
 			path = miniChallenge;
 			sourceTree = "<group>";
@@ -219,7 +156,15 @@
 		C35FA09A1EA53BDB00E1DD29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C35FA09D1EA53BDB00E1DD29 /* AppDelegate.h */,
+				C35FA09E1EA53BDB00E1DD29 /* AppDelegate.m */,
+				7D951E641EBA619300E0187D /* Supersonic Rocketship.ttf */,
+				C35FA0A61EA53BDB00E1DD29 /* Assets.xcassets */,
 				C35FA09B1EA53BDB00E1DD29 /* main.m */,
+				C35FA0A81EA53BDB00E1DD29 /* LaunchScreen.storyboard */,
+				03DB5C7F1EA9147700EDE172 /* database.plist */,
+				C35FA0AB1EA53BDB00E1DD29 /* Info.plist */,
+				C32900E21EB8F1A100D9E5E1 /* soundtrack.m4a */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -248,6 +193,44 @@
 				C39E062A1EAE804900AA148D /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E82B89AB1EF07A3F00E86308 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C35FA0A01EA53BDB00E1DD29 /* ViewController.h */,
+				C35FA0A11EA53BDB00E1DD29 /* ViewController.m */,
+				C316E2051EAE8E4D0036E2C8 /* SettingsViewController.h */,
+				C316E2061EAE8E4D0036E2C8 /* SettingsViewController.m */,
+				C32DA4601EA6AA8900130808 /* CharCollectionViewCell.h */,
+				C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */,
+				C35FA0D01EA53CA000E1DD29 /* CharacterViewController.h */,
+				C35FA0D11EA53CA000E1DD29 /* CharacterViewController.m */,
+				C35FA0CD1EA53BFC00E1DD29 /* GameViewController.h */,
+				C35FA0CE1EA53BFC00E1DD29 /* GameViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E82B89AC1EF07AB400E86308 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8C50E431EB3A23C0099CFFC /* User.h */,
+				E8C50E441EB3A23C0099CFFC /* User.m */,
+				E8C50E461EB3AC1A0099CFFC /* currentUser.h */,
+				E8C50E471EB3AC1A0099CFFC /* currentUser.m */,
+				C316E2081EAE8F690036E2C8 /* AudioManager.h */,
+				C316E2091EAE8F690036E2C8 /* AudioManager.m */,
+				7DD935011EA921BC0040242F /* Scene.h */,
+				7DD935021EA921BC0040242F /* Scene.m */,
+				03F5478C1EA7E5190033C2C4 /* Item.h */,
+				03F5478D1EA7E5190033C2C4 /* Item.m */,
+				03DB5C811EA9259700EDE172 /* Subject.h */,
+				03DB5C821EA9259700EDE172 /* Subject.m */,
+				7DECBF861EA932A500E44078 /* Question.h */,
+				7DECBF871EA932A500E44078 /* Question.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,18 +343,9 @@
 				C37FA1DE1EBA3ECC0021ADCA /* soundtrack.m4a in Resources */,
 				C35FA0AA1EA53BDB00E1DD29 /* LaunchScreen.storyboard in Resources */,
 				C35FA0A71EA53BDB00E1DD29 /* Assets.xcassets in Resources */,
-				C35FA0D41EA53DEF00E1DD29 /* Third View 1.jpg in Resources */,
 				C35FA0A51EA53BDB00E1DD29 /* Main.storyboard in Resources */,
-				C32DA4661EA7E80D00130808 /* personagem.png in Resources */,
-				C39E06161EA92BC900AA148D /* personagem 1.png in Resources */,
-				C32DA4641EA6AB5500130808 /* astro.jpg in Resources */,
-				C39E06171EA92BC900AA148D /* personagem 2.png in Resources */,
 				03DB5C801EA9147700EDE172 /* database.plist in Resources */,
-				C39E06221EAE727000AA148D /* characterSelection@2x.png in Resources */,
-				C39E06281EAE7F6C00AA148D /* test.mp3 in Resources */,
 				7D951E651EBA619300E0187D /* Supersonic Rocketship.ttf in Resources */,
-				C39E06251EAE727000AA148D /* fill2@2x.png in Resources */,
-				C39E06211EAE727000AA148D /* characterSelection.png in Resources */,
 				AF336D081EB3BE3F008DDDA7 /* GameViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
