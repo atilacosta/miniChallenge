@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
+@property (weak, nonatomic) IBOutlet UIButton *soundButton;
+@property (weak, nonatomic) IBOutlet UIButton *musicButton;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @end
 
 @implementation ViewController
@@ -56,7 +59,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)toogleSound:(id)sender {
+}
 
+- (IBAction)toogleMusic:(id)sender {
+    [[[currentUser sharedManager] user] changeMusicStatus];
+    [[currentUser sharedManager] saveConfiguration];
+    [[AudioManager sharedManager] toggle];
+    if([[[AudioManager sharedManager] player] isPlaying]){
+        [sender setBackgroundImage:[UIImage imageNamed:@"music_on"] forState:UIControlStateNormal];
+        //[[currentUser sharedManager]user]
+    }
+    else{
+        [sender setBackgroundImage:[UIImage imageNamed:@"music_off"] forState:UIControlStateNormal];
+    }
+    
 
+}
+
+- (IBAction)resetProgress:(id)sender {
+    [[[currentUser sharedManager] user] initWithUserId:[NSNumber numberWithInt:1]];
+    [[currentUser sharedManager] saveConfiguration];
+    if([[[currentUser sharedManager] user] isMusicOn]){
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music_on"] forState:UIControlStateNormal];
+    }
+    else{
+        [self.musicButton setBackgroundImage:[UIImage imageNamed:@"music_off"] forState:UIControlStateNormal];
+    }
+}
 
 @end

@@ -14,7 +14,6 @@
 		7DD935031EA921BC0040242F /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD935021EA921BC0040242F /* Scene.m */; };
 		7DECBF881EA932A500E44078 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DECBF871EA932A500E44078 /* Question.m */; };
 		AF336D081EB3BE3F008DDDA7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF336D061EB3BE3F008DDDA7 /* GameViewController.storyboard */; };
-		C316E2071EAE8E4D0036E2C8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C316E2061EAE8E4D0036E2C8 /* SettingsViewController.m */; };
 		C316E20A1EAE8F690036E2C8 /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C316E2091EAE8F690036E2C8 /* AudioManager.m */; };
 		C32DA4621EA6AA8900130808 /* CharCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32DA4611EA6AA8900130808 /* CharCollectionViewCell.m */; };
 		C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FA09B1EA53BDB00E1DD29 /* main.m */; };
@@ -381,7 +380,6 @@
 				C316E20A1EAE8F690036E2C8 /* AudioManager.m in Sources */,
 				03F5478E1EA7E5190033C2C4 /* Item.m in Sources */,
 				7DECBF881EA932A500E44078 /* Question.m in Sources */,
-				C316E2071EAE8E4D0036E2C8 /* SettingsViewController.m in Sources */,
 				C35FA09C1EA53BDB00E1DD29 /* main.m in Sources */,
 				E8C50E481EB3AC1A0099CFFC /* currentUser.m in Sources */,
 				03DB5C831EA9259700EDE172 /* Subject.m in Sources */,

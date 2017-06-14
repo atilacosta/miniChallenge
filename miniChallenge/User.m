@@ -35,8 +35,7 @@
         _userSettings = [[NSDictionary alloc]init];
         _userSettings = @{
                           @"SOUND":@"TRUE",
-                          @"MUSIC":@"TRUE",
-                          @"LANGUAGE": @"PT_BR"
+                          @"MUSIC":@"TRUE"
                           };
         //inicializando as variaveis privadas
         _currentCharacters = [[NSNumber alloc]init];
