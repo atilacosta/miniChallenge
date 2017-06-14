@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>sceneName</key>
-		<string>SceneSpace</string>
+		<string>background</string>
 		<key>sceneImage</key>
 		<string>OuterSpace</string>
 		<key>sceneCharacterImage</key>
